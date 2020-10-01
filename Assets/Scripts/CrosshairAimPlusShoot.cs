@@ -12,6 +12,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
 
     private Vector3 target;
     public GameObject player;
+    public GameObject gunFire;
     
     public Rigidbody2D rb;
 
@@ -48,7 +49,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
 
     void fireBullet(Vector2 direction, float viewAngle){
         GameObject b = Instantiate(bullet) as GameObject;
-        b.transform.position = player.transform.position;
+        b.transform.position = gunFire.transform.position;
         b.transform.rotation = Quaternion.Euler(0.0f, 0.0f, viewAngle);
         b.GetComponent<Rigidbody2D>().velocity = direction * bulletPace;
 

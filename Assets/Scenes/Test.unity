@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &275884039 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3629355927949118602, guid: efa0b6c7978bc884e9ee371c66c18c55,
+    type: 3}
+  m_PrefabInstance: {fileID: 364009686}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &364009686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -196,17 +202,17 @@ PrefabInstance:
     - target: {fileID: 3629355927127209670, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.749509
+      value: 0.44879097
       objectReference: {fileID: 0}
     - target: {fileID: 3629355927127209670, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.8184583
+      value: 0.49007645
       objectReference: {fileID: 0}
     - target: {fileID: 3629355927127209670, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.57102716
+      value: 0.34191963
       objectReference: {fileID: 0}
     - target: {fileID: 3629355927127209674, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
@@ -261,7 +267,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   rb: {fileID: 364009689}
-  cam: {fileID: 1755552527}
 --- !u!1 &654135863
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,6 +298,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1755552527}
+  bullet: {fileID: 5384531704605720402, guid: e8309b3ea86af2042ba2383f9164344a, type: 3}
+  bulletPace: 20
+  player: {fileID: 364009687}
+  gunFire: {fileID: 275884039}
+  rb: {fileID: 298580761329660585, guid: e8309b3ea86af2042ba2383f9164344a, type: 3}
 --- !u!212 &654135865
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -455,11 +465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34668ef5d7bd0e74a88257084798646f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followTarget: {fileID: 0}
-  dampTime: 0.15
-  velocity: {x: 0, y: 0, z: 0}
-  cameraZ: 0
-  camera: {fileID: 0}
 --- !u!114 &1755552530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,11 +477,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34668ef5d7bd0e74a88257084798646f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followTarget: {fileID: 0}
-  dampTime: 0.15
-  velocity: {x: 0, y: 0, z: 0}
-  cameraZ: 0
-  camera: {fileID: 0}
 --- !u!1 &1866949346
 GameObject:
   m_ObjectHideFlags: 0
