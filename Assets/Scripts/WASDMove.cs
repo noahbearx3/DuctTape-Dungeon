@@ -13,7 +13,7 @@ public class WASDMove : MonoBehaviour
 
     // Rigidbody and Camera 
     public Rigidbody2D rb;
-    public Camera cam;
+    
 
 
     
