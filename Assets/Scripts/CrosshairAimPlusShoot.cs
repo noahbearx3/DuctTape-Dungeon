@@ -23,6 +23,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
     void Start()
     {
         Cursor.visible = false;
+        
     }
 
     // Update is called once per frame
@@ -35,8 +36,9 @@ public class CrosshairAimPlusShoot : MonoBehaviour
         Vector3 difference = target - player.transform.position;
 
         Vector2 lookDir = crosshairMousePos - rb.position;
-         float viewAngle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg - 90f;
         // Using Atan to calculate the x-axis to the direcokDir.x) * Mathf.Rad2Deg - 90f;
+         float viewAngle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg - 90f;
+        
         
 
         if(Input.GetMouseButtonDown(0)){
@@ -45,6 +47,8 @@ public class CrosshairAimPlusShoot : MonoBehaviour
             direction.Normalize();
             fireBullet(direction,viewAngle);
         }
+
+        
     }
 
     void fireBullet(Vector2 direction, float viewAngle){
@@ -52,6 +56,9 @@ public class CrosshairAimPlusShoot : MonoBehaviour
         b.transform.position = gunFire.transform.position;
         b.transform.rotation = Quaternion.Euler(0.0f, 0.0f, viewAngle);
         b.GetComponent<Rigidbody2D>().velocity = direction * bulletPace;
-
+        Destroy(b, 2.0f);
+        
     }
+
+    
 }
