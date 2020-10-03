@@ -6,6 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     private float enemyHealth;
     public GameObject bullet;
+    public CameraShake shake;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +35,7 @@ public class EnemyController : MonoBehaviour
             Destroy (col.gameObject);
             //Destroy (gameObject);
             enemyHealth = enemyHealth - 25;
+            shake.ShakeCamera(); 
             
             
         }

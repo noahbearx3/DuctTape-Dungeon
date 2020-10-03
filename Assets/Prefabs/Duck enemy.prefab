@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1973774196434504500}
   - component: {fileID: 1973774196434504501}
   m_Layer: 0
-  m_Name: Duck enemy (1)
+  m_Name: Duck enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a887ee1cadff7ad48bd151696723ae87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
+  bullet: {fileID: 5384531704605720402, guid: e8309b3ea86af2042ba2383f9164344a, type: 3}
+  shake: {fileID: 5478158005558970441, guid: b39134933ea72ea46865dced20fbaedd, type: 3}
 --- !u!70 &1973774196434504500
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
