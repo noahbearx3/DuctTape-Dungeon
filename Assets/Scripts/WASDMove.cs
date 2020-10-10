@@ -13,10 +13,10 @@ public class WASDMove : MonoBehaviour
 
     // Rigidbody and Camera 
     public Rigidbody2D rb;
-    
+    public Camera cam;
 
 
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,9 +32,7 @@ public class WASDMove : MonoBehaviour
          playerMovement.x = Input.GetAxisRaw("Horizontal");
          playerMovement.y = Input.GetAxisRaw("Vertical");
 
-         
- 
-     }
+    }
 
       void FixedUpdate() {
         // Using positoins from update function this line of code will enable the player to move
