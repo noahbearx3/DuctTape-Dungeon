@@ -524,6 +524,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3629355927127209669, guid: efa0b6c7978bc884e9ee371c66c18c55,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4016541092131827615, guid: 5aa3b512965dc9c4781de12d8097bf4d,
+        type: 3}
     - target: {fileID: 3629355927127209670, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -616,7 +622,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364009687}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d9d47b41849e7d44393dd5600f25937e, type: 2}
   m_CullingMode: 0
@@ -651,6 +657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf3fecfd67801454a985d56ae52cb3fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovement: {x: 0, y: 0}
   speed: 3
   rb: {fileID: 364009689}
 --- !u!1 &406909701 stripped
@@ -671,7 +678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8ba0efb6519fb48be993e69eb1662b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 3
   rb: {fileID: 406909704}
   cam: {fileID: 1755552527}
 --- !u!50 &406909704 stripped
