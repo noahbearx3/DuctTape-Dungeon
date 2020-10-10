@@ -660,6 +660,21 @@ MonoBehaviour:
   playerMovement: {x: 0, y: 0}
   speed: 3
   rb: {fileID: 364009689}
+--- !u!114 &364009692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364009687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b2542654b9c48c4a92123e1afc78199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  rb: {fileID: 364009689}
+  cam: {fileID: 1755552527}
 --- !u!1 &406909701 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4598534976591734831, guid: 60375c1f44303f04cb1d24b53a0c530f,
