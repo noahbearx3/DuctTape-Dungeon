@@ -7,6 +7,9 @@ public class WASDMoveRotate : MonoBehaviour
     //2D Vectors made to store player poisiton and mouse postion
     Vector2 playerMovement;
     Vector2 mousePos;
+    public SpriteRenderer spriteRenderer;
+    public Sprite newSprite;
+    public Sprite oldSprite;
 
     //Speed in wihch player will move 
     public float speed = 20f;
@@ -33,6 +36,20 @@ public class WASDMoveRotate : MonoBehaviour
          playerMovement.y = Input.GetAxisRaw("Vertical");
 
          mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
+         if (rb.rotation >= 90 & rb.rotation <= 180){
+             ChangeSprite();
+         }
+          if (rb.rotation <= -90 & rb.rotation >= -180){
+             ChangeSprite();
+         }
+        if (rb.rotation >= -90 & rb.rotation <= 0){
+             ChangeSpriteBack();
+         }
+
+          if (rb.rotation >= 0  & rb.rotation <= 90){
+             ChangeSpriteBack();
+         }
  
      }
 
@@ -45,4 +62,14 @@ public class WASDMoveRotate : MonoBehaviour
          float viewAngle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg + 90f;
          rb.rotation = viewAngle;
      }
+
+     void ChangeSprite()
+    {
+        spriteRenderer.sprite = newSprite; 
+    }
+
+    void ChangeSpriteBack()
+    {
+        spriteRenderer.sprite = oldSprite; 
+    }
 }
