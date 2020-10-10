@@ -38,7 +38,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
         Vector2 lookDir = crosshairMousePos - rb.position;
         // Using Atan to calculate the x-axis to the direcokDir.x) * Mathf.Rad2Deg - 90f;
          float viewAngle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg - 90f;
-        Debug.Log(viewAngle);
+        
 
         if (Input.GetMouseButtonDown(0)){
             float distance = difference.magnitude;

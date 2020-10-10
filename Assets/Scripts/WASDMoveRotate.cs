@@ -37,20 +37,7 @@ public class WASDMoveRotate : MonoBehaviour
 
          mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
-         if (rb.rotation >= 90 & rb.rotation <= 180){
-             ChangeSprite();
-         }
-          if (rb.rotation <= -90 & rb.rotation >= -180){
-             ChangeSprite();
-         }
-        if (rb.rotation >= -90 & rb.rotation <= 0){
-             ChangeSpriteBack();
-         }
-
-          if (rb.rotation >= 0  & rb.rotation <= 90){
-             ChangeSpriteBack();
-         }
- 
+       
      }
 
       void FixedUpdate() {
@@ -58,9 +45,25 @@ public class WASDMoveRotate : MonoBehaviour
          rb.MovePosition(rb.position + playerMovement * speed * Time.fixedDeltaTime);
         // Calculate the position the player wants to look in by subtracting the 2 vectors mouse position and player position
          Vector2 lookDir = mousePos - rb.position;
+         lookDir.Normalize();
         // Using Atan to calculate the x-axis to the directional vector using the lookDir, The player can look around with the Mouse, Atan is convereted from Radians to Degrees
          float viewAngle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg + 90f;
          rb.rotation = viewAngle;
+
+           if (rb.rotation >= -45 & rb.rotation <= 45){
+             ChangeSpriteBack();
+         }
+          else if (rb.rotation >= 45 & rb.rotation < 115){
+             ChangeSprite();
+         }
+        if (rb.rotation >= 115 & rb.rotation <= -115){
+             ChangeSpriteBack();
+         }
+
+          else if (rb.rotation >= -115  & rb.rotation <= -145){
+             ChangeSprite();
+         }
+ 
      }
 
      void ChangeSprite()

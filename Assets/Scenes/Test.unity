@@ -1438,6 +1438,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 465689933707734444, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1755552527}
     - target: {fileID: 1973774196434504502, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
       propertyPath: m_Name
@@ -1513,7 +1518,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.91182125
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 465689933707734444, guid: a467e768c6da07d46a13f364e8ef73a1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a467e768c6da07d46a13f364e8ef73a1, type: 3}
 --- !u!1 &1755552525
 GameObject:
