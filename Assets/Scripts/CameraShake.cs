@@ -9,6 +9,10 @@ public class CameraShake : MonoBehaviour
     public float shakeMagnititude = 0.05f, shakeTime = 0.1f;
     public Camera mainCamera;
 
+    void Start(){
+        cameraStartPosition = mainCamera.transform.position;
+    }
+
 
     public void ShakeCamera(){
         cameraStartPosition = mainCamera.transform.position;
