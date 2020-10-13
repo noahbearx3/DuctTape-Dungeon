@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WASDMove : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     //2D Vectors made to store player poisiton and mouse postion
     Vector2 playerMovement;
@@ -15,22 +15,36 @@ public class WASDMove : MonoBehaviour
     public Rigidbody2D rb;
     public Camera cam;
 
+    // Variable to store Player's Health
+    public float playerHealth;
+    
+   
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+      //Assign Player Health to 100
+        playerHealth = 100;
     }
 
     // Update is called once per frame
       
  
      void Update () {
-
+        // Get the players postion constantly through the update function
          playerMovement.x = Input.GetAxisRaw("Horizontal");
          playerMovement.y = Input.GetAxisRaw("Vertical");
+          
+          // Whenplayer reaches 0 health destroy Player game object
+          if(playerHealth == 0){
+            
+            Destroy (gameObject);
+
+            
+        }
+        Debug.Log(playerHealth);
 
     }
 
@@ -39,6 +53,19 @@ public class WASDMove : MonoBehaviour
          rb.MovePosition(rb.position + playerMovement * speed * Time.fixedDeltaTime);
         // Calculate the position the player wants to look in by subtracting the 2 vectors mouse position and player position
          
+    
        
+     }
+
+     void OnCollisionEnter2D(Collision2D col) {
+        
+        if (col.gameObject.CompareTag("MeeleEnemy")){
+            //Destroy (col.gameObject);
+            //Destroy (gameObject);
+            playerHealth = playerHealth - 10;
+            
+
+        }
+
      }
 }

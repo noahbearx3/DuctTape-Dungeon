@@ -8,12 +8,18 @@ public class EnemyController : MonoBehaviour
     public GameObject bullet;
     public CameraShake shake;
 
+    public float speed;
+
+    private Transform target;
+
     Animator attackAnim;
     // Start is called before the first frame update
     void Start()
     {
         enemyHealth = 100;
         attackAnim = gameObject.GetComponent<Animator>();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
     }
 
     // Update is called once per frame
@@ -24,8 +30,11 @@ public class EnemyController : MonoBehaviour
             
             Destroy (gameObject);
         }
-    }
-
+        //if(Vector2.Distance(transform.position, target.position) > 3){
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+    //}
+}
+          
      void FixedUpdate() {
          
          bullet = GameObject.FindGameObjectWithTag("Bullet");

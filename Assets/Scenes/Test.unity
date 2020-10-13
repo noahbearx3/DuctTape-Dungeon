@@ -514,6 +514,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8889654607750772479, guid: efa0b6c7978bc884e9ee371c66c18c55,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8889654607750772479, guid: efa0b6c7978bc884e9ee371c66c18c55,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8889654607750772479, guid: efa0b6c7978bc884e9ee371c66c18c55,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3629355927127209668, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
       propertyPath: cam
@@ -530,6 +545,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4016541092131827615, guid: 5aa3b512965dc9c4781de12d8097bf4d,
         type: 3}
+    - target: {fileID: 3629355927127209669, guid: efa0b6c7978bc884e9ee371c66c18c55,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629355927127209669, guid: efa0b6c7978bc884e9ee371c66c18c55,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3629355927127209670, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -600,6 +625,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.34191963
       objectReference: {fileID: 0}
+    - target: {fileID: 3629355927127209671, guid: efa0b6c7978bc884e9ee371c66c18c55,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629355927127209671, guid: efa0b6c7978bc884e9ee371c66c18c55,
+        type: 3}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3629355927127209674, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
       propertyPath: m_Name
@@ -657,9 +692,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf3fecfd67801454a985d56ae52cb3fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovement: {x: 0, y: 0}
-  speed: 3
-  rb: {fileID: 364009689}
 --- !u!114 &364009692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,6 +707,7 @@ MonoBehaviour:
   speed: 3
   rb: {fileID: 364009689}
   cam: {fileID: 1755552527}
+  playerHealth: 0
 --- !u!1 &406909701 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4598534976591734831, guid: 60375c1f44303f04cb1d24b53a0c530f,
@@ -1443,10 +1476,60 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1755552527}
+    - target: {fileID: 1973774196434504500, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.06392452
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973774196434504500, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.35215092
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973774196434504500, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973774196434504500, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973774196434504501, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973774196434504501, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973774196434504501, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973774196434504501, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973774196434504501, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1973774196434504502, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
       propertyPath: m_Name
       value: Duck enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973774196434504502, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_TagString
+      value: MeeleEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 1973774196434504505, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
@@ -1517,6 +1600,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.91182125
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973774196434504506, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 282671577
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973774196434504506, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1973774196434504507, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: speed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 465689933707734444, guid: a467e768c6da07d46a13f364e8ef73a1, type: 3}
