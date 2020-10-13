@@ -7,12 +7,13 @@ public class EnemyController : MonoBehaviour
     private float enemyHealth;
     public GameObject bullet;
     public CameraShake shake;
-    public Rigidbody bulletHit;
+
+    Animator attackAnim;
     // Start is called before the first frame update
     void Start()
     {
         enemyHealth = 100;
-       
+        attackAnim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -33,16 +34,23 @@ public class EnemyController : MonoBehaviour
    void OnCollisionEnter2D(Collision2D col) {
         
         if (col.gameObject.CompareTag("Bullet")){
-            
             Destroy (col.gameObject);
             //Destroy (gameObject);
             enemyHealth = enemyHealth - 25;
             shake.ShakeCamera(); 
-            Instantiate(bulletHit, transform.position, transform.rotation);
-            
-            
-            
+
         }
-        
+
+        if (col.gameObject.CompareTag("Player"))
+        {
+            attackAnim.SetTrigger("Attack");
+            attackAnim.ResetTrigger("Idle");
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        attackAnim.ResetTrigger("Attack");
+        attackAnim.SetTrigger("Idle");
     }
 }
