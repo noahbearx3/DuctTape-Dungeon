@@ -19,6 +19,7 @@ public class EnemyController : MonoBehaviour
         enemyHealth = 100;
         attackAnim = gameObject.GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        
 
     }
 
@@ -41,6 +42,7 @@ public class EnemyController : MonoBehaviour
         
     }
    void OnCollisionEnter2D(Collision2D col) {
+
         
         if (col.gameObject.CompareTag("Bullet")){
             Destroy (col.gameObject);
