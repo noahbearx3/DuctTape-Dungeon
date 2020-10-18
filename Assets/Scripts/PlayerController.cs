@@ -7,26 +7,25 @@ public class PlayerController : MonoBehaviour
     //2D Vectors made to store player poisiton and mouse postion
     Vector2 playerMovement;
     
-
     //Speed in wihch player will move 
     public float speed = 20f;
 
     // Rigidbody and Camera 
     public Rigidbody2D rb;
     public Camera cam;
+    public SpriteRenderer ammoRenderer;
+    public Sprite newAmmo;
+    public Sprite originalAmmo;
 
     // Variable to store Player's Health
     public float playerHealth;
     
-   
-
-
-
     // Start is called before the first frame update
     void Start()
     {
-      //Assign Player Health to 100
+    //Assign Player Health to 100
         playerHealth = 100;
+        
     }
 
     // Update is called once per frame
@@ -41,31 +40,43 @@ public class PlayerController : MonoBehaviour
           if(playerHealth == 0){
             
             Destroy (gameObject);
+     }
 
-            
-        }
         Debug.Log(playerHealth);
+
+        if (Input.GetKeyDown(KeyCode.Space)){
+            ChangeAmmo();
+        }
+
+       if (Input.GetKeyDown(KeyCode.Tab)){
+           ChangeAmmoBack();
+       }
 
     }
 
       void FixedUpdate() {
         // Using positoins from update function this line of code will enable the player to move
-         rb.MovePosition(rb.position + playerMovement * speed * Time.fixedDeltaTime);
-        // Calculate the position the player wants to look in by subtracting the 2 vectors mouse position and player position
-         
-    
-       
+        rb.MovePosition(rb.position + playerMovement * speed * Time.fixedDeltaTime);
+        // Calculate the position the player wants to look in by subtracting the 2 vectors mouse position and player position   
      }
 
      void OnCollisionEnter2D(Collision2D col) {
-        
+       
         if (col.gameObject.CompareTag("MeeleEnemy")){
             //Destroy (col.gameObject);
             //Destroy (gameObject);
             playerHealth = playerHealth - 10;
-            
-
         }
 
      }
+
+      void ChangeAmmo()
+    {
+        ammoRenderer.sprite = newAmmo; 
+    }
+
+       void ChangeAmmoBack()
+    {
+        ammoRenderer.sprite = originalAmmo; 
+    }
 }
