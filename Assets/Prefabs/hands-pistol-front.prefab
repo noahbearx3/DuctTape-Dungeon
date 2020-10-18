@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8443963466880866528}
   - component: {fileID: 5625691358870963521}
-  - component: {fileID: 1707274765677897492}
   - component: {fileID: 8038691659784926750}
   m_Layer: 0
   m_Name: hands-pistol-front
@@ -83,21 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1707274765677897492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4598534976591734831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ace0a73510e8e564e96f1561a42a6819, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 20
-  rb: {fileID: 0}
-  cam: {fileID: 0}
 --- !u!50 &8038691659784926750
 Rigidbody2D:
   serializedVersion: 4

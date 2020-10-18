@@ -8,6 +8,8 @@ public class EnemyController : MonoBehaviour
     public GameObject bullet;
     public CameraShake shake;
 
+    public GameObject bulletHit;
+
     public float speed;
 
     private Transform target;

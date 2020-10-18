@@ -612,7 +612,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 5478158005406631406}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b8872359b24aea40bcbf112b3377f8b, type: 3}
   m_Name: 
@@ -3406,6 +3406,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1230133844}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1750007365 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 3629355927127209671, guid: efa0b6c7978bc884e9ee371c66c18c55,
+    type: 3}
+  m_PrefabInstance: {fileID: 1230133844}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1750007366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3419,8 +3425,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  rb: {fileID: 0}
+  rb: {fileID: 1750007365}
   cam: {fileID: 455288576}
+  playerHealth: 0
 --- !u!4 &1750007368 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3629355927127209670, guid: efa0b6c7978bc884e9ee371c66c18c55,
@@ -3659,6 +3666,11 @@ PrefabInstance:
         type: 3}
       propertyPath: shakeTime
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478158005558970441, guid: b39134933ea72ea46865dced20fbaedd,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b39134933ea72ea46865dced20fbaedd, type: 3}
