@@ -613,17 +613,17 @@ PrefabInstance:
     - target: {fileID: 3629355927127209670, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.071965
+      value: 1.9226199
       objectReference: {fileID: 0}
     - target: {fileID: 3629355927127209670, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.354563
+      value: 2.0994868
       objectReference: {fileID: 0}
     - target: {fileID: 3629355927127209670, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.340433
+      value: 1.4647833
       objectReference: {fileID: 0}
     - target: {fileID: 3629355927127209671, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
@@ -1789,12 +1789,12 @@ PrefabInstance:
     - target: {fileID: 8038691659784926750, guid: 60375c1f44303f04cb1d24b53a0c530f,
         type: 3}
       propertyPath: m_BodyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8038691659784926750, guid: 60375c1f44303f04cb1d24b53a0c530f,
         type: 3}
       propertyPath: m_UseFullKinematicContacts
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8038691659784926750, guid: 60375c1f44303f04cb1d24b53a0c530f,
         type: 3}
