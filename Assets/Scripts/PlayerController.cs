@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer ammoRenderer;
     public Sprite newAmmo;
     public Sprite originalAmmo;
+    
+    public bool icePicked = false;
+
 
     // Variable to store Player's Health
     public float playerHealth;
@@ -44,7 +47,7 @@ public class PlayerController : MonoBehaviour
 
         Debug.Log(playerHealth);
 
-        if (Input.GetKeyDown(KeyCode.Space)){
+        if (icePicked == true){
             ChangeAmmo();
         }
 
@@ -68,7 +71,22 @@ public class PlayerController : MonoBehaviour
             playerHealth = playerHealth - 10;
         }
 
-     }
+         if (col.gameObject.CompareTag("Ice")){
+            Destroy (col.gameObject);
+            icePicked = true;
+
+         }
+    }
+
+      //void OnCollisionEnter2D(Collision2D colIce) {
+
+        
+       
+            
+            
+
+      //  }
+    //  }
 
       void ChangeAmmo()
     {
@@ -79,4 +97,6 @@ public class PlayerController : MonoBehaviour
     {
         ammoRenderer.sprite = originalAmmo; 
     }
+
+    
 }
