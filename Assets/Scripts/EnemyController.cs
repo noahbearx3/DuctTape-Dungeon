@@ -54,7 +54,13 @@ public class EnemyController : MonoBehaviour
         }
         if(Vector2.Distance(transform.position, target.position) < 5){
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-  }
+            attackAnim.SetTrigger("Walk");
+            attackAnim.ResetTrigger("Idle");
+        } else
+        {
+            attackAnim.SetTrigger("Idle");
+            attackAnim.ResetTrigger("Walk");
+        }
 }
           
      void FixedUpdate() {
@@ -79,13 +85,13 @@ public class EnemyController : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             attackAnim.SetTrigger("Attack");
-            attackAnim.ResetTrigger("Idle");
+            attackAnim.ResetTrigger("Walk");
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
         attackAnim.ResetTrigger("Attack");
-        attackAnim.SetTrigger("Idle");
+        attackAnim.SetTrigger("Walk");
     }
 }
