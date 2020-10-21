@@ -8,16 +8,26 @@ public class EnemyController : MonoBehaviour
     public GameObject bullet;
     public CameraShake shake;
     public GameObject feather;
+
+    public GameObject frostHit;
     public GameObject duckEnemy;
 
     private Vector3 duckPosition;
     public GameObject bulletHit;
 
+    EnemyController icePicked;
+
     public float speed;
 
     private bool hitDuck = false;
 
+    private bool icePick = false;
+
     private Transform target;
+
+    public PlayerController boolean;
+
+    
 
     Animator attackAnim;
     // Start is called before the first frame update
@@ -28,13 +38,13 @@ public class EnemyController : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         
         
-        
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        icePick = boolean.icePicked;
 
         duckPosition = duckEnemy.transform.position;
         
@@ -46,10 +56,17 @@ public class EnemyController : MonoBehaviour
             Destroy(f, 0.1f);
         }
 
-        if (hitDuck == true){
+        if (hitDuck == true && icePick == false ){
             GameObject h = Instantiate(bulletHit) as GameObject;
             h.transform.position = transform.position;
             Destroy(h, 0.2f);
+            hitDuck = false;
+        }
+
+        if (hitDuck == true && icePick == true ){
+            GameObject frost = Instantiate(frostHit) as GameObject;
+            frostHit.transform.position = transform.position;
+            Destroy(frostHit, 0.2f);
             hitDuck = false;
         }
         if(Vector2.Distance(transform.position, target.position) < 5){
