@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
 {
     public Transform player;
     Vector3 target, mousePos, refVel;
-    float cameraDist = 3.5f; //how far cam should be when the mouse is on the edge
+    float cameraDist = 2.2f; //how far cam should be when the mouse is on the edge
     float smoothTime = 0.2f, zStart; //speeed to target position
 
     // Start is called before the first frame update
