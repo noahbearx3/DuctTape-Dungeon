@@ -52,9 +52,9 @@ public class EnemyController : MonoBehaviour
             Destroy(h, 0.2f);
             hitDuck = false;
         }
-        //if(Vector2.Distance(transform.position, target.position) > 3){
+        if(Vector2.Distance(transform.position, target.position) < 5){
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-    //}
+  }
 }
           
      void FixedUpdate() {
@@ -69,7 +69,7 @@ public class EnemyController : MonoBehaviour
             Destroy (col.gameObject);
             //Destroy (gameObject);
             enemyHealth = enemyHealth - 25;
-            hitDuck = true;
+            hitDuck = true; 
             shake.ShakeCamera(); 
             
             
