@@ -56,6 +56,13 @@ public class EnemyController : MonoBehaviour
             Destroy(f, 0.1f);
         }
 
+        if (hitDuck == true && icePick == true ){
+            GameObject frost = Instantiate(frostHit) as GameObject;
+            frostHit.transform.position = transform.position;
+            Destroy(frostHit, 0.2f);
+            
+        }
+
         if (hitDuck == true && icePick == false ){
             GameObject h = Instantiate(bulletHit) as GameObject;
             h.transform.position = transform.position;
@@ -63,12 +70,8 @@ public class EnemyController : MonoBehaviour
             hitDuck = false;
         }
 
-        if (hitDuck == true && icePick == true ){
-            GameObject frost = Instantiate(frostHit) as GameObject;
-            frostHit.transform.position = transform.position;
-            Destroy(frostHit, 0.2f);
-            hitDuck = false;
-        }
+        
+
         if(Vector2.Distance(transform.position, target.position) < 5){
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
             attackAnim.SetTrigger("Walk");

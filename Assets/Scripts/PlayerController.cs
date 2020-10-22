@@ -71,11 +71,11 @@ public class PlayerController : MonoBehaviour
             playerHealth = playerHealth - 10;
         }
 
-         if (col.gameObject.CompareTag("Ice")){
-            Destroy (col.gameObject);
-            icePicked = true;
+         //if (col.gameObject.CompareTag("Ice")){
+           // Destroy (col.gameObject);
+           // icePicked = true;
 
-         }
+       //  }
     }
 
       //void OnCollisionEnter2D(Collision2D colIce) {
