@@ -101,13 +101,10 @@ MonoBehaviour:
   bullet: {fileID: 2733203797086261812, guid: e8309b3ea86af2042ba2383f9164344a, type: 3}
   shake: {fileID: 5478158005558970441, guid: b39134933ea72ea46865dced20fbaedd, type: 3}
   feather: {fileID: 4624075061970007673, guid: 3077d6c861a20be41810f2f51bf51ef3, type: 3}
-  frostHit: {fileID: 7332072325922633152, guid: eaac882d0398db047a034accb0e5b4ff,
-    type: 3}
   duckEnemy: {fileID: 7181311015234179585}
   bulletHit: {fileID: 1429306884795790670, guid: a354fc9251560ca41ab23c12300fd519,
     type: 3}
   speed: 1
-  boolean: {fileID: 0}
 --- !u!70 &7181311015234179588
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
