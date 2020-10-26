@@ -230,6 +230,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 306669791741008862, guid: e8309b3ea86af2042ba2383f9164344a,
         type: 3}
+    - target: {fileID: 4689020229296750875, guid: 46f17397dbabafa468dafb935cd3e09f,
+        type: 3}
+      propertyPath: frostBullet
+      value: 
+      objectReference: {fileID: 6941989727196294982, guid: 5b1a80f08e205604c832336fc902f18d,
+        type: 3}
+    - target: {fileID: 4689020229296750875, guid: 46f17397dbabafa468dafb935cd3e09f,
+        type: 3}
+      propertyPath: boolean
+      value: 
+      objectReference: {fileID: 1256034748}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46f17397dbabafa468dafb935cd3e09f, type: 3}
 --- !u!1001 &208673981
@@ -260,6 +271,12 @@ PrefabInstance:
       propertyPath: frostHit
       value: 
       objectReference: {fileID: 7332072325922633152, guid: eaac882d0398db047a034accb0e5b4ff,
+        type: 3}
+    - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: iceBullet
+      value: 
+      objectReference: {fileID: 6941989727196294982, guid: 5b1a80f08e205604c832336fc902f18d,
         type: 3}
     - target: {fileID: 7181311015234179590, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
@@ -415,6 +432,12 @@ PrefabInstance:
       propertyPath: frostHit
       value: 
       objectReference: {fileID: 7332072325922633152, guid: eaac882d0398db047a034accb0e5b4ff,
+        type: 3}
+    - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: iceBullet
+      value: 
+      objectReference: {fileID: 6941989727196294982, guid: 5b1a80f08e205604c832336fc902f18d,
         type: 3}
     - target: {fileID: 7181311015234179590, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
@@ -3893,6 +3916,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7332072325922633152, guid: eaac882d0398db047a034accb0e5b4ff,
         type: 3}
+    - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: iceBullet
+      value: 
+      objectReference: {fileID: 6941989727196294982, guid: 5b1a80f08e205604c832336fc902f18d,
+        type: 3}
     - target: {fileID: 7181311015234179590, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
       propertyPath: m_FlipX
@@ -4176,6 +4205,12 @@ PrefabInstance:
       propertyPath: frostHit
       value: 
       objectReference: {fileID: 7332072325922633152, guid: eaac882d0398db047a034accb0e5b4ff,
+        type: 3}
+    - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: iceBullet
+      value: 
+      objectReference: {fileID: 6941989727196294982, guid: 5b1a80f08e205604c832336fc902f18d,
         type: 3}
     - target: {fileID: 7181311015234179590, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}

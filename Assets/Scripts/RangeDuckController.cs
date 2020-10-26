@@ -19,7 +19,7 @@ public class RangeDuckController : MonoBehaviour
     void Update()
     {
         float dist = Mathf.Round(Vector3.Distance(mainPlayer.transform.position, transform.position));
-        print("Distance to other: " + dist);
+       // print("Distance to other: " + dist);
 
         if (dist <= 3)
         {

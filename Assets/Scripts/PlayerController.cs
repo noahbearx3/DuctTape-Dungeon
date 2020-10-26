@@ -47,9 +47,9 @@ public class PlayerController : MonoBehaviour
 
         Debug.Log(playerHealth);
 
-        if (icePicked == true){
-            ChangeAmmo();
-        }
+     //   if (icePicked == true){
+     //       ChangeAmmo();
+      //  }
 
        if (Input.GetKeyDown(KeyCode.Tab)){
            ChangeAmmoBack();

@@ -6,6 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     private float enemyHealth;
     public GameObject bullet;
+    public GameObject iceBullet;
     public CameraShake shake;
     public GameObject feather;
 
@@ -44,11 +45,13 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         icePick = boolean.icePicked;
 
         duckPosition = duckEnemy.transform.position;
         
-        if(enemyHealth == 0){
+        if(enemyHealth <= 0){
             
             Destroy (gameObject);
             GameObject f = Instantiate(feather) as GameObject;
@@ -81,13 +84,23 @@ public class EnemyController : MonoBehaviour
 }
           
      void FixedUpdate() {
-         
+
+         iceBullet = GameObject.FindGameObjectWithTag("IceBullet");
          bullet = GameObject.FindGameObjectWithTag("Bullet");
+         
+         
         
     }
    void OnCollisionEnter2D(Collision2D col) {
 
-        
+        if (col.gameObject.CompareTag("IceBullet")){
+            Destroy (col.gameObject);
+            //Destroy (gameObject);
+            enemyHealth = enemyHealth - 20;
+            hitDuck = true; 
+            shake.ShakeCamera(); 
+            }
+
         if (col.gameObject.CompareTag("Bullet")){
             Destroy (col.gameObject);
             //Destroy (gameObject);
@@ -98,6 +111,8 @@ public class EnemyController : MonoBehaviour
             
 
         }
+        
+         
 
         if (col.gameObject.CompareTag("Player"))
         {
