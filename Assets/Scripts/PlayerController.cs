@@ -18,7 +18,9 @@ public class PlayerController : MonoBehaviour
     public Sprite originalAmmo;
     
     public bool icePicked = false;
+    public bool batteryPicked = false;
 
+    public CrosshairAimPlusShoot bullet; 
 
     // Variable to store Player's Health
     public float playerHealth;
@@ -74,6 +76,16 @@ public class PlayerController : MonoBehaviour
          if (col.gameObject.CompareTag("Ice")){
             Destroy (col.gameObject);
             icePicked = true;
+            batteryPicked = false;
+
+         }
+
+           if (col.gameObject.CompareTag("Battery")){
+            Destroy (col.gameObject);
+            batteryPicked = true;
+            icePicked = false;
+            
+
 
          }
     }

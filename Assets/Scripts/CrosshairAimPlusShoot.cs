@@ -10,9 +10,12 @@ public class CrosshairAimPlusShoot : MonoBehaviour
 
     public GameObject frostBullet;
 
+    public GameObject lightningBullet;
+
     public float bulletPace = 60f;
 
     private bool pickIce;
+    private bool pickBatt;
 
     private Vector3 target;
     public GameObject player;
@@ -42,7 +45,8 @@ public class CrosshairAimPlusShoot : MonoBehaviour
         
         
         pickIce = boolean.icePicked;
-Debug.Log(pickIce);
+        pickBatt = boolean.batteryPicked;
+Debug.Log(pickBatt);
         crosshairMousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y));
         transform.position = crosshairMousePos;
         target = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y));
@@ -66,7 +70,7 @@ Debug.Log(pickIce);
     }
 
     void fireBullet(Vector2 direction, float viewAngle){
-        if (bulletNormal == true && pickIce == false){
+        if (bulletNormal == true && pickIce == false && pickBatt == false){
         GameObject b = Instantiate(bullet) as GameObject;
         b.transform.position = gunFire.transform.position;
         b.transform.rotation = Quaternion.Euler(0.0f, 0.0f, viewAngle);
@@ -75,7 +79,7 @@ Debug.Log(pickIce);
         
         }
 
-        if(bulletNormal == true && pickIce == true){
+        if(bulletNormal == true && pickIce == true && pickBatt == false){
         GameObject frost = Instantiate(frostBullet) as GameObject;
         frost.transform.position = gunFire.transform.position;
         frost.transform.rotation = Quaternion.Euler(0.0f, 0.0f, viewAngle);
@@ -83,6 +87,13 @@ Debug.Log(pickIce);
         Destroy(frost, 2.0f);   
         }
         
+        if(bulletNormal == true && pickIce == false && pickBatt == true){
+        GameObject lightning = Instantiate(lightningBullet) as GameObject;
+        lightning.transform.position = gunFire.transform.position;
+        lightning.transform.rotation = Quaternion.Euler(0.0f, 0.0f, viewAngle);
+        lightning.GetComponent<Rigidbody2D>().velocity = direction * bulletPace;
+        Destroy(lightning, 2.0f);   
+        }
     }
 
     

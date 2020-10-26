@@ -8,6 +8,8 @@ TagManager:
   - MeeleEnemy
   - Ice
   - IceBullet
+  - Battery
+  - LightningBullet
   layers:
   - Default
   - TransparentFX

@@ -7,10 +7,12 @@ public class EnemyController : MonoBehaviour
     private float enemyHealth;
     public GameObject bullet;
     public GameObject iceBullet;
+    public GameObject lightningBullet;
     public CameraShake shake;
-    public GameObject feather;
+   public GameObject feather;
 
     public GameObject frostHit;
+    public GameObject lightningHit;
     public GameObject duckEnemy;
 
     private Vector3 duckPosition;
@@ -23,6 +25,7 @@ public class EnemyController : MonoBehaviour
     private bool hitDuck = false;
 
     private bool icePick = false;
+     private bool battPick = false;
 
     private Transform target;
 
@@ -48,6 +51,7 @@ public class EnemyController : MonoBehaviour
         
 
         icePick = boolean.icePicked;
+        battPick = boolean.batteryPicked;
 
         duckPosition = duckEnemy.transform.position;
         
@@ -59,17 +63,24 @@ public class EnemyController : MonoBehaviour
             Destroy(f, 0.1f);
         }
 
-        if (hitDuck == true && icePick == false ){
+        if (hitDuck == true && icePick == false && battPick == false ){
             GameObject h = Instantiate(bulletHit) as GameObject;
             h.transform.position = transform.position;
             Destroy(h, 0.2f);
             hitDuck = false;
         }
 
-        if (hitDuck == true && icePick == true ){
+        if (hitDuck == true && icePick == true && battPick == false){
             GameObject frost = Instantiate(frostHit) as GameObject;
             frost.transform.position = transform.position;
             Destroy(frost, 0.2f);
+            hitDuck = false;
+        }
+
+        if (hitDuck == true && icePick == false && battPick == true ){
+            GameObject spark = Instantiate(lightningHit) as GameObject;
+            spark.transform.position = transform.position;
+            Destroy(spark, 0.2f);
             hitDuck = false;
         }
         if(Vector2.Distance(transform.position, target.position) < 5){
@@ -84,7 +95,7 @@ public class EnemyController : MonoBehaviour
 }
           
      void FixedUpdate() {
-
+           iceBullet = GameObject.FindGameObjectWithTag("LightningBullet");
          iceBullet = GameObject.FindGameObjectWithTag("IceBullet");
          bullet = GameObject.FindGameObjectWithTag("Bullet");
          
@@ -92,6 +103,16 @@ public class EnemyController : MonoBehaviour
         
     }
    void OnCollisionEnter2D(Collision2D col) {
+
+       if (col.gameObject.CompareTag("LightningBullet")){
+            Destroy (col.gameObject);
+            //Destroy (gameObject);
+
+            enemyHealth = enemyHealth - 10;
+            
+            hitDuck = true; 
+            shake.ShakeCamera(); 
+            }
 
         if (col.gameObject.CompareTag("IceBullet")){
             Destroy (col.gameObject);
