@@ -278,6 +278,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6941989727196294982, guid: 5b1a80f08e205604c832336fc902f18d,
         type: 3}
+    - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: enemySpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7181311015234179590, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
       propertyPath: m_FlipX
@@ -439,6 +444,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6941989727196294982, guid: 5b1a80f08e205604c832336fc902f18d,
         type: 3}
+    - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: enemySpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7181311015234179590, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
       propertyPath: m_FlipX
@@ -3922,6 +3932,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6941989727196294982, guid: 5b1a80f08e205604c832336fc902f18d,
         type: 3}
+    - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: enemySpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7181311015234179590, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
       propertyPath: m_FlipX
@@ -4212,6 +4227,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6941989727196294982, guid: 5b1a80f08e205604c832336fc902f18d,
         type: 3}
+    - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: enemySpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7181311015234179590, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
       propertyPath: m_FlipX
@@ -4799,6 +4819,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7332072325922633152, guid: eaac882d0398db047a034accb0e5b4ff,
         type: 3}
+    - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: enemySpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7181311015234179591, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
       propertyPath: m_LocalPosition.x
