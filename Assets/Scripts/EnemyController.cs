@@ -18,7 +18,7 @@ public class EnemyController : MonoBehaviour
 
     EnemyController icePicked;
 
-    public float speed;
+    public float enemySpeed;
 
     private bool hitDuck = false;
 
@@ -68,12 +68,12 @@ public class EnemyController : MonoBehaviour
 
         if (hitDuck == true && icePick == true ){
             GameObject frost = Instantiate(frostHit) as GameObject;
-            frostHit.transform.position = transform.position;
-            Destroy(frostHit, 0.2f);
+            frost.transform.position = transform.position;
+            Destroy(frost, 0.2f);
             hitDuck = false;
         }
         if(Vector2.Distance(transform.position, target.position) < 5){
-            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, target.position, enemySpeed * Time.deltaTime);
             attackAnim.SetTrigger("Walk");
             attackAnim.ResetTrigger("Idle");
         } else
@@ -97,6 +97,7 @@ public class EnemyController : MonoBehaviour
             Destroy (col.gameObject);
             //Destroy (gameObject);
             enemyHealth = enemyHealth - 20;
+            enemySpeed = enemySpeed - 1;
             hitDuck = true; 
             shake.ShakeCamera(); 
             }

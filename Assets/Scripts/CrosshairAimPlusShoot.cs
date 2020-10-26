@@ -25,7 +25,9 @@ public class CrosshairAimPlusShoot : MonoBehaviour
 
     public bool bulletNormal = true;
 
-    public PlayerController boolean;    
+    public PlayerController boolean;   
+
+     
 
     // Start is called before the first frame update
     void Start()
