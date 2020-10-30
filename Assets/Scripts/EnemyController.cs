@@ -31,7 +31,10 @@ public class EnemyController : MonoBehaviour
 
     public PlayerController boolean;
 
-    
+
+    public GameObject mainPlayer;
+    private SpriteRenderer mySpriteRenderer;
+
 
     Animator attackAnim;
     // Start is called before the first frame update
@@ -40,8 +43,9 @@ public class EnemyController : MonoBehaviour
         enemyHealth = 100;
         attackAnim = gameObject.GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        
-        
+
+        mainPlayer = GameObject.FindGameObjectWithTag("Player");
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
 
     }
 
@@ -92,7 +96,26 @@ public class EnemyController : MonoBehaviour
             attackAnim.SetTrigger("Idle");
             attackAnim.ResetTrigger("Walk");
         }
-}
+
+        // Calculats where the player is compared to the duck
+        //  << 0.0 means he is on the left side of the duck
+        // >> 0.0 means he is on the right side of the duck
+        // Flips the sprite when he is on the right side, and flips it back when he's on the left side again
+        var relativePoint = transform.InverseTransformPoint(mainPlayer.transform.position);
+        if (relativePoint.x < 0.0)
+        {
+            mySpriteRenderer.flipX = false;
+        }
+        else if (relativePoint.x > 0.0)
+        {
+            mySpriteRenderer.flipX = true;
+        }
+
+
+
+
+
+    }
           
      void FixedUpdate() {
            iceBullet = GameObject.FindGameObjectWithTag("LightningBullet");
