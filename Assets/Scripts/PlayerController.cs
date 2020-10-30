@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public Sprite newAmmo;
     public Sprite originalAmmo;
     
+    public bool shotgunPicked = false;
+    public bool ak47Picked = false;
     public bool icePicked = false;
     public bool batteryPicked = false;
 
@@ -84,21 +86,22 @@ public class PlayerController : MonoBehaviour
             Destroy (col.gameObject);
             batteryPicked = true;
             icePicked = false;
-            
+         }
 
+         if (col.gameObject.CompareTag("Shotgun")){
+            Destroy (col.gameObject);
+            shotgunPicked = true;
+            ak47Picked = false;
+         }
 
+         if (col.gameObject.CompareTag("AK47")){
+            Destroy (col.gameObject);
+            shotgunPicked = false;
+            ak47Picked = true;
          }
     }
 
-      //void OnCollisionEnter2D(Collision2D colIce) {
-
-        
-       
-            
-            
-
-      //  }
-    //  }
+      
 
       void ChangeAmmo()
     {

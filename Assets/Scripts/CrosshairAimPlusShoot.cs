@@ -16,6 +16,10 @@ public class CrosshairAimPlusShoot : MonoBehaviour
 
     private bool pickIce;
     private bool pickBatt;
+    private bool shotgun = false;
+    private bool ak47 = false;
+
+    private bool pistol = true;
 
     private Vector3 target;
     public GameObject player;
@@ -30,12 +34,16 @@ public class CrosshairAimPlusShoot : MonoBehaviour
 
     public PlayerController boolean;   
 
+
+     public ParticleSystem particleEmitter;
+     //private ParticleAnimator particleAnimator;
      
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = false;
+        //particleEmitter = GameObject.Find("Particle System").GetComponent<ParticleSystem>().Play();
         
     }
 
@@ -46,7 +54,29 @@ public class CrosshairAimPlusShoot : MonoBehaviour
         
         pickIce = boolean.icePicked;
         pickBatt = boolean.batteryPicked;
-Debug.Log(pickBatt);
+        shotgun = boolean.shotgunPicked;
+        ak47 = boolean.ak47Picked;
+
+        
+        
+        if(shotgun){
+            pistol = false;
+            shotgun = true;
+            ak47 = false;
+            Debug.Log(bulletNormal);
+            Debug.Log(ak47);
+            Debug.Log(shotgun);
+            
+        }
+          if(ak47){
+            pistol = false;
+            shotgun = false;
+            ak47 = true;
+            Debug.Log(bulletNormal);
+            Debug.Log(ak47);
+            Debug.Log(shotgun);
+        }
+        
         crosshairMousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y));
         transform.position = crosshairMousePos;
         target = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y));
@@ -57,17 +87,50 @@ Debug.Log(pickBatt);
         // Using Atan to calculate the x-axis to the direcokDir.x) * Mathf.Rad2Deg - 90f;
          float viewAngle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg - 90f;
         
-    
+    if(pistol==true && shotgun == false && ak47==false){
         if (Input.GetMouseButtonDown(0)){
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;
             direction.Normalize();
             fireBullet(direction,viewAngle);
-        
+        }
     }
+
+     if(pistol==false && shotgun == true && ak47==false){
+        if (Input.GetMouseButtonDown(0)){
+            bulletPace = 10;
+            float distance = difference.magnitude;
+            Vector2 direction = difference / distance;
+            Vector2 offset = Vector2.right ;
+            // /int offset = difference / distance + 10;
+            direction.Normalize();
+            fireBullet(direction + offset/2 ,viewAngle );
+            fireBullet(direction - offset/2,viewAngle );
+            fireBullet(direction,viewAngle);
+        }
+    }
+
+     if(pistol==false && shotgun == false && ak47==true){
+        if (Input.GetMouseButton(0)){
+            bulletPace = 10;
+            float distance = difference.magnitude;
+            Vector2 direction = difference / distance;
+            direction.Normalize();
+            fireBullet(direction,viewAngle);
+        }
+    }
+
+     if (Input.GetButton("Fire1")){
+         particleEmitter.Play();
+     }
+     else if (Input.GetButtonUp("Fire1")){
+         particleEmitter.Stop();
+ }
 
         
     }
+
+    
 
     void fireBullet(Vector2 direction, float viewAngle){
         if (bulletNormal == true && pickIce == false && pickBatt == false){
@@ -78,7 +141,7 @@ Debug.Log(pickBatt);
         Destroy(b, 2.0f);
         
         }
-
+        
         if(bulletNormal == true && pickIce == true && pickBatt == false){
         GameObject frost = Instantiate(frostBullet) as GameObject;
         frost.transform.position = gunFire.transform.position;
