@@ -35,7 +35,7 @@ public class RangeDuckController : MonoBehaviour
         }
 
         // Calculats where the player is compared to the duck
-        //  << 0.0 means he is on the left side of the duck
+        // << 0.0 means he is on the left side of the duck
         // >> 0.0 means he is on the right side of the duck
         // Flips the sprite when he is on the right side, and flips it back when he's on the left side again
         var relativePoint = transform.InverseTransformPoint(mainPlayer.transform.position);

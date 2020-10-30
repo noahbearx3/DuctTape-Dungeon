@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &107705660810378308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 107705660810378314}
+  - component: {fileID: 107705660810378309}
+  m_Layer: 0
+  m_Name: DuckSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &107705660810378314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107705660810378308}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.6, y: -3.44, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &107705660810378309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107705660810378308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edfadf1a62f717648bfa31aec82d9df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duckEnemies:
+  - {fileID: 7181311015234179585, guid: a467e768c6da07d46a13f364e8ef73a1, type: 3}
+  - {fileID: 4907996339984639359, guid: 1f4fc37c96fa0a049ace7956874f0cf5, type: 3}
+  - {fileID: 7570316356706231424, guid: 4057b38a20679f945bd7743164bfbb57, type: 3}
+  - {fileID: 7607809555741376254, guid: ea3f076e1c2cac14f91d2a7ca0d1caa4, type: 3}
+  randomEnemy: 0

@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour
     public GameObject iceBullet;
     public GameObject lightningBullet;
     public CameraShake shake;
-   public GameObject feather;
+    public GameObject feather;
 
     public GameObject frostHit;
     public GameObject lightningHit;
@@ -40,6 +40,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        boolean = GetComponent<PlayerController>();
         enemyHealth = 100;
         attackAnim = gameObject.GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
