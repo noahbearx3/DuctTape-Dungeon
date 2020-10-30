@@ -10,6 +10,8 @@ TagManager:
   - IceBullet
   - Battery
   - LightningBullet
+  - Shotgun
+  - AK47
   layers:
   - Default
   - TransparentFX
