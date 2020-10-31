@@ -50,28 +50,29 @@ public class WASDMoveRotate : MonoBehaviour
          float viewAngle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg + 90f;
          rb.rotation = viewAngle;
 
-           if (rb.rotation >= -45 & rb.rotation <= 45){
-             ChangeSpriteBack();
-         }
-          else if (rb.rotation >= 45 & rb.rotation < 115){
-             ChangeSprite();
-         }
-        if (rb.rotation >= 115 & rb.rotation <= -115){
-             ChangeSpriteBack();
-         }
 
-          else if (rb.rotation >= -115  & rb.rotation <= -145){
-             ChangeSprite();
-         }
+        //   if (rb.rotation >= -45 & rb.rotation <= 45){
+        //     ChangeSpriteBack();
+        // }
+        //  else if (rb.rotation >= 45 & rb.rotation < 115){
+         //    ChangeSprite();
+      //   }
+       // if (rb.rotation >= 115 & rb.rotation <= -115){
+         //    ChangeSpriteBack();
+       //  }
+
+         // else if (rb.rotation >= -115  & rb.rotation <= -145){
+        //     ChangeSprite();
+        // }
  
      }
 
      void ChangeSprite()
     {
-        spriteRenderer.sprite = newSprite; 
+       spriteRenderer.sprite = newSprite; 
     }
 
-    void ChangeSpriteBack()
+   void ChangeSpriteBack()
     {
         spriteRenderer.sprite = oldSprite; 
     }
