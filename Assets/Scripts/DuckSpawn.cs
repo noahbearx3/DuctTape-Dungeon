@@ -15,7 +15,10 @@ public class DuckSpawn : MonoBehaviour
 
         // Generates a random duck from the arra
         randomEnemy = Random.Range(0, duckEnemies.Count);
+        
         Instantiate(duckEnemies[randomEnemy], transform.position, Quaternion.identity);
+        
+        
     }
 
     // Update is called once per frame

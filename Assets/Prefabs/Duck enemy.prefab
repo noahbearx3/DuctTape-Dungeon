@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7181311015234179588}
   - component: {fileID: 7181311015234179587}
   - component: {fileID: 7181311015234179586}
-  - component: {fileID: 9130362379369721673}
   m_Layer: 9
   m_Name: Duck enemy
   m_TagString: MeeleEnemy
@@ -172,25 +171,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &9130362379369721673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7181311015234179585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b2542654b9c48c4a92123e1afc78199, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 20
-  rb: {fileID: 0}
-  cam: {fileID: 0}
-  ammoRenderer: {fileID: 0}
-  newAmmo: {fileID: 0}
-  originalAmmo: {fileID: 0}
-  icePicked: 0
-  batteryPicked: 0
-  bullet: {fileID: 0}
-  playerHealth: 0

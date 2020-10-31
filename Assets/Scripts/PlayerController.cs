@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     public bool batteryPicked = false;
 
     public CrosshairAimPlusShoot bullet; 
+   AudioSource pistolShot;
 
     // Variable to store Player's Health
     public float playerHealth;
@@ -32,11 +33,11 @@ public class PlayerController : MonoBehaviour
     {
     //Assign Player Health to 100
         playerHealth = 100;
-        
+        pistolShot = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
-      
+   
  
      void Update () {
         // Get the players postion constantly through the update function
@@ -99,6 +100,8 @@ public class PlayerController : MonoBehaviour
             shotgunPicked = false;
             ak47Picked = true;
          }
+
+        
     }
 
       
