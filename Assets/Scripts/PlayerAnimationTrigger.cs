@@ -6,12 +6,16 @@ public class PlayerAnimationTrigger : MonoBehaviour
 {
     public GameObject myPlayer;
     public Animator animator;
+    public PlayerController speedv;
+    private float runspeed;
 
     void Update()
     {
 
         Vector3 v3Pos;
         float fAngle;
+        runspeed = speedv.playerSpeed;
+
 
         v3Pos = Camera.main.WorldToScreenPoint(myPlayer.transform.position);
         v3Pos = Input.mousePosition - v3Pos;
@@ -25,6 +29,15 @@ public class PlayerAnimationTrigger : MonoBehaviour
             animator.SetBool("Back", true);
             animator.SetBool("Left", false);
             animator.SetBool("Right", false);
+
+            if (runspeed > 0)
+            {
+                animator.SetFloat("Speed", 1);
+            }
+            else if (runspeed <= 0)
+            {
+                animator.SetFloat("Speed", 0);
+            }
         }
 
         else

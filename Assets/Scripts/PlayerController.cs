@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     Vector2 playerMovement;
     
     //Speed in wihch player will move 
-    public float speed = 20f;
+    public float playerSpeed = 20f;
 
     // Rigidbody and Camera 
     public Rigidbody2D rb;
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
 
       void FixedUpdate() {
         // Using positoins from update function this line of code will enable the player to move
-        rb.MovePosition(rb.position + playerMovement * speed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + playerMovement * playerSpeed * Time.fixedDeltaTime);
         // Calculate the position the player wants to look in by subtracting the 2 vectors mouse position and player position   
      }
 
