@@ -804,6 +804,108 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1256034747}
+--- !u!1 &805347287 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4689020229296750868, guid: 46f17397dbabafa468dafb935cd3e09f,
+    type: 3}
+  m_PrefabInstance: {fileID: 157957054}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &805347291
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805347287}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 112281601601be14bbcbff9b03b3c6a4, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &967916007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7181311015234179591, guid: a467e768c6da07d46a13f364e8ef73a1,
@@ -1137,7 +1239,7 @@ PrefabInstance:
     - target: {fileID: 3629355927127209671, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
       propertyPath: m_UseAutoMass
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3629355927127209671, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
@@ -1147,7 +1249,7 @@ PrefabInstance:
     - target: {fileID: 3629355927127209671, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
       propertyPath: m_CollisionDetection
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3629355927127209671, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
@@ -1158,6 +1260,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629355927127209671, guid: efa0b6c7978bc884e9ee371c66c18c55,
+        type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629355927127209671, guid: efa0b6c7978bc884e9ee371c66c18c55,
+        type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3629355927127209674, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
@@ -9175,7 +9287,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: a467e768c6da07d46a13f364e8ef73a1, type: 3}
 --- !u!1 &1809198100
 GameObject:
@@ -9508,36 +9621,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 764344d16cd47404db887da11f59f103, type: 3}
---- !u!1 &1980269676 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7181311015234179585, guid: a467e768c6da07d46a13f364e8ef73a1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1667126662}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1980269682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980269676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b2542654b9c48c4a92123e1afc78199, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 20
-  rb: {fileID: 0}
-  cam: {fileID: 0}
-  ammoRenderer: {fileID: 0}
-  newAmmo: {fileID: 0}
-  originalAmmo: {fileID: 0}
-  shotgunPicked: 0
-  ak47Picked: 0
-  icePicked: 0
-  batteryPicked: 0
-  bullet: {fileID: 0}
-  playerHealth: 0
 --- !u!1 &1996822721
 GameObject:
   m_ObjectHideFlags: 0
@@ -9704,10 +9787,10 @@ GameObject:
   - component: {fileID: 2096385692}
   - component: {fileID: 2096385691}
   - component: {fileID: 2096385690}
-  - component: {fileID: 2096385689}
+  - component: {fileID: 2096385688}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9726,8 +9809,8 @@ Transform:
   m_Father: {fileID: 1996822723}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!66 &2096385689
-CompositeCollider2D:
+--- !u!61 &2096385688
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9739,37 +9822,19 @@ CompositeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
+  m_Offset: {x: 12.474787, y: -1}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0505257, y: 6}
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 2096385691}
-    m_ColliderPaths:
-    - - X: 130000041
-        Y: 20000100
-      - X: 119999959
-        Y: 20000100
-      - X: 119999900
-        Y: 20000041
-      - X: 119999900
-        Y: -40000041
-      - X: 119999959
-        Y: -40000100
-      - X: 130000041
-        Y: -40000100
-      - X: 130000100
-        Y: -40000041
-      - X: 130000100
-        Y: 20000041
-  m_CompositePaths:
-    m_Paths:
-    - - {x: 12.999974, y: -4.00001}
-      - {x: 12.999974, y: 2.00001}
-      - {x: 11.99999, y: 1.9999748}
-      - {x: 12.000026, y: -4.00001}
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
 --- !u!50 &2096385690
 Rigidbody2D:
   serializedVersion: 4
@@ -9778,19 +9843,19 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2096385686}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 7
 --- !u!19719996 &2096385691
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -10043,7 +10108,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: a467e768c6da07d46a13f364e8ef73a1, type: 3}
 --- !u!1001 &107705659943664290
 PrefabInstance:

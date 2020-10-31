@@ -12,6 +12,7 @@ TagManager:
   - LightningBullet
   - Shotgun
   - AK47
+  - Walls
   layers:
   - Default
   - TransparentFX

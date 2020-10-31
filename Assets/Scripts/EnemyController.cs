@@ -30,6 +30,7 @@ public class EnemyController : MonoBehaviour
     private Transform target;
 
     public PlayerController boolean;
+    
 
 
     public GameObject mainPlayer;
@@ -40,7 +41,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        boolean = GetComponent<PlayerController>();
+        // /boolean = GetComponent<PlayerController>();
         enemyHealth = 100;
         attackAnim = gameObject.GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -119,7 +120,7 @@ public class EnemyController : MonoBehaviour
     }
           
      void FixedUpdate() {
-           iceBullet = GameObject.FindGameObjectWithTag("LightningBullet");
+        lightningBullet = GameObject.FindGameObjectWithTag("LightningBullet");
          iceBullet = GameObject.FindGameObjectWithTag("IceBullet");
          bullet = GameObject.FindGameObjectWithTag("Bullet");
          
