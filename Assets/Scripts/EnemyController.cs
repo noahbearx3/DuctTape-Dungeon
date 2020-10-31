@@ -31,7 +31,9 @@ public class EnemyController : MonoBehaviour
 
     public PlayerController boolean;
     
-
+    AudioSource audio;
+    public AudioClip deathClip;
+    public AudioClip iceHit;
 
     public GameObject mainPlayer;
     private SpriteRenderer mySpriteRenderer;
@@ -41,11 +43,13 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+         
         // /boolean = GetComponent<PlayerController>();
         enemyHealth = 100;
         attackAnim = gameObject.GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-
+        audio = GetComponent<AudioSource>();
+        
         mainPlayer = GameObject.FindGameObjectWithTag("Player");
         mySpriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -62,22 +66,23 @@ public class EnemyController : MonoBehaviour
         duckPosition = duckEnemy.transform.position;
         
         if(enemyHealth <= 0){
+
+           Death();
             
-            Destroy (gameObject);
-            GameObject f = Instantiate(feather) as GameObject;
-            f.transform.position = transform.position;
-            Destroy(f, 0.1f);
+            
         }
 
         if (hitDuck == true && icePick == false && battPick == false ){
             GameObject h = Instantiate(bulletHit) as GameObject;
             h.transform.position = transform.position;
             Destroy(h, 0.2f);
+            
             hitDuck = false;
         }
 
         if (hitDuck == true && icePick == true && battPick == false){
             GameObject frost = Instantiate(frostHit) as GameObject;
+            AudioSource.PlayClipAtPoint(iceHit, transform.position);
             frost.transform.position = transform.position;
             Destroy(frost, 0.2f);
             hitDuck = false;
@@ -172,5 +177,13 @@ public class EnemyController : MonoBehaviour
     {
         attackAnim.ResetTrigger("Attack");
         attackAnim.SetTrigger("Walk");
+    }
+
+    void Death(){
+        AudioSource.PlayClipAtPoint (deathClip, transform.position);
+        GameObject f = Instantiate(feather) as GameObject;
+        Destroy (gameObject);
+        f.transform.position = transform.position;
+        Destroy(f, 0.1f);
     }
 }

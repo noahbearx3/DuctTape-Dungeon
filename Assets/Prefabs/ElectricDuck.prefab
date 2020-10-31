@@ -114,7 +114,10 @@ MonoBehaviour:
     type: 3}
   enemySpeed: 3
   boolean: {fileID: 0}
-  mainPlayer: {fileID: 0}
+  deathClip: {fileID: 8300000, guid: bc73d97e9a0efb342b33f765526919c4, type: 3}
+  iceHit: {fileID: 8300000, guid: 9601b7bc05ecca9459bf430cfa2b9d9d, type: 3}
+  mainPlayer: {fileID: 3629355927127209674, guid: efa0b6c7978bc884e9ee371c66c18c55,
+    type: 3}
 --- !u!70 &4907996339984639354
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
