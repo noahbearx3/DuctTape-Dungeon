@@ -143,7 +143,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
         b.transform.position = gunFire.transform.position;
         b.transform.rotation = Quaternion.Euler(0.0f, 0.0f, viewAngle);
         b.GetComponent<Rigidbody2D>().velocity = direction * bulletPace;
-        Destroy(b, 2.0f);
+        Destroy(b, 1.0f);
         
         }
         
@@ -156,6 +156,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
         }
         
         if(bulletNormal == true && pickIce == false && pickBatt == true){
+        bulletPace = 5;
         GameObject lightning = Instantiate(lightningBullet) as GameObject;
         lightning.transform.position = gunFire.transform.position;
         lightning.transform.rotation = Quaternion.Euler(0.0f, 0.0f, viewAngle);
