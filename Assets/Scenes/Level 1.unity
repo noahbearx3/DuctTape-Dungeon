@@ -292,6 +292,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3109958087545938006, guid: c912b799357149d4e9ed1102f804959b,
         type: 3}
+    - target: {fileID: 7570316356706231428, guid: 4057b38a20679f945bd7743164bfbb57,
+        type: 3}
+      propertyPath: sparkHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
     - target: {fileID: 7570316356706231430, guid: 4057b38a20679f945bd7743164bfbb57,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -542,17 +547,6 @@ PrefabInstance:
       propertyPath: boolean
       value: 
       objectReference: {fileID: 1109391469}
-    - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
-        type: 3}
-      propertyPath: enemySpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
-        type: 3}
-      propertyPath: lightningBullet
-      value: 
-      objectReference: {fileID: 3109958087545938006, guid: c912b799357149d4e9ed1102f804959b,
-        type: 3}
     - target: {fileID: 7181311015234179591, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -763,6 +757,11 @@ PrefabInstance:
       propertyPath: boolean
       value: 
       objectReference: {fileID: 1109391469}
+    - target: {fileID: 7607809555741376250, guid: ea3f076e1c2cac14f91d2a7ca0d1caa4,
+        type: 3}
+      propertyPath: sparkHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
     - target: {fileID: 7607809555741376254, guid: ea3f076e1c2cac14f91d2a7ca0d1caa4,
         type: 3}
       propertyPath: m_Name
@@ -849,6 +848,11 @@ PrefabInstance:
       propertyPath: boolean
       value: 
       objectReference: {fileID: 1109391469}
+    - target: {fileID: 7607809555741376250, guid: ea3f076e1c2cac14f91d2a7ca0d1caa4,
+        type: 3}
+      propertyPath: sparkHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
     - target: {fileID: 7607809555741376254, guid: ea3f076e1c2cac14f91d2a7ca0d1caa4,
         type: 3}
       propertyPath: m_Name
@@ -1094,6 +1098,11 @@ PrefabInstance:
       propertyPath: boolean
       value: 
       objectReference: {fileID: 1109391469}
+    - target: {fileID: 4907996339984639355, guid: 1f4fc37c96fa0a049ace7956874f0cf5,
+        type: 3}
+      propertyPath: sparkHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
     - target: {fileID: 4907996339984639359, guid: 1f4fc37c96fa0a049ace7956874f0cf5,
         type: 3}
       propertyPath: m_Name
@@ -1504,6 +1513,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3109958087545938006, guid: c912b799357149d4e9ed1102f804959b,
         type: 3}
+    - target: {fileID: 4907996339984639355, guid: 1f4fc37c96fa0a049ace7956874f0cf5,
+        type: 3}
+      propertyPath: sparkHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
     - target: {fileID: 4907996339984639359, guid: 1f4fc37c96fa0a049ace7956874f0cf5,
         type: 3}
       propertyPath: m_Name
@@ -1584,6 +1598,11 @@ PrefabInstance:
       propertyPath: boolean
       value: 
       objectReference: {fileID: 1109391469}
+    - target: {fileID: 4907996339984639355, guid: 1f4fc37c96fa0a049ace7956874f0cf5,
+        type: 3}
+      propertyPath: sparkHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
     - target: {fileID: 4907996339984639359, guid: 1f4fc37c96fa0a049ace7956874f0cf5,
         type: 3}
       propertyPath: m_Name
@@ -1730,6 +1749,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3109958087545938006, guid: c912b799357149d4e9ed1102f804959b,
         type: 3}
+    - target: {fileID: 7570316356706231428, guid: 4057b38a20679f945bd7743164bfbb57,
+        type: 3}
+      propertyPath: sparkHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
     - target: {fileID: 7570316356706231430, guid: 4057b38a20679f945bd7743164bfbb57,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1875,6 +1899,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3109958087545938006, guid: c912b799357149d4e9ed1102f804959b,
         type: 3}
+    - target: {fileID: 4907996339984639355, guid: 1f4fc37c96fa0a049ace7956874f0cf5,
+        type: 3}
+      propertyPath: sparkHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
     - target: {fileID: 4907996339984639359, guid: 1f4fc37c96fa0a049ace7956874f0cf5,
         type: 3}
       propertyPath: m_Name
@@ -1905,6 +1934,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3109958087545938006, guid: c912b799357149d4e9ed1102f804959b,
         type: 3}
+    - target: {fileID: 7570316356706231428, guid: 4057b38a20679f945bd7743164bfbb57,
+        type: 3}
+      propertyPath: sparkHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
     - target: {fileID: 7570316356706231430, guid: 4057b38a20679f945bd7743164bfbb57,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9761,6 +9795,11 @@ PrefabInstance:
       propertyPath: boolean
       value: 
       objectReference: {fileID: 1109391469}
+    - target: {fileID: 7607809555741376250, guid: ea3f076e1c2cac14f91d2a7ca0d1caa4,
+        type: 3}
+      propertyPath: sparkHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
     - target: {fileID: 7607809555741376254, guid: ea3f076e1c2cac14f91d2a7ca0d1caa4,
         type: 3}
       propertyPath: m_Name
@@ -29662,6 +29701,11 @@ PrefabInstance:
       propertyPath: boolean
       value: 
       objectReference: {fileID: 1109391469}
+    - target: {fileID: 7570316356706231428, guid: 4057b38a20679f945bd7743164bfbb57,
+        type: 3}
+      propertyPath: sparkHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
     - target: {fileID: 7570316356706231430, guid: 4057b38a20679f945bd7743164bfbb57,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30336,6 +30380,11 @@ PrefabInstance:
       propertyPath: boolean
       value: 
       objectReference: {fileID: 1109391469}
+    - target: {fileID: 7570316356706231428, guid: 4057b38a20679f945bd7743164bfbb57,
+        type: 3}
+      propertyPath: sparkHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
     - target: {fileID: 7570316356706231430, guid: 4057b38a20679f945bd7743164bfbb57,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30466,6 +30515,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3109958087545938006, guid: c912b799357149d4e9ed1102f804959b,
         type: 3}
+    - target: {fileID: 4907996339984639355, guid: 1f4fc37c96fa0a049ace7956874f0cf5,
+        type: 3}
+      propertyPath: sparkHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
     - target: {fileID: 4907996339984639359, guid: 1f4fc37c96fa0a049ace7956874f0cf5,
         type: 3}
       propertyPath: m_Name
@@ -31053,6 +31107,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3109958087545938006, guid: c912b799357149d4e9ed1102f804959b,
         type: 3}
+    - target: {fileID: 7570316356706231428, guid: 4057b38a20679f945bd7743164bfbb57,
+        type: 3}
+      propertyPath: sparkHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
     - target: {fileID: 7570316356706231430, guid: 4057b38a20679f945bd7743164bfbb57,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31263,6 +31322,11 @@ PrefabInstance:
       propertyPath: boolean
       value: 
       objectReference: {fileID: 1109391469}
+    - target: {fileID: 7607809555741376250, guid: ea3f076e1c2cac14f91d2a7ca0d1caa4,
+        type: 3}
+      propertyPath: sparkHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
     - target: {fileID: 7607809555741376254, guid: ea3f076e1c2cac14f91d2a7ca0d1caa4,
         type: 3}
       propertyPath: m_Name
@@ -31538,7 +31602,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750955516}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.99, y: -0.48, z: 0}
+  m_LocalPosition: {x: -20.71, y: -2.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -32341,6 +32405,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3109958087545938006, guid: c912b799357149d4e9ed1102f804959b,
         type: 3}
+    - target: {fileID: 4907996339984639355, guid: 1f4fc37c96fa0a049ace7956874f0cf5,
+        type: 3}
+      propertyPath: sparkHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
     - target: {fileID: 4907996339984639359, guid: 1f4fc37c96fa0a049ace7956874f0cf5,
         type: 3}
       propertyPath: m_Name
