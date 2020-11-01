@@ -38,7 +38,7 @@ public class RangeDuckController : MonoBehaviour
         if (dist < attackRange)
         {
             Vector3 targetDir = target.position - transform.position;
-            float angle = Mathf.Atan2(targetDir.y,targetDir.x) * Mathf.Rad2Deg - 90f;
+            float angle = Mathf.Atan2(targetDir.y,targetDir.x) * Mathf.Rad2Deg + 180f;
             Quaternion q = Quaternion.AngleAxis (angle, Vector3.forward);
             //transform.rotation = Quaternion.RotateTowards (transform.rotation, q, 90* Time.deltaTime);
             attackAnim.SetTrigger("Attack");
