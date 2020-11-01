@@ -76,6 +76,12 @@ public class PlayerController : MonoBehaviour
             playerHealth = playerHealth - 10;
         }
 
+         if (col.gameObject.CompareTag("Spear")){
+            Destroy (col.gameObject);
+            //Destroy (gameObject);
+            playerHealth = playerHealth - 10;
+        }
+
          if (col.gameObject.CompareTag("Ice")){
             Destroy (col.gameObject);
             icePicked = true;
