@@ -156,6 +156,7 @@ MonoBehaviour:
     type: 3}
   deathClip: {fileID: 8300000, guid: bc73d97e9a0efb342b33f765526919c4, type: 3}
   iceHit: {fileID: 8300000, guid: 9601b7bc05ecca9459bf430cfa2b9d9d, type: 3}
+  sparkHit: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
   spearObject: {fileID: 4152530201278531601, guid: 285964972da398e4f99c1102a5d50fc3,
     type: 3}
   attackRange: 5

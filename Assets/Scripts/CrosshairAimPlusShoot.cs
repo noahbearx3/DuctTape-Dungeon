@@ -99,8 +99,9 @@ public class CrosshairAimPlusShoot : MonoBehaviour
              audio.Play(0);
             fireBullet(direction,viewAngle);
         }
+    
     }
-
+        
      if(pistol==false && shotgun == true && ak47==false){
         if (Input.GetMouseButtonDown(0)){
             bulletPace = 10;

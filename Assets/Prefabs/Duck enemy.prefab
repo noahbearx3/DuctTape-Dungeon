@@ -30,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7181311015234179585}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.1175923, y: -2.212873, z: 2.1277797}
   m_LocalScale: {x: 2.7899864, y: 2.7899864, z: 2.7899864}
   m_Children: []
@@ -103,7 +103,7 @@ MonoBehaviour:
   bullet: {fileID: 2733203797086261812, guid: e8309b3ea86af2042ba2383f9164344a, type: 3}
   iceBullet: {fileID: 6941989727196294982, guid: 5b1a80f08e205604c832336fc902f18d,
     type: 3}
-  lightningBullet: {fileID: 7470071310824232027, guid: 0186766c3f295854cb910aba0bc2b111,
+  lightningBullet: {fileID: 3109958087545938006, guid: c912b799357149d4e9ed1102f804959b,
     type: 3}
   shake: {fileID: 5478158005558970441, guid: b39134933ea72ea46865dced20fbaedd, type: 3}
   feather: {fileID: 4624075061970007673, guid: 3077d6c861a20be41810f2f51bf51ef3, type: 3}
@@ -114,10 +114,11 @@ MonoBehaviour:
   duckEnemy: {fileID: 7181311015234179585}
   bulletHit: {fileID: 1429306884795790670, guid: a354fc9251560ca41ab23c12300fd519,
     type: 3}
-  enemySpeed: 3
+  enemySpeed: 2
   boolean: {fileID: 0}
   deathClip: {fileID: 8300000, guid: bc73d97e9a0efb342b33f765526919c4, type: 3}
   iceHit: {fileID: 8300000, guid: 9601b7bc05ecca9459bf430cfa2b9d9d, type: 3}
+  sparkHit: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
   mainPlayer: {fileID: 3629355927127209674, guid: efa0b6c7978bc884e9ee371c66c18c55,
     type: 3}
 --- !u!70 &7181311015234179588

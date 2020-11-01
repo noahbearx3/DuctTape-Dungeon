@@ -19,6 +19,7 @@ public class RangeDuckController : MonoBehaviour
      AudioSource audio;
     public AudioClip deathClip;
     public AudioClip iceHit;
+    public AudioClip sparkHit;
     Animator attackAnim;
     private SpriteRenderer mySpriteRenderer;
     public GameObject spearObject;
@@ -140,6 +141,7 @@ public class RangeDuckController : MonoBehaviour
 
         if (hitMallard == true && icePick == false && battPick == true ){
             GameObject spark = Instantiate(lightningHit) as GameObject;
+            AudioSource.PlayClipAtPoint (sparkHit, transform.position);
             spark.transform.position = transform.position;
             Destroy(spark, 0.2f);
             hitMallard = false;

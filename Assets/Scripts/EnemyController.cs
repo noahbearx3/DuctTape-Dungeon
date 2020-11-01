@@ -34,6 +34,7 @@ public class EnemyController : MonoBehaviour
     AudioSource audio;
     public AudioClip deathClip;
     public AudioClip iceHit;
+    public AudioClip sparkHit;
 
     public GameObject mainPlayer;
     private SpriteRenderer mySpriteRenderer;
@@ -137,6 +138,7 @@ public class EnemyController : MonoBehaviour
        if (col.gameObject.CompareTag("LightningBullet")){
             Destroy (col.gameObject);
             //Destroy (gameObject);
+             AudioSource.PlayClipAtPoint (sparkHit, transform.position);
 
             enemyHealth = enemyHealth - 10;
             
