@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3974707692364616740}
   - component: {fileID: 267758737832328380}
   - component: {fileID: 4396451299512759859}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: lightnng
   m_TagString: LightningBullet
   m_Icon: {fileID: 0}

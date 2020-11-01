@@ -82,7 +82,7 @@ public class EnemyController : MonoBehaviour
 
         if (hitDuck == true && icePick == true && battPick == false){
             GameObject frost = Instantiate(frostHit) as GameObject;
-            AudioSource.PlayClipAtPoint(iceHit, transform.position);
+            AudioSource.PlayClipAtPoint (iceHit, transform.position);
             frost.transform.position = transform.position;
             Destroy(frost, 0.2f);
             hitDuck = false;
