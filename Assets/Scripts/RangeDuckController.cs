@@ -5,18 +5,40 @@ using UnityEngine;
 public class RangeDuckController : MonoBehaviour
 {
     public GameObject mainPlayer;
+
+    public GameObject bullet;
+    public GameObject iceBullet;
+    public GameObject lightningBullet;
+    public CameraShake shake;
+    public GameObject feather;
+
+    public GameObject frostHit;
+    public GameObject lightningHit;
+    public GameObject mallardEnemy;
+    public GameObject bulletHit;
+     AudioSource audio;
+    public AudioClip deathClip;
+    public AudioClip iceHit;
     Animator attackAnim;
     private SpriteRenderer mySpriteRenderer;
     public GameObject spearObject;
     private Transform target;
     public float attackRange = 3f;
+
+    public float mallardSpeed = 2;
     public float chaseRange;
     public int damage;
     private float lastAttackTime;
     public float attackDelay;
+    private float mallardHealth;
+    private bool hitMallard;
     public GameObject spearFire;
 
     public float spearSpeed = 5;
+    private bool icePick = false;
+     private bool battPick = false;
+
+     public PlayerController boolean;
 
     // Start is called before the first frame update
     void Start()
@@ -25,12 +47,19 @@ public class RangeDuckController : MonoBehaviour
         attackAnim = gameObject.GetComponent<Animator>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-
+        mallardHealth = 100;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        lightningBullet = GameObject.FindGameObjectWithTag("LightningBullet");
+         iceBullet = GameObject.FindGameObjectWithTag("IceBullet");
+         bullet = GameObject.FindGameObjectWithTag("Bullet");
+         
+        icePick = boolean.icePicked;
+        battPick = boolean.batteryPicked;
         // Calculates the difference between the mainPlayer, and the Duck
         float dist = Vector3.Distance(transform.position, target.position);
 
@@ -84,29 +113,79 @@ public class RangeDuckController : MonoBehaviour
         else if (relativePoint.x > 0.0)
         {
             mySpriteRenderer.flipX = true;
-        }           
+        }    
+
+        if(mallardHealth <= 0){
+
+           Death();
+            
+            
+        }
+
+        if (hitMallard == true && icePick == false && battPick == false ){
+            GameObject h = Instantiate(bulletHit) as GameObject;
+            h.transform.position = transform.position;
+            Destroy(h, 0.2f);
+            
+            hitMallard = false;
+        }
+
+        if (hitMallard == true && icePick == true && battPick == false){
+            GameObject frost = Instantiate(frostHit) as GameObject;
+            AudioSource.PlayClipAtPoint (iceHit, transform.position);
+            frost.transform.position = transform.position;
+            Destroy(frost, 0.2f);
+            hitMallard = false;
+        }
+
+        if (hitMallard == true && icePick == false && battPick == true ){
+            GameObject spark = Instantiate(lightningHit) as GameObject;
+            spark.transform.position = transform.position;
+            Destroy(spark, 0.2f);
+            hitMallard = false;
+        }       
                 
         
-
-
-    //void Attack(){
-        
-      //  
-     //   spear.transform.position = spear.transform.position;
-     //   spear.transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
-    //    spear.GetComponent<Rigidbody2D>().velocity = direction * bulletPace;
-     //   Destroy(spear, 2.0f);
-    
-
-
-//    }
-
-
-
-
-
-
+         
     }
 
-    
+    void OnCollisionEnter2D(Collision2D col) {
+
+       if (col.gameObject.CompareTag("LightningBullet")){
+            Destroy (col.gameObject);
+            //Destroy (gameObject);
+
+            mallardHealth = mallardHealth - 10;
+            
+            hitMallard = true; 
+            shake.ShakeCamera(); 
+            }
+
+        if (col.gameObject.CompareTag("IceBullet")){
+            Destroy (col.gameObject);
+            //Destroy (gameObject);
+            mallardHealth = mallardHealth - 20;
+            mallardSpeed = mallardSpeed - 1;
+            hitMallard = true; 
+            shake.ShakeCamera(); 
+            }
+
+        if (col.gameObject.CompareTag("Bullet")){
+            Destroy (col.gameObject);
+            //Destroy (gameObject);
+            mallardHealth = mallardHealth - 25;
+            hitMallard = true; 
+            shake.ShakeCamera(); 
+            
+            
+
+            }
+        }
+    void Death(){
+        AudioSource.PlayClipAtPoint (deathClip, transform.position);
+        GameObject f = Instantiate(feather) as GameObject;
+        Destroy (gameObject);
+        f.transform.position = transform.position;
+        Destroy(f, 0.1f);
+    }
 }

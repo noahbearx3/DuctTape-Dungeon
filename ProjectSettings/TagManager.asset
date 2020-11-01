@@ -15,6 +15,7 @@ TagManager:
   - Walls
   - Fire
   - Spear
+  - RangeEnemy
   layers:
   - Default
   - TransparentFX

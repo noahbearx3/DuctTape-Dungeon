@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 510566251202215502}
   - component: {fileID: 4737044314159511913}
-  - component: {fileID: 492394811091324770}
   - component: {fileID: 7434232016051836572}
   - component: {fileID: 8273655268332461958}
   - component: {fileID: 4970518519802434999}
-  m_Layer: 9
+  - component: {fileID: 6420432626892635322}
+  m_Layer: 0
   m_Name: Duck_Range
-  m_TagString: Untagged
+  m_TagString: RangeEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,22 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &492394811091324770
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6322599017171293511}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.48, y: 0.48}
-  m_Direction: 0
 --- !u!50 &7434232016051836572
 Rigidbody2D:
   serializedVersion: 4
@@ -122,7 +106,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!95 &8273655268332461958
 Animator:
@@ -156,13 +140,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainPlayer: {fileID: 0}
+  bullet: {fileID: 2733203797086261812, guid: e8309b3ea86af2042ba2383f9164344a, type: 3}
+  iceBullet: {fileID: 6941989727196294982, guid: 5b1a80f08e205604c832336fc902f18d,
+    type: 3}
+  lightningBullet: {fileID: 3109958087545938006, guid: c912b799357149d4e9ed1102f804959b,
+    type: 3}
+  shake: {fileID: 0}
+  feather: {fileID: 4624075061970007673, guid: 3077d6c861a20be41810f2f51bf51ef3, type: 3}
+  frostHit: {fileID: 7332072325922633152, guid: eaac882d0398db047a034accb0e5b4ff,
+    type: 3}
+  lightningHit: {fileID: 2943021053511931487, guid: f9a7f372b450ced43871fa763cbe482f,
+    type: 3}
+  mallardEnemy: {fileID: 6322599017171293511}
+  bulletHit: {fileID: 1429306884795790670, guid: a354fc9251560ca41ab23c12300fd519,
+    type: 3}
+  deathClip: {fileID: 8300000, guid: bc73d97e9a0efb342b33f765526919c4, type: 3}
+  iceHit: {fileID: 8300000, guid: 9601b7bc05ecca9459bf430cfa2b9d9d, type: 3}
   spearObject: {fileID: 4152530201278531601, guid: 285964972da398e4f99c1102a5d50fc3,
     type: 3}
-  attackRange: 3
-  chaseRange: 0
+  attackRange: 5
+  mallardSpeed: 2
+  chaseRange: 3
   damage: 0
-  attackDelay: 0
+  attackDelay: 1
   spearFire: {fileID: 8747468496559263037}
+  spearSpeed: 5
+  boolean: {fileID: 0}
+--- !u!61 &6420432626892635322
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6322599017171293511}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.48, y: 0.48}
+    newSize: {x: 0.48, y: 0.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.48, y: 0.48}
+  m_EdgeRadius: 0
 --- !u!1 &8747468496559263037
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1314615831223907462}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: SpearFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}

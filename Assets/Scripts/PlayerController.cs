@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
          playerMovement.y = Input.GetAxisRaw("Vertical");
           
           // Whenplayer reaches 0 health destroy Player game object
-          if(playerHealth == 0){
+          if(playerHealth <= 0){
             
             Destroy (gameObject);
      }
