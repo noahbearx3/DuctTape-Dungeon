@@ -8,8 +8,8 @@ public class mainMenu : MonoBehaviour
 
     public void OnStartGame()
     {
-        int index = Random.Range(1, 2);
-        SceneManager.LoadScene(index); 
+    //    int index = Random.Range(2, 3);
+        SceneManager.LoadScene(2); 
     }
 
 
@@ -21,6 +21,11 @@ public class mainMenu : MonoBehaviour
     public void OnMainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void OnInstruction()
+    {
+        SceneManager.LoadScene(1);
     }
 
 }
