@@ -12,15 +12,21 @@ public class HealthBarController : MonoBehaviour
     void Start()
     {
          healthBar = transform.Find("Bar");
-        
+         
        
     }
 
     //Used to set the size of the health bar
     public void SetSize(float sizeNormalized){
+
         healthBar.localScale = new Vector3 (sizeNormalized,1f);
     }
 
+    public void SetColor(Color color){
+        healthBar.Find("BarSprite").GetComponent<SpriteRenderer>().color = color;
+    }
 }
+
+   
     // Update is called once per frame
     

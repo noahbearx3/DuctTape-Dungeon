@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour
     public bool icePicked = false;
     public bool batteryPicked = false;
 
+    public HealthController healthControl;
+    public HealthBarController h;
+
     public CrosshairAimPlusShoot bullet; 
    AudioSource pistolShot;
 
@@ -44,12 +47,15 @@ public class PlayerController : MonoBehaviour
         // Get the players postion constantly through the update function
          playerMovement.x = Input.GetAxisRaw("Horizontal");
          playerMovement.y = Input.GetAxisRaw("Vertical");
+         
           
           // Whenplayer reaches 0 health destroy Player game object
           if(playerHealth <= 0){
             
             Destroy (gameObject);
             SceneManager.LoadScene(2);
+            
+
         }
 
         Debug.Log(playerHealth);
@@ -76,12 +82,14 @@ public class PlayerController : MonoBehaviour
             //Destroy (col.gameObject);
             //Destroy (gameObject);
             playerHealth = playerHealth - 10;
+            h.SetSize(playerHealth / 100);
         }
 
          if (col.gameObject.CompareTag("Spear")){
             Destroy (col.gameObject);
             //Destroy (gameObject);
             playerHealth = playerHealth - 10;
+            h.SetSize(playerHealth / 100);
         }
 
          if (col.gameObject.CompareTag("Ice")){
