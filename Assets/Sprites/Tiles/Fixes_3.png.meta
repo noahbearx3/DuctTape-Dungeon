@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 5aa3b512965dc9c4781de12d8097bf4d
+guid: ef898705b5b49c640bc51e6a996d8f4b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4016541092131827615
-    second: tape-boy-basic-spritesheet_0
+      213: 2556211602708461363
+    second: Fixes_3_0
   - first:
-      213: 94387211509481750
-    second: tape-boy-basic-spritesheet_1
+      213: -6707152648805908542
+    second: Fixes_3_1
   - first:
-      213: 8383179269231770247
-    second: tape-boy-basic-spritesheet_2
+      213: -3686087351793092475
+    second: Fixes_3_2
   - first:
-      213: -2395606678814877444
-    second: tape-boy-basic-spritesheet_3
+      213: -7745234422202598384
+    second: Fixes_3_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -76,7 +76,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -88,7 +88,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -99,12 +99,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tape-boy-basic-spritesheet_0
+      name: Fixes_3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 31
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -113,19 +113,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9fe64eb7de9db730800000000000000
-      internalID: 4016541092131827615
+      spriteID: 3377b26c8ec797320800000000000000
+      internalID: 2556211602708461363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tape-boy-basic-spritesheet_1
+      name: Fixes_3_1
       rect:
         serializedVersion: 2
-        x: 31
+        x: 64
         y: 0
-        width: 32
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -134,19 +134,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 611cc553ba45f4100800000000000000
-      internalID: 94387211509481750
+      spriteID: 2cf7a91b3386be2a0800000000000000
+      internalID: -6707152648805908542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tape-boy-basic-spritesheet_2
+      name: Fixes_3_2
       rect:
         serializedVersion: 2
-        x: 63
+        x: 128
         y: 0
-        width: 32
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -155,19 +155,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78a7afe1129075470800000000000000
-      internalID: 8383179269231770247
+      spriteID: 588ff41551368dcc0800000000000000
+      internalID: -3686087351793092475
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tape-boy-basic-spritesheet_3
+      name: Fixes_3_3
       rect:
         serializedVersion: 2
-        x: 95
+        x: 192
         y: 0
-        width: 31
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -176,8 +176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf89fa70b6811ced0800000000000000
-      internalID: -2395606678814877444
+      spriteID: 01c7c7a3456638490800000000000000
+      internalID: -7745234422202598384
       vertices: []
       indices: 
       edges: []

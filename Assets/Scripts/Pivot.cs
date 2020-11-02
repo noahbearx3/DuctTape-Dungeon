@@ -52,7 +52,7 @@ public class Pivot : MonoBehaviour
         fAngle = Mathf.Atan2(v3Pos.y, v3Pos.x) * Mathf.Rad2Deg;
         if (fAngle < 0.0f) fAngle += 360.0f;
 
-        Debug.Log(fAngle);
+
 
         if (fAngle >= 45 && fAngle <= 135)
         {
