@@ -8,7 +8,7 @@ public class mainMenu : MonoBehaviour
 
     public void OnStartGame()
     {
-        int index = Random.Range(1, 3);
+        int index = Random.Range(1, 2);
         SceneManager.LoadScene(index); 
     }
 
@@ -17,4 +17,10 @@ public class mainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void OnMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
 }
