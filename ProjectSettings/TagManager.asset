@@ -16,6 +16,7 @@ TagManager:
   - Fire
   - Spear
   - RangeEnemy
+  - Bar
   layers:
   - Default
   - TransparentFX
