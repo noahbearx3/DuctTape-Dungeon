@@ -26,7 +26,7 @@ public class EnemyController : MonoBehaviour
     private bool hitDuck = false;
 
     private bool icePick = false;
-     private bool battPick = false;
+    private bool battPick = false;
 
     private Transform target;
 

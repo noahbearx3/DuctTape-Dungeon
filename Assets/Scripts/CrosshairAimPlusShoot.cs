@@ -34,6 +34,8 @@ public class CrosshairAimPlusShoot : MonoBehaviour
 
     public PlayerController boolean;   
     AudioSource audio;
+    public AudioClip iceShot;
+    public AudioClip sparkShot;
 
 
      public ParticleSystem particleEmitter;
@@ -92,12 +94,35 @@ public class CrosshairAimPlusShoot : MonoBehaviour
          float viewAngle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg - 90f;
         
     if(pistol==true && shotgun == false && ak47==false){
+        if(pistol==true && shotgun == false && ak47== false && pickIce == false && pickBatt == false){
         if (Input.GetMouseButtonDown(0)){
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;
             direction.Normalize();
              audio.Play(0);
             fireBullet(direction,viewAngle);
+        }
+        
+        }
+        if(pistol==true && shotgun == false && ak47== false && pickIce == true && pickBatt == false){
+        if (Input.GetMouseButtonDown(0)){
+            float distance = difference.magnitude;
+            Vector2 direction = difference / distance;
+            direction.Normalize();
+            AudioSource.PlayClipAtPoint (iceShot, transform.position);
+            fireBullet(direction,viewAngle);
+        }
+        
+        }
+        if(pistol==true && shotgun == false && ak47== false && pickIce == false && pickBatt == true){
+        if (Input.GetMouseButtonDown(0)){
+            float distance = difference.magnitude;
+            Vector2 direction = difference / distance;
+            direction.Normalize();
+            AudioSource.PlayClipAtPoint (sparkShot, transform.position);
+            fireBullet(direction,viewAngle);
+        }
+        
         }
     
     }
