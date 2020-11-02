@@ -159,9 +159,9 @@ MonoBehaviour:
   sparkHit: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
   spearObject: {fileID: 4152530201278531601, guid: 285964972da398e4f99c1102a5d50fc3,
     type: 3}
-  attackRange: 5
-  mallardSpeed: 2
-  chaseRange: 3
+  attackRange: 9
+  mallardSpeed: 1
+  chaseRange: 6
   damage: 0
   attackDelay: 1
   spearFire: {fileID: 8747468496559263037}

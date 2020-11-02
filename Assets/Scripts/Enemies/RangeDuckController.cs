@@ -63,7 +63,15 @@ public class RangeDuckController : MonoBehaviour
         battPick = boolean.batteryPicked;
         // Calculates the difference between the mainPlayer, and the Duck
         float dist = Vector3.Distance(transform.position, target.position);
-
+        if(dist < chaseRange){
+            transform.position = Vector2.MoveTowards(transform.position, target.position, mallardSpeed * Time.deltaTime);
+             attackAnim.SetTrigger("Walk");
+             attackAnim.ResetTrigger("Idle");
+        }
+        else{
+            attackAnim.SetTrigger("Idle");
+            attackAnim.ResetTrigger("Walk");
+        }
         // Changes the animation depending on the distance and checks if player is withinn attack range 
         if (dist < attackRange)
         {
