@@ -150,6 +150,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
         
         if(bulletNormal == true && pickIce == true && pickBatt == false){
         GameObject frost = Instantiate(frostBullet) as GameObject;
+        bulletPace = 5;
         frost.transform.position = gunFire.transform.position;
         frost.transform.rotation = Quaternion.Euler(0.0f, 0.0f, viewAngle);
         frost.GetComponent<Rigidbody2D>().velocity = direction * bulletPace;

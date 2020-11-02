@@ -105,6 +105,7 @@ MonoBehaviour:
     type: 3}
   shake: {fileID: 5478158005558970441, guid: b39134933ea72ea46865dced20fbaedd, type: 3}
   feather: {fileID: 4624075061970007673, guid: 3077d6c861a20be41810f2f51bf51ef3, type: 3}
+  iceDamage: 5
   frostHit: {fileID: 7332072325922633152, guid: eaac882d0398db047a034accb0e5b4ff,
     type: 3}
   lightningHit: {fileID: 2943021053511931487, guid: f9a7f372b450ced43871fa763cbe482f,
@@ -116,6 +117,7 @@ MonoBehaviour:
   boolean: {fileID: 0}
   deathClip: {fileID: 8300000, guid: bc73d97e9a0efb342b33f765526919c4, type: 3}
   iceHit: {fileID: 8300000, guid: 9601b7bc05ecca9459bf430cfa2b9d9d, type: 3}
+  sparkHit: {fileID: 0}
   mainPlayer: {fileID: 3629355927127209674, guid: efa0b6c7978bc884e9ee371c66c18c55,
     type: 3}
 --- !u!70 &7570316356706231429

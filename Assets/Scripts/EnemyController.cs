@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     public GameObject lightningBullet;
     public CameraShake shake;
     public GameObject feather;
+    public float iceDamage = 10;
 
     public GameObject frostHit;
     public GameObject lightningHit;
@@ -149,10 +150,11 @@ public class EnemyController : MonoBehaviour
         if (col.gameObject.CompareTag("IceBullet")){
             Destroy (col.gameObject);
             //Destroy (gameObject);
-            enemyHealth = enemyHealth - 20;
-            enemySpeed = enemySpeed - 1;
+            enemyHealth = enemyHealth - iceDamage;
+            enemySpeed = enemySpeed - 0.1f;
             hitDuck = true; 
             shake.ShakeCamera(); 
+            
             }
 
         if (col.gameObject.CompareTag("Bullet")){
