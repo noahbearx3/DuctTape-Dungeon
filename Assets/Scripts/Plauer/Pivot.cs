@@ -4,17 +4,49 @@ using UnityEngine;
 
 public class Pivot : MonoBehaviour
 {
-
+    private Transform Hands;
     public GameObject myPlayer;
+    public GameObject pistol;
+    [SerializeField] private SpriteRenderer handsSprite;
+    public float sizeNormalized = -1f;
+
+    private void Start()
+    {
+       Hands = transform.Find("Hands");
+    }
 
     private void FixedUpdate()
     {
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 
-        float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg + 90f;
+        Vector3 v3Pos;
+        float fAngle;
 
-        transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
+
+        v3Pos = Camera.main.WorldToScreenPoint(myPlayer.transform.position);
+        v3Pos = Input.mousePosition - v3Pos;
+        fAngle = Mathf.Atan2(v3Pos.y, v3Pos.x) * Mathf.Rad2Deg +90f;
+        if (fAngle < 0.0f) fAngle += 360.0f;
+        transform.rotation = Quaternion.Euler(0f, 0f, fAngle);
+
+        if(fAngle <= 360 && fAngle >= 180)
+        {
+            FlipHands(-1f);
+
+        }
+        else
+        {
+            FlipHands(1f);
+        }
+
+
+
     }
 
+
+    public void FlipHands (float moveLeft)
+    {
+        Hands.localScale = new Vector3(moveLeft, 1f);
+
+    }
 
 }
