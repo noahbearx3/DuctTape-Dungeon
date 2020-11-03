@@ -40,7 +40,7 @@ public class PlayerAnimationTrigger : MonoBehaviour
 
         else
         { 
-            if (fAngle >= 135 && fAngle <= 225)
+            if (fAngle >= 135 && fAngle <= 225 )
             {
                 pbodyanimator.SetBool("Front", false);
                 pbodyanimator.SetBool("Back", false);
@@ -59,31 +59,91 @@ public class PlayerAnimationTrigger : MonoBehaviour
                     pbodyanimator.SetBool("Right", false);
                     LookFront();
                 }
-
-                else
+                
+               else
                 {
                     pbodyanimator.SetBool("Front", false);
                     pbodyanimator.SetBool("Back", false);
                     pbodyanimator.SetBool("Left", false);
                     pbodyanimator.SetBool("Right", true);
                     LookRight();
+
+
                 }
+                
+
+
+
             }
 
 
-            //if (Input.GetKeyDown(KeyCode.D))
-            //{
-             //   animator.SetBool("RightRun", true);
-            //}
-           // else if (Input.GetKeyUp(KeyCode.D))
-            //{
-            //    animator.SetBool("RightRun", false);
-            //}
-
 
         }
+        if (Input.GetKey(KeyCode.D))
+        {
+            pbodyanimator.SetBool("Running", true);
+            pbodyanimator.SetBool("RightRun", true);
+            pbodyanimator.SetBool("BackRun", false);
+            pbodyanimator.SetBool("LeftRun", false);
+            pbodyanimator.SetBool("FrontRun", false);
 
+        }
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            pbodyanimator.SetBool("Running", false);
+            pbodyanimator.SetBool("RightRun", false);
+        }
+        
 
+        if (Input.GetKey(KeyCode.W))
+        {
+            pbodyanimator.SetBool("Running", true);
+            pbodyanimator.SetBool("BackRun", true);
+            pbodyanimator.SetBool("RightRun", false);
+            pbodyanimator.SetBool("LeftRun", false);
+            pbodyanimator.SetBool("FrontRun", false);
+
+        }
+        
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            pbodyanimator.SetBool("Running", false);
+            pbodyanimator.SetBool("BackRun", false);
+        }
+        
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            pbodyanimator.SetBool("Running", true);
+            pbodyanimator.SetBool("LeftRun", true);
+            pbodyanimator.SetBool("RightRun", false);
+            pbodyanimator.SetBool("BackRun", false);
+            pbodyanimator.SetBool("FrontRun", false);
+
+        }
+        
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            pbodyanimator.SetBool("Running", false);
+            pbodyanimator.SetBool("LeftRun", false);
+        }
+
+    
+        if (Input.GetKey(KeyCode.S))
+        {
+            pbodyanimator.SetBool("Running", true);
+            pbodyanimator.SetBool("FrontRun", true);
+            pbodyanimator.SetBool("RightRun", false);
+            pbodyanimator.SetBool("BackRun", false);
+            pbodyanimator.SetBool("LeftRun", false);
+        }
+        
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            pbodyanimator.SetBool("Running", false);
+            pbodyanimator.SetBool("FrontRun", false);
+        }
+        
 
     }
 
@@ -107,7 +167,6 @@ public class PlayerAnimationTrigger : MonoBehaviour
     {
         spriteRenderer.sprite = HeadBack;
     }
-
 
 
 }
