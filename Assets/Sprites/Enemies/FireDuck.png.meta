@@ -20,6 +20,24 @@ TextureImporter:
   - first:
       213: 2394598878676152166
     second: FireDuck_5
+  - first:
+      213: 8107006462022142716
+    second: FireDuck_0
+  - first:
+      213: -7166503838843868860
+    second: FireDuck_1
+  - first:
+      213: -1448270670500093304
+    second: FireDuck_2
+  - first:
+      213: -96685884333319915
+    second: FireDuck_3
+  - first:
+      213: -8577952751514943022
+    second: FireDuck_4
+  - first:
+      213: 7646476307416534724
+    second: FireDuck_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -122,7 +140,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 40
+        width: 43
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -131,8 +149,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca05b5ca226d76d70800000000000000
-      internalID: 9036426621751087276
+      spriteID: cfa40a8ac6fd18070800000000000000
+      internalID: 8107006462022142716
       vertices: []
       indices: 
       edges: []
@@ -141,9 +159,9 @@ TextureImporter:
       name: FireDuck_1
       rect:
         serializedVersion: 2
-        x: 41
+        x: 43
         y: 0
-        width: 40
+        width: 43
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -152,8 +170,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8fc77a9ad8376650800000000000000
-      internalID: 6226007521408569231
+      spriteID: 449ec347ab67b8c90800000000000000
+      internalID: -7166503838843868860
       vertices: []
       indices: 
       edges: []
@@ -162,9 +180,9 @@ TextureImporter:
       name: FireDuck_2
       rect:
         serializedVersion: 2
-        x: 82
+        x: 86
         y: 0
-        width: 40
+        width: 43
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -173,8 +191,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d872cce278c9b1c00800000000000000
-      internalID: 872463057245972365
+      spriteID: 882a93a9f75b6ebe0800000000000000
+      internalID: -1448270670500093304
       vertices: []
       indices: 
       edges: []
@@ -183,9 +201,9 @@ TextureImporter:
       name: FireDuck_3
       rect:
         serializedVersion: 2
-        x: 123
+        x: 129
         y: 0
-        width: 40
+        width: 43
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -194,8 +212,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f834b14cb7ee3710800000000000000
-      internalID: 1675030907170601204
+      spriteID: 519948153b088aef0800000000000000
+      internalID: -96685884333319915
       vertices: []
       indices: 
       edges: []
@@ -204,9 +222,9 @@ TextureImporter:
       name: FireDuck_4
       rect:
         serializedVersion: 2
-        x: 164
+        x: 172
         y: 0
-        width: 40
+        width: 43
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -215,8 +233,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12dd98bc50e2083e0800000000000000
-      internalID: -2053590827656422111
+      spriteID: 2d10ed1ab6df4f880800000000000000
+      internalID: -8577952751514943022
       vertices: []
       indices: 
       edges: []
@@ -225,9 +243,9 @@ TextureImporter:
       name: FireDuck_5
       rect:
         serializedVersion: 2
-        x: 205
+        x: 215
         y: 0
-        width: 40
+        width: 43
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -236,8 +254,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66f6a073ef25b3120800000000000000
-      internalID: 2394598878676152166
+      spriteID: 4cec00750bdbd1a60800000000000000
+      internalID: 7646476307416534724
       vertices: []
       indices: 
       edges: []
