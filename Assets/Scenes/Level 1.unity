@@ -408,6 +408,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Duck enemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7181311015234179587, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1.1085978
+      objectReference: {fileID: 0}
     - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
       propertyPath: boolean
@@ -754,6 +759,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Duck enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7181311015234179587, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1.1085978
+      objectReference: {fileID: 0}
     - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
       propertyPath: boolean
@@ -896,6 +906,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Duck enemy (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181311015234179587, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1.1085978
       objectReference: {fileID: 0}
     - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
@@ -1647,6 +1662,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Duck enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181311015234179587, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1.1085978
       objectReference: {fileID: 0}
     - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
@@ -10093,6 +10113,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Duck enemy (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7181311015234179587, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1.1085978
+      objectReference: {fileID: 0}
     - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
       propertyPath: lightningBullet
@@ -10199,7 +10224,7 @@ Transform:
   m_GameObject: {fileID: 1073512104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -41.710003, y: -5.287, z: 0}
-  m_LocalScale: {x: 1.2873611, y: 0.54517794, z: 0.58983564}
+  m_LocalScale: {x: 1.3002348, y: 0.55062973, z: 0.595734}
   m_Children: []
   m_Father: {fileID: 1615515038}
   m_RootOrder: 1
@@ -10794,7 +10819,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 743a14d6fa81df342979d83ccc1be340, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30495,12 +30520,12 @@ PrefabInstance:
     - target: {fileID: 3629355927127209670, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.5
+      value: -32.52
       objectReference: {fileID: 0}
     - target: {fileID: 3629355927127209670, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 3629355927127209670, guid: efa0b6c7978bc884e9ee371c66c18c55,
         type: 3}
@@ -31386,6 +31411,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Duck enemy (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7181311015234179587, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1.1085978
+      objectReference: {fileID: 0}
     - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
       propertyPath: boolean
@@ -31721,6 +31751,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Duck enemy (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181311015234179587, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1.1085978
       objectReference: {fileID: 0}
     - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
@@ -32671,6 +32706,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Duck enemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181311015234179587, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1.1085978
       objectReference: {fileID: 0}
     - target: {fileID: 7181311015234179589, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}

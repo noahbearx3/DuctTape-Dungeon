@@ -17,6 +17,8 @@ TagManager:
   - Spear
   - RangeEnemy
   - Bar
+  - BulletHitbox
+  - Health
   layers:
   - Default
   - TransparentFX

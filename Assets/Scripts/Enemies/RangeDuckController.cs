@@ -16,6 +16,8 @@ public class RangeDuckController : MonoBehaviour
     public GameObject lightningHit;
     public GameObject mallardEnemy;
     public GameObject bulletHit;
+    public float mallardIceDamage = 7.5f;
+    public EnemyController damageControl;
      AudioSource audio;
     public AudioClip deathClip;
     public AudioClip iceHit;
@@ -49,6 +51,7 @@ public class RangeDuckController : MonoBehaviour
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         mallardHealth = 100;
+        
     }
 
     // Update is called once per frame
@@ -131,6 +134,10 @@ public class RangeDuckController : MonoBehaviour
             
         }
 
+        if(mallardSpeed <= 0.0f){
+            mallardSpeed = mallardSpeed + 0.1f;
+        }
+
         if (hitMallard == true && icePick == false && battPick == false ){
             GameObject h = Instantiate(bulletHit) as GameObject;
             h.transform.position = transform.position;
@@ -174,8 +181,8 @@ public class RangeDuckController : MonoBehaviour
         if (col.gameObject.CompareTag("IceBullet")){
             Destroy (col.gameObject);
             //Destroy (gameObject);
-            mallardHealth = mallardHealth - 20;
-            mallardSpeed = mallardSpeed - 1;
+            mallardHealth = mallardHealth - mallardIceDamage;
+            mallardSpeed = mallardSpeed - 0.1f;
             hitMallard = true; 
             shake.ShakeCamera(); 
             }
