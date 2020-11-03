@@ -20,6 +20,24 @@ TextureImporter:
   - first:
       213: 4260706701347348427
     second: ElectricDuck_5
+  - first:
+      213: 6540944142825294892
+    second: ElectricDuck_0
+  - first:
+      213: 7380274478912607527
+    second: ElectricDuck_1
+  - first:
+      213: -3711466533269768068
+    second: ElectricDuck_2
+  - first:
+      213: 3974244719981269788
+    second: ElectricDuck_3
+  - first:
+      213: -7504887402407252155
+    second: ElectricDuck_4
+  - first:
+      213: 5119001845489567592
+    second: ElectricDuck_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -122,7 +140,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 40
+        width: 43
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -131,8 +149,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f70f032379aa83990800000000000000
-      internalID: -7405982020851928961
+      spriteID: c2c06c0ea0a16ca50800000000000000
+      internalID: 6540944142825294892
       vertices: []
       indices: 
       edges: []
@@ -141,9 +159,9 @@ TextureImporter:
       name: ElectricDuck_1
       rect:
         serializedVersion: 2
-        x: 41
+        x: 43
         y: 0
-        width: 40
+        width: 43
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -152,8 +170,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baf6f19f881a8a1e0800000000000000
-      internalID: -2186320009421164629
+      spriteID: 725977449800c6660800000000000000
+      internalID: 7380274478912607527
       vertices: []
       indices: 
       edges: []
@@ -162,9 +180,9 @@ TextureImporter:
       name: ElectricDuck_2
       rect:
         serializedVersion: 2
-        x: 82
+        x: 86
         y: 0
-        width: 40
+        width: 43
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -173,8 +191,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7ec435fe91469870800000000000000
-      internalID: 8689204682032467579
+      spriteID: c7874b82ad83e7cc0800000000000000
+      internalID: -3711466533269768068
       vertices: []
       indices: 
       edges: []
@@ -183,9 +201,9 @@ TextureImporter:
       name: ElectricDuck_3
       rect:
         serializedVersion: 2
-        x: 123
+        x: 129
         y: 0
-        width: 40
+        width: 43
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -194,8 +212,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 680c15f16611dc380800000000000000
-      internalID: -8949477754205519738
+      spriteID: c1394f0348a572730800000000000000
+      internalID: 3974244719981269788
       vertices: []
       indices: 
       edges: []
@@ -204,9 +222,9 @@ TextureImporter:
       name: ElectricDuck_4
       rect:
         serializedVersion: 2
-        x: 164
+        x: 172
         y: 0
-        width: 40
+        width: 43
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -215,8 +233,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f2ef0a39d130b370800000000000000
-      internalID: 8336217719314572022
+      spriteID: 54f263c8ba849d790800000000000000
+      internalID: -7504887402407252155
       vertices: []
       indices: 
       edges: []
@@ -225,9 +243,9 @@ TextureImporter:
       name: ElectricDuck_5
       rect:
         serializedVersion: 2
-        x: 205
+        x: 215
         y: 0
-        width: 40
+        width: 43
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -236,8 +254,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcf5fe1bb22112b30800000000000000
-      internalID: 4260706701347348427
+      spriteID: 86789fc8e095a0740800000000000000
+      internalID: 5119001845489567592
       vertices: []
       indices: 
       edges: []
