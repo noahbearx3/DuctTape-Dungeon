@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 4d1c1e74ca904c245851985dd709b853
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6264560905244539736
+    second: Anim-0001-Sheet_0
+  - first:
+      213: 729965583239390468
+    second: Anim-0001-Sheet_1
+  - first:
+      213: -8290118439474820729
+    second: Anim-0001-Sheet_2
+  - first:
+      213: -6166538344159385166
+    second: Anim-0001-Sheet_3
+  - first:
+      213: -5454344086820983089
+    second: Anim-0001-Sheet_4
+  - first:
+      213: -5470701973606665412
+    second: Anim-0001-Sheet_5
+  - first:
+      213: -1321750222023898451
+    second: Anim-0001-Sheet_6
+  - first:
+      213: -6419525571577302353
+    second: Anim-0001-Sheet_7
+  - first:
+      213: 7997233109005842527
+    second: Anim-0001-Sheet_8
+  - first:
+      213: -458900724843102718
+    second: Anim-0001-Sheet_9
+  - first:
+      213: -1060200248822404081
+    second: Anim-0001-Sheet_10
+  - first:
+      213: 2312682783158511085
+    second: Anim-0001-Sheet_11
+  - first:
+      213: 5393619039655202104
+    second: Anim-0001-Sheet_12
+  - first:
+      213: -146553188541037269
+    second: Anim-0001-Sheet_13
+  - first:
+      213: -5090628763777565124
+    second: Anim-0001-Sheet_14
+  - first:
+      213: 5987962051279403207
+    second: Anim-0001-Sheet_15
+  - first:
+      213: 8649867152112967781
+    second: Anim-0001-Sheet_16
+  - first:
+      213: 9188414212410334813
+    second: Anim-0001-Sheet_17
+  - first:
+      213: -1118912793618040656
+    second: Anim-0001-Sheet_18
+  - first:
+      213: -1532106706819973812
+    second: Anim-0001-Sheet_19
+  - first:
+      213: -4007706205809684578
+    second: Anim-0001-Sheet_20
+  - first:
+      213: -487537792463138448
+    second: Anim-0001-Sheet_21
+  - first:
+      213: 4171939003696210402
+    second: Anim-0001-Sheet_22
+  - first:
+      213: -5516135687466888541
+    second: Anim-0001-Sheet_23
+  - first:
+      213: -9033876797691834338
+    second: Anim-0001-Sheet_24
+  - first:
+      213: -5810207028578729993
+    second: Anim-0001-Sheet_25
+  - first:
+      213: 691296054035801801
+    second: Anim-0001-Sheet_26
+  - first:
+      213: 6692065569961600407
+    second: Anim-0001-Sheet_27
+  - first:
+      213: -3420847642970675
+    second: Anim-0001-Sheet_28
+  - first:
+      213: -1009794844325678808
+    second: Anim-0001-Sheet_29
+  - first:
+      213: -8819135530290640402
+    second: Anim-0001-Sheet_30
+  - first:
+      213: 6468716693604038959
+    second: Anim-0001-Sheet_31
+  - first:
+      213: 1854053316292195036
+    second: Anim-0001-Sheet_32
+  - first:
+      213: -7037255700033974454
+    second: Anim-0001-Sheet_33
+  - first:
+      213: -9063953728247220404
+    second: Anim-0001-Sheet_34
+  - first:
+      213: -8352202778336039770
+    second: Anim-0001-Sheet_35
+  - first:
+      213: 4615583486437973858
+    second: Anim-0001-Sheet_36
+  - first:
+      213: 6949725240506606994
+    second: Anim-0001-Sheet_37
+  - first:
+      213: 1017236221439856252
+    second: Anim-0001-Sheet_38
+  - first:
+      213: 7125678945447126909
+    second: Anim-0001-Sheet_39
+  - first:
+      213: 4772525061092170935
+    second: Anim-0001-Sheet_40
+  - first:
+      213: 492960806846625367
+    second: Anim-0001-Sheet_41
+  - first:
+      213: 3400571089616927798
+    second: Anim-0001-Sheet_42
+  - first:
+      213: 4162714394420818558
+    second: Anim-0001-Sheet_43
+  - first:
+      213: -3134696950827339454
+    second: Anim-0001-Sheet_44
+  - first:
+      213: -7117199649279067061
+    second: Anim-0001-Sheet_45
+  - first:
+      213: 4272899072003154228
+    second: Anim-0001-Sheet_46
+  - first:
+      213: -6121999745848648161
+    second: Anim-0001-Sheet_47
+  - first:
+      213: 5909865668647101084
+    second: Anim-0001-Sheet_48
+  - first:
+      213: 4977253314048988096
+    second: Anim-0001-Sheet_49
+  - first:
+      213: -2263719718230173359
+    second: Anim-0001-Sheet_50
+  - first:
+      213: 3405454249548034352
+    second: Anim-0001-Sheet_51
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Anim-0001-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b76e6c3f030f650800000000000000
+      internalID: 6264560905244539736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim-0001-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405ae3794db512a00800000000000000
+      internalID: 729965583239390468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim-0001-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7890035c33593fc80800000000000000
+      internalID: -8290118439474820729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim-0001-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9ed863c0e0c6aa0800000000000000
+      internalID: -6166538344159385166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim-0001-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce684e83f64e44b0800000000000000
+      internalID: -5454344086820983089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim-0001-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33752f3a892414b0800000000000000
+      internalID: -5470701973606665412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim-0001-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daac87e0d2338ade0800000000000000
+      internalID: -1321750222023898451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim-0001-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa23997318349e6a0800000000000000
+      internalID: -6419525571577302353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim-0001-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5839483421ebfe60800000000000000
+      internalID: 7997233109005842527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim-0001-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ebe8cd838a1a9f0800000000000000
+      internalID: -458900724843102718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim-0001-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ce82aad796941f0800000000000000
+      internalID: -1060200248822404081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim-0001-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de52358fcbc481020800000000000000
+      internalID: 2312682783158511085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim-0001-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d8e60a0fbf9da40800000000000000
+      internalID: 5393619039655202104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
