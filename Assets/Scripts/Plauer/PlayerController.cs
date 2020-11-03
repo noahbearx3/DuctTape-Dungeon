@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public bool ak47Picked = false;
     public bool icePicked = false;
     public bool batteryPicked = false;
+    public float healthPickup = 25f;
 
     public HealthController healthControl;
     public HealthBarController h;
@@ -119,6 +120,13 @@ public class PlayerController : MonoBehaviour
             Destroy (col.gameObject);
             shotgunPicked = false;
             ak47Picked = true;
+         }
+
+         if (col.gameObject.CompareTag("Health")){
+             playerHealth = playerHealth + healthPickup;
+             h.SetSize(playerHealth / 100);
+             Destroy (col.gameObject);
+            
          }
 
         

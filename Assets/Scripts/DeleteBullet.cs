@@ -35,6 +35,20 @@ public class DeleteBullet : MonoBehaviour
             Destroy (col.gameObject);
            
         }
+
+         if (col.gameObject.CompareTag("LightningBullet")){
+             bulletHitWall = true;
+             AudioSource.PlayClipAtPoint (hitWall , transform.position);
+            Destroy (col.gameObject);
+           
+        }
+
+         if (col.gameObject.CompareTag("IceBullet")){
+             bulletHitWall = true;
+             AudioSource.PlayClipAtPoint (hitWall , transform.position);
+            Destroy (col.gameObject);
+           
+        }
     }
 
     

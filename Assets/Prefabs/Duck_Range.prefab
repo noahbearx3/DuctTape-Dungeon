@@ -166,7 +166,7 @@ MonoBehaviour:
   attackDelay: 1
   spearFire: {fileID: 8747468496559263037}
   spearSpeed: 5
-  boolean: {fileID: 0}
+  boolean: {fileID: 3749597875947396566, guid: 2811d4319756ec3479b70457cc526f75, type: 3}
 --- !u!61 &6420432626892635322
 BoxCollider2D:
   m_ObjectHideFlags: 0
