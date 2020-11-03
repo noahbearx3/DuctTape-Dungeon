@@ -163,7 +163,7 @@ MonoBehaviour:
     type: 3}
   attackRange: 9
   mallardSpeed: 1
-  chaseRange: 6
+  chaseRange: 10
   damage: 0
   attackDelay: 1
   spearFire: {fileID: 8747468496559263037}
