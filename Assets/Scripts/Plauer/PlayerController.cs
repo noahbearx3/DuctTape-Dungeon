@@ -53,7 +53,11 @@ public class PlayerController : MonoBehaviour
           if(playerHealth <= 0){
             
             Destroy (gameObject);
-            SceneManager.LoadScene(2);
+
+            // Get's the last scene number. 
+            // Make sure to have the Game Over scene at the end in the Buildsettings!
+            int lastscene = SceneManager.sceneCountInBuildSettings - 1;
+            SceneManager.LoadScene(lastscene);
             
 
         }
