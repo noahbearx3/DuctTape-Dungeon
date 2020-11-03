@@ -34,6 +34,7 @@ public class EnemyController : MonoBehaviour
     private bool hitDuck = false;
 
     private bool icePick = false;
+    private bool firePick = false;
     private bool battPick = false;
     [SerializeField] private float chaseRange = 4f;
 
@@ -73,8 +74,9 @@ public class EnemyController : MonoBehaviour
 
         icePick = boolean.icePicked;
         battPick = boolean.batteryPicked;
+        firePick = boolean.emberPicked;
 
-        Debug.Log(icePick);
+        
 
         duckPosition = duckEnemy.transform.position;
         
@@ -156,7 +158,7 @@ public class EnemyController : MonoBehaviour
             //Destroy (gameObject);
              AudioSource.PlayClipAtPoint (sparkHit, transform.position);
 
-            enemyHealth = enemyHealth - lightningDamage;
+            enemyHealth = enemyHealth - (lightningDamage - duckLightningArmor);
             
             hitDuck = true; 
             shake.ShakeCamera(); 
@@ -165,7 +167,7 @@ public class EnemyController : MonoBehaviour
         if (col.gameObject.CompareTag("IceBullet")){
                 Destroy (col.gameObject);
                 //Destroy (gameObject);
-                enemyHealth = enemyHealth - iceDamage;
+                enemyHealth = enemyHealth - (iceDamage - duckIceArmor);
                 enemySpeed = enemySpeed - 0.1f;
                 hitDuck = true; 
                 shake.ShakeCamera(); 
@@ -180,6 +182,14 @@ public class EnemyController : MonoBehaviour
             shake.ShakeCamera(); 
             
 
+        }
+
+        if (col.gameObject.CompareTag("FireBullet")){
+            Destroy (col.gameObject);
+            //Destroy (gameObject);
+            enemyHealth = enemyHealth - (fireDamage - duckFireArmor);
+            hitDuck = true; 
+            shake.ShakeCamera(); 
         }
 
        

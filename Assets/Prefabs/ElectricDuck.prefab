@@ -163,11 +163,11 @@ MonoBehaviour:
   feather: {fileID: 4624075061970007673, guid: 3077d6c861a20be41810f2f51bf51ef3, type: 3}
   pistolDamage: 15
   duckArmor: 10
-  duckIceArmor: 0
-  duckLightningArmor: -90
-  duckFireArmor: 0
+  duckIceArmor: -35
+  duckLightningArmor: 7.5
+  duckFireArmor: 10
   iceDamage: 10
-  fireDamage: 10
+  fireDamage: 15
   lightningDamage: 10
   frostHit: {fileID: 7332072325922633152, guid: eaac882d0398db047a034accb0e5b4ff,
     type: 3}

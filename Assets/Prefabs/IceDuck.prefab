@@ -164,9 +164,11 @@ MonoBehaviour:
   pistolDamage: 10
   duckArmor: 5
   duckIceArmor: 12.5
-  duckLightningArmor: 2.5
-  duckFireArmor: -10
+  duckLightningArmor: 5
+  duckFireArmor: -40
   iceDamage: 15
+  fireDamage: 10
+  lightningDamage: 10
   frostHit: {fileID: 7332072325922633152, guid: eaac882d0398db047a034accb0e5b4ff,
     type: 3}
   lightningHit: {fileID: 2943021053511931487, guid: f9a7f372b450ced43871fa763cbe482f,

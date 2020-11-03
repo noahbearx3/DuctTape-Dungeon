@@ -177,9 +177,14 @@ public class LightningEnemyController : MonoBehaviour
             enemyHealth = enemyHealth - (pistolDamage - duckArmor);
             hitDuck = true; 
             shake.ShakeCamera(); 
-            
-            
+        }
 
+        if (col.gameObject.CompareTag("FireBullet")){
+            Destroy (col.gameObject);
+            //Destroy (gameObject);
+            enemyHealth = enemyHealth - (fireDamage - duckFireArmor);
+            hitDuck = true; 
+            shake.ShakeCamera(); 
         }
 
        

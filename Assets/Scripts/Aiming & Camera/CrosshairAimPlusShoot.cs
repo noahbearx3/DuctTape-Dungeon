@@ -12,10 +12,13 @@ public class CrosshairAimPlusShoot : MonoBehaviour
 
     public GameObject lightningBullet;
 
+    public GameObject emberBullet;
+
     public float bulletPace = 60f;
 
     private bool pickIce;
     private bool pickBatt;
+    private bool pickFire;
     private bool shotgun = false;
     private bool ak47 = false;
 
@@ -37,6 +40,8 @@ public class CrosshairAimPlusShoot : MonoBehaviour
     public AudioClip pistolShot;
     public AudioClip iceShot;
     public AudioClip sparkShot;
+    public AudioClip fireShot;
+
 
 
      public ParticleSystem particleEmitter;
@@ -59,10 +64,10 @@ public class CrosshairAimPlusShoot : MonoBehaviour
         
         pickIce = boolean.icePicked;
         pickBatt = boolean.batteryPicked;
+        pickFire = boolean.emberPicked;
         shotgun = boolean.shotgunPicked;
         ak47 = boolean.ak47Picked;
-         Debug.Log(pickIce);
-            Debug.Log(pickBatt);
+        Debug.Log(pickFire);
 
         
         
@@ -95,7 +100,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
          float viewAngle = Mathf.Atan2(lookDir.y,lookDir.x) * Mathf.Rad2Deg - 90f;
         
     if(pistol==true && shotgun == false && ak47==false){
-        if(pistol==true && shotgun == false && ak47== false && pickIce == false && pickBatt == false){
+        if(pistol==true && shotgun == false && ak47== false && pickIce == false && pickBatt == false && pickFire == false){
         if (Input.GetMouseButtonDown(0)){
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;
@@ -105,7 +110,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
         }
         
         }
-        if(pistol==true && shotgun == false && ak47== false && pickIce == true && pickBatt == false){
+        if(pistol==true && shotgun == false && ak47== false && pickIce == true && pickBatt == false & pickFire == false){
         if (Input.GetMouseButtonDown(0)){
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;
@@ -115,7 +120,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
         }
         
         }
-        if(pistol==true && shotgun == false && ak47== false && pickIce == false && pickBatt == true){
+        if(pistol==true && shotgun == false && ak47== false && pickIce == false && pickBatt == true && pickFire == false){
         if (Input.GetMouseButtonDown(0)){
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;
@@ -123,6 +128,20 @@ public class CrosshairAimPlusShoot : MonoBehaviour
             AudioSource.PlayClipAtPoint (sparkShot, transform.position);
             fireBullet(direction,viewAngle);
         }
+
+        
+        
+        }
+        if(pistol==true && shotgun == false && ak47== false && pickIce == false && pickBatt == false && pickFire == true){
+        if (Input.GetMouseButtonDown(0)){
+            float distance = difference.magnitude;
+            Vector2 direction = difference / distance;
+            direction.Normalize();
+            AudioSource.PlayClipAtPoint (fireShot, transform.position);
+            fireBullet(direction,viewAngle);
+        }
+
+        
         
         }
     
@@ -165,7 +184,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
     
 
     void fireBullet(Vector2 direction, float viewAngle){
-        if (bulletNormal == true && pickIce == false && pickBatt == false){
+        if (bulletNormal == true && pickIce == false && pickBatt == false && pickFire == false){
         GameObject b = Instantiate(bullet) as GameObject;
         b.transform.position = gunFire.transform.position;
         b.transform.rotation = Quaternion.Euler(0.0f, 0.0f, viewAngle);
@@ -174,7 +193,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
         
         }
         
-        if(bulletNormal == true && pickIce == true && pickBatt == false){
+        if(bulletNormal == true && pickIce == true && pickBatt == false && pickFire == false){
         GameObject frost = Instantiate(frostBullet) as GameObject;
         bulletPace = 5;
         frost.transform.position = gunFire.transform.position;
@@ -183,13 +202,23 @@ public class CrosshairAimPlusShoot : MonoBehaviour
         Destroy(frost, 2.0f);   
         }
         
-        if(bulletNormal == true && pickIce == false && pickBatt == true){
+        if(bulletNormal == true && pickIce == false && pickBatt == true && pickFire == false){
         bulletPace = 5;
         GameObject lightning = Instantiate(lightningBullet) as GameObject;
         lightning.transform.position = gunFire.transform.position;
         lightning.transform.rotation = Quaternion.Euler(0.0f, 0.0f, viewAngle);
         lightning.GetComponent<Rigidbody2D>().velocity = direction * bulletPace;
         Destroy(lightning, 2.0f);   
+        }
+
+         
+        if(bulletNormal == true && pickIce == false && pickBatt == false && pickFire == true){
+        bulletPace = 5;
+        GameObject ember = Instantiate(emberBullet) as GameObject;
+        ember.transform.position = gunFire.transform.position;
+        ember.transform.rotation = Quaternion.Euler(0.0f, 0.0f, viewAngle);
+        ember.GetComponent<Rigidbody2D>().velocity = direction * bulletPace;
+        Destroy(ember, 2.0f);   
         }
     }
 

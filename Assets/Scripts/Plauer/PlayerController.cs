@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public bool ak47Picked = false;
     public bool icePicked = false;
     public bool batteryPicked = false;
+    public bool emberPicked = false;
     public float healthPickup = 25f;
 
     public HealthController healthControl;
@@ -101,6 +102,15 @@ public class PlayerController : MonoBehaviour
             Destroy (col.gameObject);
             icePicked = true;
             batteryPicked = false;
+            emberPicked = false;
+
+         }
+
+          if (col.gameObject.CompareTag("Ember")){
+            Destroy (col.gameObject);
+            icePicked = false;
+            batteryPicked = false;
+            emberPicked = true;
 
          }
 
@@ -108,6 +118,7 @@ public class PlayerController : MonoBehaviour
             Destroy (col.gameObject);
             batteryPicked = true;
             icePicked = false;
+            emberPicked = false;
          }
 
          if (col.gameObject.CompareTag("Shotgun")){
