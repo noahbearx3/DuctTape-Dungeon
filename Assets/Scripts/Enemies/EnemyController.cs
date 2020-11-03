@@ -148,12 +148,12 @@ public class EnemyController : MonoBehaviour
             }
 
         if (col.gameObject.CompareTag("IceBullet")){
-            Destroy (col.gameObject);
-            //Destroy (gameObject);
-            enemyHealth = enemyHealth - iceDamage;
-            enemySpeed = enemySpeed - 0.1f;
-            hitDuck = true; 
-            shake.ShakeCamera(); 
+                Destroy (col.gameObject);
+                //Destroy (gameObject);
+                enemyHealth = enemyHealth - iceDamage;
+                enemySpeed = enemySpeed - 0.1f;
+                hitDuck = true; 
+                shake.ShakeCamera(); 
             
             }
 
