@@ -8,8 +8,9 @@ public class mainMenu : MonoBehaviour
 
     public void OnStartGame()
     {
-    //    int index = Random.Range(2, 3);
-        SceneManager.LoadScene(2); 
+        int maxRange = SceneManager.sceneCountInBuildSettings - 2;
+        int randomLevel = Random.Range(2, maxRange);
+        SceneManager.LoadScene(randomLevel); 
     }
 
 
