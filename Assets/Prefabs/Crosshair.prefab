@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  bullet: {fileID: 2733203797086261812, guid: e8309b3ea86af2042ba2383f9164344a, type: 3}
+  bullet: {fileID: 5322537303928705250, guid: e8309b3ea86af2042ba2383f9164344a, type: 3}
   frostBullet: {fileID: 6941989727196294982, guid: 5b1a80f08e205604c832336fc902f18d,
     type: 3}
   lightningBullet: {fileID: 3109958087545938006, guid: c912b799357149d4e9ed1102f804959b,
