@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class IceEnemyController : MonoBehaviour
 {
     private float enemyHealth;
     public GameObject bullet;
@@ -11,14 +11,13 @@ public class EnemyController : MonoBehaviour
     public CameraShake shake;
     public GameObject feather;
     public float pistolDamage = 15;
-    public float iceDamage = 10;
-    public float fireDamage = 10;
-    public float lightningDamage = 10;
     public float duckArmor = 10;
     public float duckIceArmor = 0;
     public float duckLightningArmor = 0;
-    public float duckFireArmor = 0;
-    
+    public float duckFireArmor = 10;
+    public float iceDamage = 10;
+    public float fireDamage = 10;
+    public float lightningDamage = 10;
 
     public GameObject frostHit;
     public GameObject lightningHit;
@@ -41,13 +40,15 @@ public class EnemyController : MonoBehaviour
 
     public PlayerController boolean;
     
-    // /AudioSource audio;
+    
     public AudioClip deathClip;
     public AudioClip iceHit;
     public AudioClip sparkHit;
 
     public GameObject mainPlayer;
     private SpriteRenderer mySpriteRenderer;
+
+    
 
 
     Animator attackAnim;
@@ -59,7 +60,7 @@ public class EnemyController : MonoBehaviour
         enemyHealth = 100;
         attackAnim = gameObject.GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        // /audio = GetComponent<AudioSource>();
+        
         
         mainPlayer = GameObject.FindGameObjectWithTag("Player");
         mySpriteRenderer = GetComponent<SpriteRenderer>();
@@ -73,8 +74,6 @@ public class EnemyController : MonoBehaviour
 
         icePick = boolean.icePicked;
         battPick = boolean.batteryPicked;
-
-        Debug.Log(icePick);
 
         duckPosition = duckEnemy.transform.position;
         
@@ -156,7 +155,7 @@ public class EnemyController : MonoBehaviour
             //Destroy (gameObject);
              AudioSource.PlayClipAtPoint (sparkHit, transform.position);
 
-            enemyHealth = enemyHealth - lightningDamage;
+            enemyHealth = enemyHealth - (lightningDamage - duckLightningArmor);
             
             hitDuck = true; 
             shake.ShakeCamera(); 
@@ -165,7 +164,7 @@ public class EnemyController : MonoBehaviour
         if (col.gameObject.CompareTag("IceBullet")){
                 Destroy (col.gameObject);
                 //Destroy (gameObject);
-                enemyHealth = enemyHealth - iceDamage;
+                enemyHealth = enemyHealth - (iceDamage - duckIceArmor);
                 enemySpeed = enemySpeed - 0.1f;
                 hitDuck = true; 
                 shake.ShakeCamera(); 
@@ -178,6 +177,7 @@ public class EnemyController : MonoBehaviour
             enemyHealth = enemyHealth - (pistolDamage - duckArmor);
             hitDuck = true; 
             shake.ShakeCamera(); 
+            
             
 
         }

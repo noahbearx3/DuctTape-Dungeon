@@ -102,9 +102,9 @@ MonoBehaviour:
   lightningBullet: {fileID: 3109958087545938006, guid: c912b799357149d4e9ed1102f804959b,
     type: 3}
   bulletPace: 25
-  player: {fileID: 0}
-  gunFire: {fileID: 0}
-  rb: {fileID: 0}
+  player: {fileID: 456887325290119058, guid: 32d8804324786ba4bb1b5c044c3005ee, type: 3}
+  gunFire: {fileID: 456887325290119058, guid: 32d8804324786ba4bb1b5c044c3005ee, type: 3}
+  rb: {fileID: 456887325290119071, guid: 32d8804324786ba4bb1b5c044c3005ee, type: 3}
   bulletNormal: 1
   boolean: {fileID: 0}
   iceShot: {fileID: 8300000, guid: 74ec212b7f073e0458d7e97019f043ed, type: 3}

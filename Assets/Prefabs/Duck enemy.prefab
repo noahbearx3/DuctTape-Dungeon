@@ -107,6 +107,10 @@ MonoBehaviour:
     type: 3}
   shake: {fileID: 5478158005558970441, guid: b39134933ea72ea46865dced20fbaedd, type: 3}
   feather: {fileID: 4624075061970007673, guid: 3077d6c861a20be41810f2f51bf51ef3, type: 3}
+  pistolDamage: 15
+  duckArmor: 5
+  duckIceArmor: 0
+  duckLightningArmor: 0
   iceDamage: 5
   frostHit: {fileID: 7332072325922633152, guid: eaac882d0398db047a034accb0e5b4ff,
     type: 3}

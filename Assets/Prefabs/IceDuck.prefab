@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7607809555741376248}
   - component: {fileID: 7607809555741376249}
-  - component: {fileID: 7607809555741376250}
   - component: {fileID: 7607809555741376251}
   - component: {fileID: 7607809555741376252}
   - component: {fileID: 7607809555741376253}
+  - component: {fileID: 3034389027932230422}
   m_Layer: 9
   m_Name: IceDuck
   m_TagString: MeeleEnemy
@@ -86,41 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7607809555741376250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7607809555741376254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a887ee1cadff7ad48bd151696723ae87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 2733203797086261812, guid: e8309b3ea86af2042ba2383f9164344a, type: 3}
-  iceBullet: {fileID: 6941989727196294982, guid: 5b1a80f08e205604c832336fc902f18d,
-    type: 3}
-  lightningBullet: {fileID: 3109958087545938006, guid: c912b799357149d4e9ed1102f804959b,
-    type: 3}
-  shake: {fileID: 5478158005558970441, guid: b39134933ea72ea46865dced20fbaedd, type: 3}
-  feather: {fileID: 4624075061970007673, guid: 3077d6c861a20be41810f2f51bf51ef3, type: 3}
-  iceDamage: 5
-  frostHit: {fileID: 7332072325922633152, guid: eaac882d0398db047a034accb0e5b4ff,
-    type: 3}
-  lightningHit: {fileID: 2943021053511931487, guid: f9a7f372b450ced43871fa763cbe482f,
-    type: 3}
-  duckEnemy: {fileID: 7607809555741376254}
-  bulletHit: {fileID: 1429306884795790670, guid: a354fc9251560ca41ab23c12300fd519,
-    type: 3}
-  enemySpeed: 3
-  chaseRange: 10
-  boolean: {fileID: 3749597875947396566, guid: 32d8804324786ba4bb1b5c044c3005ee, type: 3}
-  deathClip: {fileID: 8300000, guid: bc73d97e9a0efb342b33f765526919c4, type: 3}
-  iceHit: {fileID: 8300000, guid: 9601b7bc05ecca9459bf430cfa2b9d9d, type: 3}
-  sparkHit: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
-  mainPlayer: {fileID: 3629355927127209674, guid: efa0b6c7978bc884e9ee371c66c18c55,
-    type: 3}
 --- !u!70 &7607809555741376251
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -177,3 +142,42 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3034389027932230422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7607809555741376254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae8a00c7da251a94c84d9c86136760f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5322537303928705250, guid: e8309b3ea86af2042ba2383f9164344a, type: 3}
+  iceBullet: {fileID: 6941989727196294982, guid: 5b1a80f08e205604c832336fc902f18d,
+    type: 3}
+  lightningBullet: {fileID: 3109958087545938006, guid: c912b799357149d4e9ed1102f804959b,
+    type: 3}
+  shake: {fileID: 0}
+  feather: {fileID: 4624075061970007673, guid: 3077d6c861a20be41810f2f51bf51ef3, type: 3}
+  pistolDamage: 10
+  duckArmor: 5
+  duckIceArmor: 12.5
+  duckLightningArmor: 2.5
+  duckFireArmor: -10
+  iceDamage: 15
+  frostHit: {fileID: 7332072325922633152, guid: eaac882d0398db047a034accb0e5b4ff,
+    type: 3}
+  lightningHit: {fileID: 2943021053511931487, guid: f9a7f372b450ced43871fa763cbe482f,
+    type: 3}
+  duckEnemy: {fileID: 7607809555741376254}
+  bulletHit: {fileID: 1429306884795790670, guid: a354fc9251560ca41ab23c12300fd519,
+    type: 3}
+  enemySpeed: 2
+  chaseRange: 4
+  boolean: {fileID: 0}
+  deathClip: {fileID: 8300000, guid: bc73d97e9a0efb342b33f765526919c4, type: 3}
+  iceHit: {fileID: 8300000, guid: 9601b7bc05ecca9459bf430cfa2b9d9d, type: 3}
+  sparkHit: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
+  mainPlayer: {fileID: 0}

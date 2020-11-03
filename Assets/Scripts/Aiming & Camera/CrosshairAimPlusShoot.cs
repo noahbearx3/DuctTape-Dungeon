@@ -33,7 +33,8 @@ public class CrosshairAimPlusShoot : MonoBehaviour
     public bool bulletNormal = true;
 
     public PlayerController boolean;   
-    AudioSource audio;
+    //AudioSource audio;
+    public AudioClip pistolShot;
     public AudioClip iceShot;
     public AudioClip sparkShot;
 
@@ -46,7 +47,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
     void Start()
     {
         Cursor.visible = false;
-         audio = GetComponent<AudioSource>();
+         //audio = GetComponent<AudioSource>();
         //particleEmitter = GameObject.Find("Particle System").GetComponent<ParticleSystem>().Play();
         
     }
@@ -99,7 +100,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;
             direction.Normalize();
-             audio.Play(0);
+            AudioSource.PlayClipAtPoint (pistolShot, transform.position);
             fireBullet(direction,viewAngle);
         }
         

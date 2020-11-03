@@ -18,7 +18,7 @@ public class RangeDuckController : MonoBehaviour
     public GameObject bulletHit;
     public float mallardIceDamage = 7.5f;
     public EnemyController damageControl;
-     AudioSource audio;
+    
     public AudioClip deathClip;
     public AudioClip iceHit;
     public AudioClip sparkHit;
