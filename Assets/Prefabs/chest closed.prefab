@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7848192315367880558}
   - component: {fileID: 1198718174163660245}
   - component: {fileID: 3678119123169182802}
+  - component: {fileID: 4404322919067816542}
   m_Layer: 0
   m_Name: chest closed
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1721311291177375879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.040151, y: 3.040151, z: 3.040151}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -130,3 +131,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.37, y: 0.24}
   m_EdgeRadius: 0
+--- !u!114 &4404322919067816542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721311291177375879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d92d4be1b8056b14e854f552ba616770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Items:
+  - {fileID: 7596418049125286752, guid: 0aab2f6edd86f314f8984cbbc622b164, type: 3}
+  - {fileID: 245810953290631479, guid: 89c0615b241849243a060122576eb99c, type: 3}
+  - {fileID: 2883490508821440359, guid: cdfef73486300ec47a238f5fb50fcde4, type: 3}
+  - {fileID: 2611662988716129688, guid: d537382033e453f4eaa3e670b46cbccf, type: 3}
+  - {fileID: 5323934440959892074, guid: 062e2a58d43812f4d984a98c5f33c40c, type: 3}
+  randomItem: 0
