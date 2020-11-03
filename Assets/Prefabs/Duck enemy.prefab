@@ -108,14 +108,18 @@ MonoBehaviour:
   shake: {fileID: 5478158005558970441, guid: b39134933ea72ea46865dced20fbaedd, type: 3}
   feather: {fileID: 4624075061970007673, guid: 3077d6c861a20be41810f2f51bf51ef3, type: 3}
   pistolDamage: 15
+  iceDamage: 5
+  fireDamage: 10
+  lightningDamage: 10
   duckArmor: 5
   duckIceArmor: 0
   duckLightningArmor: 0
-  iceDamage: 5
+  duckFireArmor: 0
   frostHit: {fileID: 7332072325922633152, guid: eaac882d0398db047a034accb0e5b4ff,
     type: 3}
   lightningHit: {fileID: 2943021053511931487, guid: f9a7f372b450ced43871fa763cbe482f,
     type: 3}
+  fireHit: {fileID: 1997521191780575207, guid: 3527053fa2d7bc24a808c0c429aca8f4, type: 3}
   duckEnemy: {fileID: 7181311015234179585}
   bulletHit: {fileID: 1429306884795790670, guid: a354fc9251560ca41ab23c12300fd519,
     type: 3}
@@ -125,6 +129,7 @@ MonoBehaviour:
   deathClip: {fileID: 8300000, guid: bc73d97e9a0efb342b33f765526919c4, type: 3}
   iceHit: {fileID: 8300000, guid: 9601b7bc05ecca9459bf430cfa2b9d9d, type: 3}
   sparkHit: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
+  flameHit: {fileID: 8300000, guid: 3d11f16a06acde543a35a6489583dd66, type: 3}
   mainPlayer: {fileID: 3629355927127209674, guid: efa0b6c7978bc884e9ee371c66c18c55,
     type: 3}
 --- !u!70 &7181311015234179588

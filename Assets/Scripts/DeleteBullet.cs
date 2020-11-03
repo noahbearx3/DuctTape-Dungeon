@@ -49,6 +49,13 @@ public class DeleteBullet : MonoBehaviour
             Destroy (col.gameObject);
            
         }
+
+        if (col.gameObject.CompareTag("FireBullet")){
+             bulletHitWall = true;
+             AudioSource.PlayClipAtPoint (hitWall , transform.position);
+            Destroy (col.gameObject);
+           
+        }
     }
 
     

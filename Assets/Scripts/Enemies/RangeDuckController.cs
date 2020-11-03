@@ -14,6 +14,8 @@ public class RangeDuckController : MonoBehaviour
 
     public GameObject frostHit;
     public GameObject lightningHit;
+
+    public GameObject fireHit;
     public GameObject mallardEnemy;
     public GameObject bulletHit;
     public float mallardIceDamage = 7.5f;
@@ -22,6 +24,7 @@ public class RangeDuckController : MonoBehaviour
     public AudioClip deathClip;
     public AudioClip iceHit;
     public AudioClip sparkHit;
+    public AudioClip flameHit;
     Animator attackAnim;
     private SpriteRenderer mySpriteRenderer;
     public GameObject spearObject;
@@ -40,6 +43,10 @@ public class RangeDuckController : MonoBehaviour
     public float spearSpeed = 5;
     private bool icePick = false;
      private bool battPick = false;
+     private bool firePick = false;
+
+     
+     
 
      public PlayerController boolean;
 
@@ -64,6 +71,7 @@ public class RangeDuckController : MonoBehaviour
          
         icePick = boolean.icePicked;
         battPick = boolean.batteryPicked;
+        firePick = boolean.emberPicked;
         // Calculates the difference between the mainPlayer, and the Duck
         float dist = Vector3.Distance(transform.position, target.position);
         if(dist < chaseRange){
@@ -138,7 +146,7 @@ public class RangeDuckController : MonoBehaviour
             mallardSpeed = mallardSpeed + 0.1f;
         }
 
-        if (hitMallard == true && icePick == false && battPick == false ){
+      if (hitMallard == true && icePick == false && battPick == false && firePick == false ){
             GameObject h = Instantiate(bulletHit) as GameObject;
             h.transform.position = transform.position;
             Destroy(h, 0.2f);
@@ -146,7 +154,7 @@ public class RangeDuckController : MonoBehaviour
             hitMallard = false;
         }
 
-        if (hitMallard == true && icePick == true && battPick == false){
+        if (hitMallard == true && icePick == true && battPick == false && firePick == false ){
             GameObject frost = Instantiate(frostHit) as GameObject;
             AudioSource.PlayClipAtPoint (iceHit, transform.position);
             frost.transform.position = transform.position;
@@ -154,13 +162,21 @@ public class RangeDuckController : MonoBehaviour
             hitMallard = false;
         }
 
-        if (hitMallard == true && icePick == false && battPick == true ){
+        if (hitMallard == true && icePick == false && battPick == true && firePick == false ){
             GameObject spark = Instantiate(lightningHit) as GameObject;
             AudioSource.PlayClipAtPoint (sparkHit, transform.position);
             spark.transform.position = transform.position;
             Destroy(spark, 0.2f);
             hitMallard = false;
-        }       
+        }
+
+        if (hitMallard == true && icePick == false && battPick == false && firePick == true ){
+            GameObject flame = Instantiate(fireHit) as GameObject;
+            AudioSource.PlayClipAtPoint (flameHit, transform.position);
+            flame.transform.position = transform.position;
+            Destroy(flame, 0.2f);
+            hitMallard = false;
+        }
                 
         
          
@@ -193,10 +209,15 @@ public class RangeDuckController : MonoBehaviour
             mallardHealth = mallardHealth - 25;
             hitMallard = true; 
             shake.ShakeCamera(); 
-            
-            
-
             }
+
+        if (col.gameObject.CompareTag("FireBullet")){
+        Destroy (col.gameObject);
+        //Destroy (gameObject);
+        mallardHealth = mallardHealth - 15;
+        hitMallard = true; 
+        shake.ShakeCamera(); 
+        }
         }
     void Death(){
         AudioSource.PlayClipAtPoint (deathClip, transform.position);

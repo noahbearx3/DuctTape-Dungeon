@@ -21,6 +21,7 @@ public class IceEnemyController : MonoBehaviour
 
     public GameObject frostHit;
     public GameObject lightningHit;
+    public GameObject fireHit;
     public GameObject duckEnemy;
 
     private Vector3 duckPosition;
@@ -34,6 +35,8 @@ public class IceEnemyController : MonoBehaviour
 
     private bool icePick = false;
     private bool battPick = false;
+
+    private bool firePick = false;
     [SerializeField] private float chaseRange = 4f;
 
     private Transform target;
@@ -44,6 +47,7 @@ public class IceEnemyController : MonoBehaviour
     public AudioClip deathClip;
     public AudioClip iceHit;
     public AudioClip sparkHit;
+    public AudioClip flameHit;
 
     public GameObject mainPlayer;
     private SpriteRenderer mySpriteRenderer;
@@ -74,6 +78,7 @@ public class IceEnemyController : MonoBehaviour
 
         icePick = boolean.icePicked;
         battPick = boolean.batteryPicked;
+        firePick = boolean.emberPicked;
 
         duckPosition = duckEnemy.transform.position;
         
@@ -84,7 +89,7 @@ public class IceEnemyController : MonoBehaviour
             
         }
 
-        if (hitDuck == true && icePick == false && battPick == false ){
+       if (hitDuck == true && icePick == false && battPick == false && firePick == false ){
             GameObject h = Instantiate(bulletHit) as GameObject;
             h.transform.position = transform.position;
             Destroy(h, 0.2f);
@@ -92,7 +97,7 @@ public class IceEnemyController : MonoBehaviour
             hitDuck = false;
         }
 
-        if (hitDuck == true && icePick == true && battPick == false){
+        if (hitDuck == true && icePick == true && battPick == false && firePick == false ){
             GameObject frost = Instantiate(frostHit) as GameObject;
             AudioSource.PlayClipAtPoint (iceHit, transform.position);
             frost.transform.position = transform.position;
@@ -100,10 +105,19 @@ public class IceEnemyController : MonoBehaviour
             hitDuck = false;
         }
 
-        if (hitDuck == true && icePick == false && battPick == true ){
+        if (hitDuck == true && icePick == false && battPick == true && firePick == false ){
             GameObject spark = Instantiate(lightningHit) as GameObject;
+            AudioSource.PlayClipAtPoint (sparkHit, transform.position);
             spark.transform.position = transform.position;
             Destroy(spark, 0.2f);
+            hitDuck = false;
+        }
+
+        if (hitDuck == true && icePick == false && battPick == false && firePick == true ){
+            GameObject flame = Instantiate(fireHit) as GameObject;
+            AudioSource.PlayClipAtPoint (flameHit, transform.position);
+            flame.transform.position = transform.position;
+            Destroy(flame, 0.2f);
             hitDuck = false;
         }
 
