@@ -27,6 +27,7 @@ public class EnemyController : MonoBehaviour
 
     private bool icePick = false;
     private bool battPick = false;
+    [SerializeField] private float chaseRange = 4f;
 
     private Transform target;
 
@@ -96,7 +97,11 @@ public class EnemyController : MonoBehaviour
             Destroy(spark, 0.2f);
             hitDuck = false;
         }
-        if(Vector2.Distance(transform.position, target.position) < 5){
+
+        float dist = Vector3.Distance(transform.position, target.position);
+
+
+        if(dist < chaseRange){
             transform.position = Vector2.MoveTowards(transform.position, target.position, enemySpeed * Time.deltaTime);
             attackAnim.SetTrigger("Walk");
             attackAnim.ResetTrigger("Idle");
