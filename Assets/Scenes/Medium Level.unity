@@ -7336,6 +7336,20 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1760711592}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &946788826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946788817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61429416d8300214d9dd2e600dd5ff2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: {fileID: 946788819}
+  UI: {fileID: 1990308331}
 --- !u!4 &946933607 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 510566251202215502, guid: 764344d16cd47404db887da11f59f103,
@@ -66518,6 +66532,11 @@ PrefabInstance:
       propertyPath: emberPicked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3749597875947396566, guid: 32d8804324786ba4bb1b5c044c3005ee,
+        type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 1990308331}
     - target: {fileID: 3749597876182463591, guid: 32d8804324786ba4bb1b5c044c3005ee,
         type: 3}
       propertyPath: m_SortingOrder
@@ -67297,6 +67316,10 @@ MonoBehaviour:
     type: 3}
   fireBulletSprite: {fileID: 7900860951653682938, guid: fdeba66e00e16cd41bad1abf8985ad3c,
     type: 3}
+  bulletUI: 1
+  iceBulletUI: 0
+  fireBulletUI: 0
+  lightningBulletUI: 0
   ammoImg: {fileID: 1990308332}
   items: {fileID: 946788819}
 --- !u!114 &1990308332
