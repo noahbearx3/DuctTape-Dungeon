@@ -465,6 +465,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7607809555741376249, guid: ea3f076e1c2cac14f91d2a7ca0d1caa4,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7607809555741376254, guid: ea3f076e1c2cac14f91d2a7ca0d1caa4,
         type: 3}
       propertyPath: m_Name
@@ -614,6 +619,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4737044314159511913, guid: 764344d16cd47404db887da11f59f103,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6322599017171293511, guid: 764344d16cd47404db887da11f59f103,
         type: 3}
@@ -6014,6 +6024,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Duck enemy (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181311015234179590, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7181311015234179591, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
@@ -51938,6 +51953,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Duck enemy (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7181311015234179590, guid: a467e768c6da07d46a13f364e8ef73a1,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7181311015234179591, guid: a467e768c6da07d46a13f364e8ef73a1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -66251,6 +66271,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7607809555741376249, guid: ea3f076e1c2cac14f91d2a7ca0d1caa4,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7607809555741376254, guid: ea3f076e1c2cac14f91d2a7ca0d1caa4,
         type: 3}
       propertyPath: m_Name
@@ -67582,6 +67607,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1518712348}
     m_Modifications:
+    - target: {fileID: 4907996339984639352, guid: 1f4fc37c96fa0a049ace7956874f0cf5,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4907996339984639353, guid: 1f4fc37c96fa0a049ace7956874f0cf5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67970,6 +68000,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607809555741376249, guid: ea3f076e1c2cac14f91d2a7ca0d1caa4,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7607809555741376254, guid: ea3f076e1c2cac14f91d2a7ca0d1caa4,
         type: 3}
