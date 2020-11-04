@@ -31,6 +31,7 @@ public class EnemyController : MonoBehaviour
     EnemyController icePicked;
 
     public float enemySpeed;
+    private int duckPoints = 10;
 
     private bool hitDuck = false;
 
@@ -42,6 +43,7 @@ public class EnemyController : MonoBehaviour
     private Transform target;
 
     public PlayerController boolean;
+    public PointSystem counter;
     
     // /AudioSource audio;
     public AudioClip deathClip;
@@ -84,10 +86,8 @@ public class EnemyController : MonoBehaviour
         duckPosition = duckEnemy.transform.position;
         
         if(enemyHealth <= 0){
-
-           Death();
-            
-            
+        counter.points = counter.points + duckPoints;
+        Death();   
         }
 
         if (hitDuck == true && icePick == false && battPick == false && firePick == false ){

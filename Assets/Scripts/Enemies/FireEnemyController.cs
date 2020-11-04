@@ -18,6 +18,8 @@ public class FireEnemyController : MonoBehaviour
     public float iceDamage = 10;
     public float fireDamage = 10;
     public float lightningDamage = 10;
+    private int duckPoints = 20;
+    
 
 
     public GameObject frostHit;
@@ -43,6 +45,7 @@ public class FireEnemyController : MonoBehaviour
     private Transform target;
 
     public PlayerController boolean;
+    public PointSystem counter;
     
     
     public AudioClip deathClip;
@@ -83,10 +86,8 @@ public class FireEnemyController : MonoBehaviour
         duckPosition = duckEnemy.transform.position;
         
         if(enemyHealth <= 0){
-
-           Death();
-            
-            
+        counter.points = counter.points + duckPoints;
+        Death();   
         }
 
         if (hitDuck == true && icePick == false && battPick == false && firePick == false ){
