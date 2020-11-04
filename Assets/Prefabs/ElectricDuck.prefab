@@ -164,7 +164,7 @@ MonoBehaviour:
   pistolDamage: 15
   duckArmor: 10
   duckIceArmor: -35
-  duckLightningArmor: 7.5
+  duckLightningArmor: 15
   duckFireArmor: 10
   iceDamage: 10
   fireDamage: 15
@@ -180,6 +180,7 @@ MonoBehaviour:
   enemySpeed: 2
   chaseRange: 9
   boolean: {fileID: 3749597875947396566, guid: 32d8804324786ba4bb1b5c044c3005ee, type: 3}
+  counter: {fileID: 0}
   deathClip: {fileID: 8300000, guid: bc73d97e9a0efb342b33f765526919c4, type: 3}
   iceHit: {fileID: 8300000, guid: 9601b7bc05ecca9459bf430cfa2b9d9d, type: 3}
   sparkHit: {fileID: 8300000, guid: 24dd7467304c30f4e9c080307771c39e, type: 3}
