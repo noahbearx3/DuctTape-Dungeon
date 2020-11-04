@@ -15,12 +15,21 @@ public class CrosshairAimPlusShoot : MonoBehaviour
     public GameObject emberBullet;
 
     public float bulletPace = 60f;
+    private float ammo = 5;
+    private int counter = 5;
+    private float shootTimerPistol = 1;
+    private float shootTimerAK = 1;
+    private float shootTimerShotgun = 1;
+    private float pistolRate = 3;
+    private float ak47Rate = 6;
+    private float shotgunRate = 1;
 
     private bool pickIce;
     private bool pickBatt;
     private bool pickFire;
     public bool shotgun = false;
     public bool ak47 = false;
+    private bool limit = false;
 
     public bool pistol = true;
 
@@ -62,14 +71,31 @@ public class CrosshairAimPlusShoot : MonoBehaviour
     void Update()
     {
         
-        
+        // Update Booleans to know which item is currently held
         pickIce = boolean.icePicked;
         pickBatt = boolean.batteryPicked;
         pickFire = boolean.emberPicked;
         shotgun = boolean.shotgunPicked;
         ak47 = boolean.ak47Picked;
         Debug.Log(pickFire);
-
+        // Reset time of pistol to be shot(control fire rate)
+        if(shootTimerPistol >= 0){
+            shootTimerPistol -= Time.deltaTime * pistolRate;
+        }
+        // Reset time of ak-47 to be shot(control fire rate)
+         if(shootTimerAK >= 0){
+            shootTimerAK -= Time.deltaTime * ak47Rate;
+        }
+        // Reset time of shotgun to be shot(control fire rate)
+        if(shootTimerShotgun >= 0){
+            shootTimerShotgun -= Time.deltaTime * shotgunRate;
+        }
+        //If limit is 3 run the reset function
+        
+            if(counter == 3){
+            limit = true;
+            StartCoroutine(Reset());
+            }
         
         
         if(shotgun){
@@ -102,119 +128,177 @@ public class CrosshairAimPlusShoot : MonoBehaviour
         
     if(pistol==true && shotgun == false && ak47==false){
         if(pistol==true && shotgun == false && ak47== false && pickIce == false && pickBatt == false && pickFire == false){
-        if (Input.GetMouseButtonDown(0)){
-            float distance = difference.magnitude;
-            Vector2 direction = difference / distance;
-            direction.Normalize();
-            AudioSource.PlayClipAtPoint (pistolShot, transform.position);
-            fireBullet(direction,viewAngle);
+            if(ammo > 0 && shootTimerPistol <=0){
+                if (Input.GetMouseButtonDown(0) && !limit){
+                    counter = counter + 1;
+                    shootTimerPistol = 1;
+                    float distance = difference.magnitude;
+                    Vector2 direction = difference / distance;
+                    direction.Normalize();
+                    AudioSource.PlayClipAtPoint (pistolShot, transform.position);
+                    fireBullet(direction,viewAngle);
+                }
         }
         
         }
         if(pistol==true && shotgun == false && ak47== false && pickIce == true && pickBatt == false & pickFire == false){
-        if (Input.GetMouseButtonDown(0)){
-            float distance = difference.magnitude;
-            Vector2 direction = difference / distance;
-            direction.Normalize();
-            AudioSource.PlayClipAtPoint (iceShot, transform.position);
-            fireBullet(direction,viewAngle);
+         if(ammo > 0 && shootTimerPistol <=0){
+                if (Input.GetMouseButtonDown(0) && !limit){
+                    counter = counter + 1;
+                    shootTimerPistol = 1;
+                    float distance = difference.magnitude;
+                    Vector2 direction = difference / distance;
+                    direction.Normalize();
+                    AudioSource.PlayClipAtPoint (iceShot, transform.position);
+                    fireBullet(direction,viewAngle);
+                }
         }
         
         }
         if(pistol==true && shotgun == false && ak47== false && pickIce == false && pickBatt == true && pickFire == false){
-        if (Input.GetMouseButtonDown(0)){
-            float distance = difference.magnitude;
-            Vector2 direction = difference / distance;
-            direction.Normalize();
-            AudioSource.PlayClipAtPoint (sparkShot, transform.position);
-            fireBullet(direction,viewAngle);
+         if(ammo > 0 && shootTimerPistol <=0){
+                if (Input.GetMouseButtonDown(0) && !limit){
+                    counter = counter + 1;
+                    shootTimerPistol = 1;
+                    float distance = difference.magnitude;
+                    Vector2 direction = difference / distance;
+                    direction.Normalize();
+                    AudioSource.PlayClipAtPoint (sparkShot, transform.position);
+                    fireBullet(direction,viewAngle);
+                }
         }
 
         
         
         }
         if(pistol==true && shotgun == false && ak47== false && pickIce == false && pickBatt == false && pickFire == true){
-        if (Input.GetMouseButtonDown(0)){
-            float distance = difference.magnitude;
-            Vector2 direction = difference / distance;
-            direction.Normalize();
-            AudioSource.PlayClipAtPoint (fireShot, transform.position);
-            fireBullet(direction,viewAngle);
-            }
+         if(ammo > 0 && shootTimerPistol <=0){
+                if (Input.GetMouseButtonDown(0) && !limit){
+                    counter = counter + 1;
+                    shootTimerPistol = 1;
+                    float distance = difference.magnitude;
+                    Vector2 direction = difference / distance;
+                    direction.Normalize();
+                    AudioSource.PlayClipAtPoint (fireShot, transform.position);
+                    fireBullet(direction,viewAngle);
+                }
         }
     
     }
+}
 
-    // seperate
+    // Shotgun If Controller
 
 
     if(pistol==false && shotgun == true && ak47==false){
         if(pistol==false && shotgun == true && ak47== false && pickIce == false && pickBatt == false && pickFire == false){
-        if (Input.GetMouseButtonDown(0)){
-            float distance = difference.magnitude;
-            Vector2 direction = difference / distance;
-            direction.Normalize();
-            AudioSource.PlayClipAtPoint (shotgunShot, transform.position);
-            fireBullet(direction,viewAngle);
-        }
+        if(ammo > 0 && shootTimerShotgun <=0){
+                if (Input.GetMouseButtonDown(0)){
+                bulletPace = 10;
+                shootTimerShotgun = 1;
+                float distance = difference.magnitude;
+                Vector2 direction = difference / distance;
+                Vector2 offset = Vector2.right ;
+                // /int offset = difference / distance + 10;
+                direction.Normalize();
+                AudioSource.PlayClipAtPoint (shotgunShot, transform.position);
+                fireBullet(direction + offset/2 ,viewAngle );
+                fireBullet(direction - offset/2,viewAngle );
+                fireBullet(direction,viewAngle);
+                }
+            }
         
         }
+    }
         if(pistol==false && shotgun == true && ak47== false && pickIce == true && pickBatt == false & pickFire == false){
-        if (Input.GetMouseButtonDown(0)){
-            float distance = difference.magnitude;
-            Vector2 direction = difference / distance;
-            direction.Normalize();
-            AudioSource.PlayClipAtPoint (iceShot, transform.position);
-            fireBullet(direction,viewAngle);
-        }
+        if(ammo > 0 && shootTimerShotgun <=0){
+                if (Input.GetMouseButtonDown(0)){
+                bulletPace = 10;
+                shootTimerShotgun = 1;
+                float distance = difference.magnitude;
+                Vector2 direction = difference / distance;
+                Vector2 offset = Vector2.right ;
+                // /int offset = difference / distance + 10;
+                direction.Normalize();
+                AudioSource.PlayClipAtPoint (iceShot, transform.position);
+                fireBullet(direction + offset/2 ,viewAngle );
+                fireBullet(direction - offset/2,viewAngle );
+                fireBullet(direction,viewAngle);
+                }
+            }
         
         }
         if(pistol==false && shotgun == true && ak47== false && pickIce == false && pickBatt == true && pickFire == false){
-        if (Input.GetMouseButtonDown(0)){
-            float distance = difference.magnitude;
-            Vector2 direction = difference / distance;
-            direction.Normalize();
-            AudioSource.PlayClipAtPoint (sparkShot, transform.position);
-            fireBullet(direction,viewAngle);
-        }
+        if(ammo > 0 && shootTimerShotgun <=0){
+                if (Input.GetMouseButtonDown(0)){
+                bulletPace = 10;
+                shootTimerShotgun = 1;
+                float distance = difference.magnitude;
+                Vector2 direction = difference / distance;
+                Vector2 offset = Vector2.right ;
+                // /int offset = difference / distance + 10;
+                direction.Normalize();
+                AudioSource.PlayClipAtPoint (sparkShot, transform.position);
+                fireBullet(direction + offset/2 ,viewAngle );
+                fireBullet(direction - offset/2,viewAngle );
+                fireBullet(direction,viewAngle);
+                }
+            }
 
         
         
         }
         if(pistol==false && shotgun == true && ak47== false && pickIce == false && pickBatt == false && pickFire == true){
-        if (Input.GetMouseButtonDown(0)){
-            float distance = difference.magnitude;
-            Vector2 direction = difference / distance;
-            direction.Normalize();
-            AudioSource.PlayClipAtPoint (fireShot, transform.position);
-            fireBullet(direction,viewAngle);
+        if(ammo > 0 && shootTimerShotgun <=0){
+                if (Input.GetMouseButtonDown(0)){
+                bulletPace = 10;
+                shootTimerShotgun = 1;
+                float distance = difference.magnitude;
+                Vector2 direction = difference / distance;
+                Vector2 offset = Vector2.right ;
+                // /int offset = difference / distance + 10;
+                direction.Normalize();
+                AudioSource.PlayClipAtPoint (fireShot, transform.position);
+                fireBullet(direction + offset/2 ,viewAngle );
+                fireBullet(direction - offset/2,viewAngle );
+                fireBullet(direction,viewAngle);
+                }
             }
         }
     
-    }
+    
     
         
      if(pistol==false && shotgun == true && ak47==false){
-        if (Input.GetMouseButtonDown(0)){
-            bulletPace = 10;
-            float distance = difference.magnitude;
-            Vector2 direction = difference / distance;
-            Vector2 offset = Vector2.right ;
-            // /int offset = difference / distance + 10;
-            direction.Normalize();
-            fireBullet(direction + offset/2 ,viewAngle );
-            fireBullet(direction - offset/2,viewAngle );
-            fireBullet(direction,viewAngle);
-        }
-    }
+        if(ammo > 0 && shootTimerShotgun <=0){
+                if (Input.GetMouseButtonDown(0)){
+                bulletPace = 10;
+                shootTimerShotgun = 1;
+                float distance = difference.magnitude;
+                Vector2 direction = difference / distance;
+                Vector2 offset = Vector2.right ;
+                // /int offset = difference / distance + 10;
+                direction.Normalize();
+                AudioSource.PlayClipAtPoint (shotgunShot, transform.position);
+                fireBullet(direction + offset/2 ,viewAngle );
+                fireBullet(direction - offset/2,viewAngle );
+                fireBullet(direction,viewAngle);
+                }
+            }
+     }
+
+    //AK Script
 
      if(pistol==false && shotgun == false && ak47==true){
-        if (Input.GetMouseButton(0)){
-            bulletPace = 10;
-            float distance = difference.magnitude;
-            Vector2 direction = difference / distance;
-            direction.Normalize();
-            fireBullet(direction,viewAngle);
+        if(ammo > 0 && shootTimerAK <=0){
+            if (Input.GetMouseButton(0)){
+                shootTimerAK= 1;
+                bulletPace = 10;
+                float distance = difference.magnitude;
+                Vector2 direction = difference / distance;
+                direction.Normalize();
+                fireBullet(direction,viewAngle);
+            }
         }
     }
 
@@ -229,6 +313,12 @@ public class CrosshairAimPlusShoot : MonoBehaviour
     }
 
     
+    IEnumerator Reset(){
+        yield return new WaitForSeconds(3);
+        counter = 0;
+        limit = false;
+        
+    }
 
     void fireBullet(Vector2 direction, float viewAngle){
         if (bulletNormal == true && pickIce == false && pickBatt == false && pickFire == false){
@@ -237,6 +327,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
         b.transform.rotation = Quaternion.Euler(0.0f, 0.0f, viewAngle);
         b.GetComponent<Rigidbody2D>().velocity = direction * bulletPace;
         Destroy(b, 1.0f);
+        ammo = ammo + 1;
         
         }
         

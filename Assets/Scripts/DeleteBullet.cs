@@ -5,8 +5,8 @@ using UnityEngine;
 public class DeleteBullet : MonoBehaviour
 {
 
-    public AudioClip hitWall;
-    public GameObject wallHit;
+    //public AudioClip hitWall;
+    //public GameObject wallHit;
 
     public bool bulletHitWall = false;
     // Start is called before the first frame update
@@ -31,28 +31,28 @@ public class DeleteBullet : MonoBehaviour
         // If Bullet collides with wall destroy bullet and set bulletHitWall to true
         if (col.gameObject.CompareTag("Bullet")){
              bulletHitWall = true;
-             AudioSource.PlayClipAtPoint (hitWall , transform.position);
+             //AudioSource.PlayClipAtPoint (hitWall , transform.position);
             Destroy (col.gameObject);
            
         }
 
          if (col.gameObject.CompareTag("LightningBullet")){
              bulletHitWall = true;
-             AudioSource.PlayClipAtPoint (hitWall , transform.position);
+             //AudioSource.PlayClipAtPoint (hitWall , transform.position);
             Destroy (col.gameObject);
            
         }
 
          if (col.gameObject.CompareTag("IceBullet")){
              bulletHitWall = true;
-             AudioSource.PlayClipAtPoint (hitWall , transform.position);
+             //AudioSource.PlayClipAtPoint (hitWall , transform.position);
             Destroy (col.gameObject);
            
         }
 
         if (col.gameObject.CompareTag("FireBullet")){
              bulletHitWall = true;
-             AudioSource.PlayClipAtPoint (hitWall , transform.position);
+             //AudioSource.PlayClipAtPoint (hitWall , transform.position);
             Destroy (col.gameObject);
            
         }
