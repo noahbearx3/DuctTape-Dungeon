@@ -9,6 +9,23 @@ public class SteroidDuck : MonoBehaviour
     public GameObject frostHit;
     public GameObject lightningHit;
     public GameObject fireHit;
+    public GameObject sparkHit;
+
+    //Audio Clips for hit sounds
+     public AudioClip deathClip;
+    public AudioClip iceHit;
+    public AudioClip sparksHit;
+    
+    public AudioClip flameHit;
+
+
+    public GameObject knife;
+    public GameObject knifeLaunch;
+
+    private bool icePick = false;
+     private bool battPick = false;
+     private bool firePick = false;
+     private bool hitBoss = false;
 
     // Variables to control damage dealt and defences
     public float bossPistolDamage = 15;
@@ -23,10 +40,18 @@ public class SteroidDuck : MonoBehaviour
     //Speed And Chase & Attack Range
     public float bossSpeed;
     public float bossAttackRange = 3f;
+    public float knifeSpeed = 5f;
+    public float bossHealth = 100;
 
     public float chaseRange;
     private float lastAttackTime;
     public float attackDelay;
+
+    //Used to Access Player control's variable of the currently held bullet for hit effects
+    public PlayerController boolean;
+
+    //Used to locate Main Players position
+    private Transform target;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,54 +59,102 @@ public class SteroidDuck : MonoBehaviour
         battPick = boolean.batteryPicked;
         firePick = boolean.emberPicked;
 
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        //Check the distance between Boss & Player
         float dist = Vector3.Distance(transform.position, target.position);
-        
+
+        //If the distance is less than the chase range chase player towards player's position
         if(dist < chaseRange){
-            transform.position = Vector2.MoveTowards(transform.position, target.position, mallardSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, target.position, bossSpeed * Time.deltaTime);
              //attackAnim.SetTrigger("Walk");
              //attackAnim.ResetTrigger("Idle");
         }
         else{
-            attackAnim.SetTrigger("Idle");
-            attackAnim.ResetTrigger("Walk");
+            //attackAnim.SetTrigger("Idle");
+            //attackAnim.ResetTrigger("Walk");
+            return;
         }
 
-        if (dist < attackRange)
+        if (dist < bossAttackRange)
         {
             Vector3 targetDir = target.position - transform.position;
             float angle = Mathf.Atan2(targetDir.y,targetDir.x) * Mathf.Rad2Deg + 180f;
             Quaternion q = Quaternion.AngleAxis (angle, Vector3.forward);
             //transform.rotation = Quaternion.RotateTowards (transform.rotation, q, 90* Time.deltaTime);
-            attackAnim.SetTrigger("Attack");
-            attackAnim.ResetTrigger("Idle");
+            //attackAnim.SetTrigger("Attack");
+            //attackAnim.ResetTrigger("Idle");
             
-            //Check to see if player is within attack range and makes Boss attack
+            //Check time between last shots through attacktime and delay to make delayed shots
             if (Time.time > lastAttackTime + attackDelay){
                     //Raycast to check whether player is within sight of the taget
-                    RaycastHit2D hit = Physics2D.Raycast (transform.position, transform.up, attackRange);
+                    RaycastHit2D hit = Physics2D.Raycast (transform.position, transform.up, bossAttackRange);
                     // Check if ray has hit anything and return what it had hit
                     //if(hit.transform == target){
                         //If it Hit the player - fire the spear
                         float distance = targetDir.magnitude;
                         Vector2 direction = targetDir / distance;
-                        GameObject spear = Instantiate(spearObject) as GameObject;
-                        spear.transform.position = spearFire.transform.position;
-                        spear.transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
-                        spear.GetComponent<Rigidbody2D>().velocity = direction * spearSpeed;
-                         Destroy(spear, 1.0f);
+                        GameObject bc = Instantiate(knife) as GameObject;
+                        bc.transform.position = knifeLaunch.transform.position;
+                        bc.transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
+                        bc.GetComponent<Rigidbody2D>().velocity = direction * knifeSpeed;
+                         Destroy(bc, 4.0f);
                          //b.transform.position = gunFire.transform.position;
                          lastAttackTime =  Time.time;
 
-                  //  }
-            }
+                   //}
+                }
 
         } 
 
 
+    }
+
+     void OnCollisionEnter2D(Collision2D col) {
+
+       if (col.gameObject.CompareTag("LightningBullet")){
+            Destroy (col.gameObject);
+            //Destroy (gameObject);
+             AudioSource.PlayClipAtPoint (sparksHit, transform.position);
+            bossHealth = bossHealth - (bossLightningDamage - bossLightningArmor);
+            hitBoss = true; 
+            }
+
+        if (col.gameObject.CompareTag("IceBullet")){
+                Destroy (col.gameObject);
+                //Destroy (gameObject);
+                bossHealth = bossHealth - (bossIceDamage - bossIceArmor);
+                bossSpeed = bossSpeed - 0.1f;
+                hitBoss = true; 
+            }
+
+        if (col.gameObject.CompareTag("Bullet")){
+            Destroy (col.gameObject);
+            //Destroy (gameObject);
+            bossHealth = bossHealth - (bossPistolDamage - bossArmor);
+            hitBoss = true;
+        }
+
+        if (col.gameObject.CompareTag("FireBullet")){
+            Destroy (col.gameObject);
+            //Destroy (gameObject);
+            bossHealth = bossHealth - (bossFireDamage - bossFireArmor);
+            hitBoss = true; 
+        }
+
+       
+        
+         
+
+        if (col.gameObject.CompareTag("Player"))
+        {
+            //attackAnim.SetTrigger("Attack");
+            //attackAnim.ResetTrigger("Walk");
+        }
     }
 }
