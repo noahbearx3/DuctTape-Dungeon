@@ -18,13 +18,13 @@ public class DeleteBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   //Check if bullet hit wall
-        if(bulletHitWall == true){
-            GameObject rubble = Instantiate(wallHit) as GameObject;
+        //if(bulletHitWall == true){
+        //    GameObject rubble = Instantiate(wallHit) as GameObject;
             
-            rubble.transform.position = transform.position;
-            Destroy(rubble, 0.2f);
-            bulletHitWall = false;
-        }
+          //  rubble.transform.position = transform.position;
+          //  Destroy(rubble, 0.2f);
+         //   bulletHitWall = false;
+      //  }
     }
 
     void OnCollisionEnter2D(Collision2D col) {

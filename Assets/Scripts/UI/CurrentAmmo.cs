@@ -11,15 +11,16 @@ public class CurrentAmmo : MonoBehaviour
     public Sprite lightningBulletSprite;
     public Sprite fireBulletSprite;
 
-    private bool bulletUI = true;    
-    private bool iceBulletUI;
-    private bool fireBulletUI;
-    private bool lightningBulletUI;
+    //Booleans to check current ammo
+    public bool bulletUI = true;    
+    public bool iceBulletUI;
+    public bool fireBulletUI;
+    public bool lightningBulletUI;
 
     public Image ammoImg;
     
 
-    // GameObject holding script to be added in inspector in order to access current weapon
+    // GameObject holding script to be added in inspector in order to access current ammo
     public PlayerController items;
 
     // Start is called before the first frame update
@@ -34,6 +35,8 @@ public class CurrentAmmo : MonoBehaviour
     {
         //Call CheckAmmo Function once per frame
         CheckAmmo();
+        Debug.Log(bulletUI);
+        Debug.Log(fireBulletUI);
     }
 
     void CheckAmmo(){
@@ -59,8 +62,9 @@ public class CurrentAmmo : MonoBehaviour
     }
 
     void SortAmmo(){
-        if(fireBulletUI == true || iceBulletUI == true ||lightningBulletUI == true){
-            bulletUI = false;
-        }
+        //If Bullet is fire OR ice Or lightning set bullet to false
+       // if(fireBulletUI == true || iceBulletUI == true ||lightningBulletUI == true){
+      //      bulletUI = false;
+       // }
     }
 }

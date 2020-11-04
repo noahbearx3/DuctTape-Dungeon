@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
 
     public HealthController healthControl;
     public HealthBarController h;
+    public CurrentAmmo UI;
 
     public CrosshairAimPlusShoot bullet; 
    AudioSource pistolShot;
@@ -103,6 +104,9 @@ public class PlayerController : MonoBehaviour
             icePicked = true;
             batteryPicked = false;
             emberPicked = false;
+            UI.bulletUI = false;
+             UI.lightningBulletUI = false;
+            UI.iceBulletUI = true;
 
          }
 
@@ -111,6 +115,10 @@ public class PlayerController : MonoBehaviour
             icePicked = false;
             batteryPicked = false;
             emberPicked = true;
+            UI.bulletUI = false;
+            //UI.fireBulletUI = true;
+            UI.lightningBulletUI = false;
+            UI.iceBulletUI = false;
 
          }
 
@@ -119,6 +127,8 @@ public class PlayerController : MonoBehaviour
             batteryPicked = true;
             icePicked = false;
             emberPicked = false;
+            UI.bulletUI = false;
+            UI.lightningBulletUI = true;
          }
 
          if (col.gameObject.CompareTag("Shotgun")){

@@ -76,18 +76,18 @@ public class CrosshairAimPlusShoot : MonoBehaviour
             pistol = false;
             shotgun = true;
             ak47 = false;
-            Debug.Log(bulletNormal);
-            Debug.Log(ak47);
-            Debug.Log(shotgun);
+           // Debug.Log(bulletNormal);
+           // Debug.Log(ak47);
+           // Debug.Log(shotgun);
             
         }
           if(ak47){
             pistol = false;
             shotgun = false;
             ak47 = true;
-            Debug.Log(bulletNormal);
-            Debug.Log(ak47);
-            Debug.Log(shotgun);
+           // Debug.Log(bulletNormal);
+          //  Debug.Log(ak47);
+           // Debug.Log(shotgun);
         }
         
         crosshairMousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y));
