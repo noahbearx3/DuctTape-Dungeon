@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4952409067467309171}
   - component: {fileID: 4952409067467309070}
   - component: {fileID: 4952409067467309169}
+  - component: {fileID: 7011987572925104532}
   m_Layer: 0
   m_Name: ember
   m_TagString: Ember
@@ -120,3 +121,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.17, y: 0.17}
   m_Direction: 0
+--- !u!114 &7011987572925104532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4952409067467309170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0405dc36aa923234e81be37b05e73661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitWall: {fileID: 8300000, guid: 15dc5b23c3903a7498777e7ecb7c8925, type: 3}
+  wallHit: {fileID: 4290877654301392896, guid: f1cea9b7f9b9a5244934b68fa17b8885, type: 3}
+  bulletHitWall: 0

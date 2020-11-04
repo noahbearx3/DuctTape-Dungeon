@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2260198074234577371}
   - component: {fileID: 2260198074234577369}
   - component: {fileID: 2260198074234577368}
+  - component: {fileID: 9017333152307512267}
   m_Layer: 0
   m_Name: Hologram
   m_TagString: Untagged
@@ -151,3 +152,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 0.085318804}
   m_EdgeRadius: 0
+--- !u!114 &9017333152307512267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2260198074234577348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0405dc36aa923234e81be37b05e73661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitWall: {fileID: 8300000, guid: 15dc5b23c3903a7498777e7ecb7c8925, type: 3}
+  wallHit: {fileID: 4290877654301392896, guid: f1cea9b7f9b9a5244934b68fa17b8885, type: 3}
+  bulletHitWall: 0
