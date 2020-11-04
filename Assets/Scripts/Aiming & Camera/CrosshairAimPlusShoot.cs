@@ -19,10 +19,10 @@ public class CrosshairAimPlusShoot : MonoBehaviour
     private bool pickIce;
     private bool pickBatt;
     private bool pickFire;
-    private bool shotgun = false;
-    private bool ak47 = false;
+    public bool shotgun = false;
+    public bool ak47 = false;
 
-    private bool pistol = true;
+    public bool pistol = true;
 
     private Vector3 target;
     public GameObject player;
@@ -38,6 +38,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
     public PlayerController boolean;   
     //AudioSource audio;
     public AudioClip pistolShot;
+    public AudioClip shotgunShot;
     public AudioClip iceShot;
     public AudioClip sparkShot;
     public AudioClip fireShot;
@@ -139,13 +140,59 @@ public class CrosshairAimPlusShoot : MonoBehaviour
             direction.Normalize();
             AudioSource.PlayClipAtPoint (fireShot, transform.position);
             fireBullet(direction,viewAngle);
+            }
+        }
+    
+    }
+
+    // seperate
+
+
+    if(pistol==false && shotgun == true && ak47==false){
+        if(pistol==false && shotgun == true && ak47== false && pickIce == false && pickBatt == false && pickFire == false){
+        if (Input.GetMouseButtonDown(0)){
+            float distance = difference.magnitude;
+            Vector2 direction = difference / distance;
+            direction.Normalize();
+            AudioSource.PlayClipAtPoint (shotgunShot, transform.position);
+            fireBullet(direction,viewAngle);
+        }
+        
+        }
+        if(pistol==false && shotgun == true && ak47== false && pickIce == true && pickBatt == false & pickFire == false){
+        if (Input.GetMouseButtonDown(0)){
+            float distance = difference.magnitude;
+            Vector2 direction = difference / distance;
+            direction.Normalize();
+            AudioSource.PlayClipAtPoint (iceShot, transform.position);
+            fireBullet(direction,viewAngle);
+        }
+        
+        }
+        if(pistol==false && shotgun == true && ak47== false && pickIce == false && pickBatt == true && pickFire == false){
+        if (Input.GetMouseButtonDown(0)){
+            float distance = difference.magnitude;
+            Vector2 direction = difference / distance;
+            direction.Normalize();
+            AudioSource.PlayClipAtPoint (sparkShot, transform.position);
+            fireBullet(direction,viewAngle);
         }
 
         
         
         }
+        if(pistol==false && shotgun == true && ak47== false && pickIce == false && pickBatt == false && pickFire == true){
+        if (Input.GetMouseButtonDown(0)){
+            float distance = difference.magnitude;
+            Vector2 direction = difference / distance;
+            direction.Normalize();
+            AudioSource.PlayClipAtPoint (fireShot, transform.position);
+            fireBullet(direction,viewAngle);
+            }
+        }
     
     }
+    
         
      if(pistol==false && shotgun == true && ak47==false){
         if (Input.GetMouseButtonDown(0)){
