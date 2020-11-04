@@ -12,7 +12,7 @@ public class Pivot : MonoBehaviour
 
     private void Start()
     {
-       Hands = transform.Find("Hands");
+       Hands = transform.Find("PlayerHands");
     }
 
     private void FixedUpdate()
