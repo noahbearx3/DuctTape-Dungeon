@@ -91,7 +91,7 @@ public class SteroidDuck : MonoBehaviour
             return;
         }
 
-        if (dist < bossAttackRange)
+        if (dist <= bossAttackRange && dist >= bossMeeleRange)
         {
             Vector3 targetDir = target.position - transform.position;
             float angle = Mathf.Atan2(targetDir.y,targetDir.x) * Mathf.Rad2Deg + 180f;
@@ -119,10 +119,17 @@ public class SteroidDuck : MonoBehaviour
 
                    //}
                 }
-
         } 
-
-
+         if (dist <= bossAttackRange && dist <= bossMeeleRange)
+        {
+            //attackAnim.SetTrigger("Walk");
+            //attackAnim.ResetTrigger("Idle");
+        }
+        else
+        {
+            //attackAnim.SetTrigger("Idle");
+            //attackAnim.ResetTrigger("Walk");
+        }
     }
 
      void OnCollisionEnter2D(Collision2D col) {
