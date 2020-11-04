@@ -18,7 +18,7 @@ public class ItemSpawn : MonoBehaviour
     {
         float dist = Vector3.Distance(transform.position, mainPlayer.transform.position);
 
-        if (dist <= 1.5 && Input.GetKeyDown(KeyCode.E))
+        if (dist <= 1.5 && Input.GetKeyDown(KeyCode.Space))
         {
             Destroy(gameObject);
 

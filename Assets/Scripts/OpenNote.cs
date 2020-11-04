@@ -24,7 +24,7 @@ public class OpenNote : MonoBehaviour
 
         if (dist <= 1.5)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (reading)
                 {
