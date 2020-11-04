@@ -9,10 +9,14 @@ public class mainMenu : MonoBehaviour
     public void OnStartGame()
     {
         int maxRange = SceneManager.sceneCountInBuildSettings - 2;
-        int randomLevel = Random.Range(2, maxRange);
+        int randomLevel = Random.Range(3, maxRange);
         SceneManager.LoadScene(randomLevel); 
     }
 
+    public void OnCutscene()
+    {
+        SceneManager.LoadScene(2);
+    }
 
     public void OnExitGame()
     {
