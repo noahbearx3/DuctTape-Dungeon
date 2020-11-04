@@ -60,7 +60,7 @@ public class CurrentAmmo : MonoBehaviour
 
     void SortAmmo(){
         if(fireBulletUI == true || iceBulletUI == true ||lightningBulletUI == true){
-            bulletUI = true;
+            bulletUI = false;
         }
     }
 }
