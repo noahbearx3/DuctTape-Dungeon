@@ -6,6 +6,7 @@ public class SteroidDuck : MonoBehaviour
 {
 
     //Enemy hit gameobjects to appear onHit
+    public GameObject feather;
     public GameObject frostHit;
     public GameObject lightningHit;
     public GameObject fireHit;
@@ -40,6 +41,8 @@ public class SteroidDuck : MonoBehaviour
     //Speed And Chase & Attack Range
     public float bossSpeed;
     public float bossAttackRange = 3f;
+    
+    public float bossMeeleRange = 1f;
     public float knifeSpeed = 5f;
     public float bossHealth = 100;
 
@@ -59,6 +62,8 @@ public class SteroidDuck : MonoBehaviour
         battPick = boolean.batteryPicked;
         firePick = boolean.emberPicked;
 
+        
+
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
     }
@@ -66,6 +71,11 @@ public class SteroidDuck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
+        if(bossHealth <= 0){
+        //counter.points = counter.points + duckPoints;
+        Death();   
+        }
+        
         //Check the distance between Boss & Player
         float dist = Vector3.Distance(transform.position, target.position);
 
@@ -156,5 +166,13 @@ public class SteroidDuck : MonoBehaviour
             //attackAnim.SetTrigger("Attack");
             //attackAnim.ResetTrigger("Walk");
         }
+    }
+
+    void Death(){
+        AudioSource.PlayClipAtPoint (deathClip, transform.position);
+        GameObject f = Instantiate(feather) as GameObject;
+        Destroy (gameObject);
+        f.transform.position = transform.position;
+        Destroy(f, 0.1f);
     }
 }
