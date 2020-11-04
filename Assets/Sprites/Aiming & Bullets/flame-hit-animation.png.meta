@@ -1,49 +1,25 @@
 fileFormatVersion: 2
-guid: fdeba66e00e16cd41bad1abf8985ad3c
+guid: 71596dcb693af0f4c9b2925c6cb2bd00
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8713120321045492238
-    second: Sprite-0001-Sheet_1
+      213: 5945025348991085290
+    second: flame-hit-animation_0
   - first:
-      213: 7900860951653682938
-    second: Sprite-0001-Sheet_0
+      213: 1682516974180736428
+    second: flame-hit-animation_1
   - first:
-      213: 583417684835264956
-    second: Sprite-0001-Sheet_2
+      213: -5099602633156238588
+    second: flame-hit-animation_2
   - first:
-      213: -7474615155744080074
-    second: Sprite-0001-Sheet_3
+      213: -7548768603390152708
+    second: flame-hit-animation_3
   - first:
-      213: 4952637736013467042
-    second: Sprite-0001-Sheet_4
+      213: 4527344412537865470
+    second: flame-hit-animation_4
   - first:
-      213: -3980355551068045990
-    second: Sprite-0001-Sheet_1
-  - first:
-      213: -5889849262404765700
-    second: Sprite-0001-Sheet_0
-  - first:
-      213: -1114848783538012743
-    second: Flame Bullet_0
-  - first:
-      213: -8488151659268725248
-    second: Flame Bullet_1
-  - first:
-      213: -1223234555563315905
-    second: Flame Bullet_2
-  - first:
-      213: 2924668095421055138
-    second: Flame Bullet_3
-  - first:
-      213: 7446133367471848431
-    second: Flame Bullet_4
-  - first:
-      213: -6703943921856369493
-    second: Flame Bullet_5
-  - first:
-      213: -7490003875944992182
-    second: Flame Bullet_6
+      213: -8052839006471809443
+    second: flame-hit-animation_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -129,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Flame Bullet_0
+      name: flame-hit-animation_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 6
-        width: 25
-        height: 25
+        x: 16
+        y: 15
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bdb0f620f24780f0800000000000000
-      internalID: -1114848783538012743
+      spriteID: aea6e4b8e09f08250800000000000000
+      internalID: 5945025348991085290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flame Bullet_1
+      name: flame-hit-animation_1
       rect:
         serializedVersion: 2
-        x: 31
-        y: 6
-        width: 25
-        height: 25
+        x: 80
+        y: 15
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00625adb907043a80800000000000000
-      internalID: -8488151659268725248
+      spriteID: cad9b9e0640895710800000000000000
+      internalID: 1682516974180736428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flame Bullet_2
+      name: flame-hit-animation_2
       rect:
         serializedVersion: 2
-        x: 60
-        y: 6
-        width: 25
-        height: 25
+        x: 144
+        y: 15
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3d6aa617a2360fe0800000000000000
-      internalID: -1223234555563315905
+      spriteID: 403631b8c629a39b0800000000000000
+      internalID: -5099602633156238588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flame Bullet_3
+      name: flame-hit-animation_3
       rect:
         serializedVersion: 2
-        x: 89
-        y: 6
-        width: 25
-        height: 25
+        x: 209
+        y: 15
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a08d712322869820800000000000000
-      internalID: 2924668095421055138
+      spriteID: cffee4743f26d3790800000000000000
+      internalID: -7548768603390152708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flame Bullet_4
+      name: flame-hit-animation_4
       rect:
         serializedVersion: 2
-        x: 118
-        y: 6
-        width: 25
-        height: 25
+        x: 245
+        y: 3
+        width: 1
+        height: 1
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: febb75ea8daf55760800000000000000
-      internalID: 7446133367471848431
+      spriteID: ef44b2d91cb54de30800000000000000
+      internalID: 4527344412537865470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flame Bullet_5
+      name: flame-hit-animation_5
       rect:
         serializedVersion: 2
-        x: 147
-        y: 6
-        width: 25
-        height: 25
+        x: 272
+        y: 15
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,29 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bacac97a58ec6f2a0800000000000000
-      internalID: -6703943921856369493
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flame Bullet_6
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 6
-        width: 25
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a42fff798292e0890800000000000000
-      internalID: -7490003875944992182
+      spriteID: d5696d1e6919e3090800000000000000
+      internalID: -8052839006471809443
       vertices: []
       indices: 
       edges: []
