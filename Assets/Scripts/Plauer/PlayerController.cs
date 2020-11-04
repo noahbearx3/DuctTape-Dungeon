@@ -25,6 +25,17 @@ public class PlayerController : MonoBehaviour
     public bool emberPicked = false;
     public float healthPickup = 25f;
 
+    public AudioClip akPick;
+    
+    public AudioClip shotgunPick;
+
+    public AudioClip healthPick;
+    
+    public AudioClip iced;
+    public AudioClip sparked;
+    public AudioClip flamed;
+
+
     public HealthController healthControl;
     public HealthBarController h;
     public CurrentAmmo UI;
@@ -114,6 +125,7 @@ public class PlayerController : MonoBehaviour
         }
 
          if (col.gameObject.CompareTag("Ice")){
+            //AudioSource.PlayClipAtPoint (iceHit, transform.position);
             Destroy (col.gameObject);
             icePicked = true;
             batteryPicked = false;
@@ -137,6 +149,7 @@ public class PlayerController : MonoBehaviour
          }
 
            if (col.gameObject.CompareTag("Battery")){
+            AudioSource.PlayClipAtPoint (sparked, transform.position);
             Destroy (col.gameObject);
             batteryPicked = true;
             icePicked = false;
@@ -146,18 +159,21 @@ public class PlayerController : MonoBehaviour
          }
 
          if (col.gameObject.CompareTag("Shotgun")){
+             AudioSource.PlayClipAtPoint (shotgunPick, transform.position);
             Destroy (col.gameObject);
             shotgunPicked = true;
             ak47Picked = false;
          }
 
          if (col.gameObject.CompareTag("AK47")){
+             AudioSource.PlayClipAtPoint (akPick, transform.position);
             Destroy (col.gameObject);
             shotgunPicked = false;
             ak47Picked = true;
          }
 
          if (col.gameObject.CompareTag("Health")){
+             AudioSource.PlayClipAtPoint (healthPick, transform.position);
              playerHealth = playerHealth + healthPickup;
              h.SetSize(playerHealth / 100);
              Destroy (col.gameObject);

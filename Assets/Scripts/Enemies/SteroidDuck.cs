@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SteroidDuck : MonoBehaviour
 {
-
+    public GameObject mainPlayer;
     //Enemy hit gameobjects to appear onHit
     public GameObject feather;
     public GameObject frostHit;
@@ -22,6 +22,8 @@ public class SteroidDuck : MonoBehaviour
 
     public GameObject knife;
     public GameObject knifeLaunch;
+
+    private SpriteRenderer mySpriteRenderer;
 
     private bool icePick = false;
      private bool battPick = false;
@@ -55,22 +57,29 @@ public class SteroidDuck : MonoBehaviour
 
     //Used to locate Main Players position
     private Transform target;
+
+    Animator attackAnim;
+
+    
     // Start is called before the first frame update
     void Start()
     {
-        icePick = boolean.icePicked;
-        battPick = boolean.batteryPicked;
-        firePick = boolean.emberPicked;
-
         
-
+        mainPlayer = GameObject.FindGameObjectWithTag("Player");
+        attackAnim = gameObject.GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
 
     }
 
     // Update is called once per frame
     void Update()
     {   
+
+        icePick = boolean.icePicked;
+        battPick = boolean.batteryPicked;
+        firePick = boolean.emberPicked;
+
         if(bossHealth <= 0){
         //counter.points = counter.points + duckPoints;
         Death();   
@@ -82,13 +91,13 @@ public class SteroidDuck : MonoBehaviour
         //If the distance is less than the chase range chase player towards player's position
         if(dist < chaseRange){
             transform.position = Vector2.MoveTowards(transform.position, target.position, bossSpeed * Time.deltaTime);
-             //attackAnim.SetTrigger("Walk");
-             //attackAnim.ResetTrigger("Idle");
+             attackAnim.SetTrigger("Walk");
+             attackAnim.ResetTrigger("Idle");
         }
         else{
-            //attackAnim.SetTrigger("Idle");
-            //attackAnim.ResetTrigger("Walk");
-            return;
+            attackAnim.SetTrigger("Idle");
+            attackAnim.ResetTrigger("Walk");
+            
         }
 
         if (dist <= bossAttackRange && dist >= bossMeeleRange)
@@ -97,8 +106,8 @@ public class SteroidDuck : MonoBehaviour
             float angle = Mathf.Atan2(targetDir.y,targetDir.x) * Mathf.Rad2Deg + 180f;
             Quaternion q = Quaternion.AngleAxis (angle, Vector3.forward);
             //transform.rotation = Quaternion.RotateTowards (transform.rotation, q, 90* Time.deltaTime);
-            //attackAnim.SetTrigger("Attack");
-            //attackAnim.ResetTrigger("Idle");
+            attackAnim.SetTrigger("Attack Ranged");
+            attackAnim.ResetTrigger("Idle");
             
             //Check time between last shots through attacktime and delay to make delayed shots
             if (Time.time > lastAttackTime + attackDelay){
@@ -119,17 +128,34 @@ public class SteroidDuck : MonoBehaviour
 
                    //}
                 }
-        } 
+        }
+         else
+        {
+            attackAnim.SetTrigger("Idle");
+            attackAnim.ResetTrigger("Attack Ranged");
+        }
+
          if (dist <= bossAttackRange && dist <= bossMeeleRange)
         {
-            //attackAnim.SetTrigger("Walk");
-            //attackAnim.ResetTrigger("Idle");
+            attackAnim.SetTrigger("Attack Melee");
+            attackAnim.ResetTrigger("Walk");
         }
         else
         {
-            //attackAnim.SetTrigger("Idle");
-            //attackAnim.ResetTrigger("Walk");
+           attackAnim.SetTrigger("Walk");
+            attackAnim.ResetTrigger("Attack Melee");
         }
+
+        // Flips the sprite when he is on the right side, and flips it back when he's on the left side again
+        var relativePoint = transform.InverseTransformPoint(mainPlayer.transform.position);
+        if (relativePoint.x < 0.0)
+        {
+            mySpriteRenderer.flipX = false;
+        }
+        else if (relativePoint.x > 0.0)
+        {
+            mySpriteRenderer.flipX = true;
+        }    
     }
 
      void OnCollisionEnter2D(Collision2D col) {
@@ -170,8 +196,8 @@ public class SteroidDuck : MonoBehaviour
 
         if (col.gameObject.CompareTag("Player"))
         {
-            //attackAnim.SetTrigger("Attack");
-            //attackAnim.ResetTrigger("Walk");
+            attackAnim.SetTrigger("Attack Melee");
+            attackAnim.ResetTrigger("Walk");
         }
     }
 
