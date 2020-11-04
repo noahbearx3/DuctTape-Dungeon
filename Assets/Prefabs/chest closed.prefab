@@ -149,4 +149,6 @@ MonoBehaviour:
   - {fileID: 2883490508821440359, guid: cdfef73486300ec47a238f5fb50fcde4, type: 3}
   - {fileID: 2611662988716129688, guid: d537382033e453f4eaa3e670b46cbccf, type: 3}
   - {fileID: 5323934440959892074, guid: 062e2a58d43812f4d984a98c5f33c40c, type: 3}
-  randomItem: 0
+  - {fileID: 4952409067467309170, guid: baaae79957b05f64183d04cb6819be61, type: 3}
+  mainPlayer: {fileID: 456887325290119058, guid: 32d8804324786ba4bb1b5c044c3005ee,
+    type: 3}
