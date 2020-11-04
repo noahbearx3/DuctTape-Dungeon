@@ -6583,6 +6583,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 240754284719530691, guid: c9649dc802418614fb4acb5b702b774e,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 240754284719530691, guid: c9649dc802418614fb4acb5b702b774e,
+        type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 294620826927830929, guid: c9649dc802418614fb4acb5b702b774e,
         type: 3}
       propertyPath: m_Name
@@ -7650,20 +7660,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1760711592}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &946788826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946788817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61429416d8300214d9dd2e600dd5ff2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items: {fileID: 946788819}
-  UI: {fileID: 487459444}
 --- !u!4 &946933607 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 510566251202215502, guid: 764344d16cd47404db887da11f59f103,
@@ -66741,6 +66737,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 946788826, guid: 32d8804324786ba4bb1b5c044c3005ee, type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 487459444}
     - target: {fileID: 456887325290119058, guid: 32d8804324786ba4bb1b5c044c3005ee,
         type: 3}
       propertyPath: m_Name
@@ -66801,36 +66801,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3749597874940979036, guid: 32d8804324786ba4bb1b5c044c3005ee,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3749597875947396566, guid: 32d8804324786ba4bb1b5c044c3005ee,
-        type: 3}
-      propertyPath: emberPicked
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3749597875947396566, guid: 32d8804324786ba4bb1b5c044c3005ee,
         type: 3}
       propertyPath: UI
       value: 
       objectReference: {fileID: 487459444}
-    - target: {fileID: 3749597876182463591, guid: 32d8804324786ba4bb1b5c044c3005ee,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3749597876182463591, guid: 32d8804324786ba4bb1b5c044c3005ee,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 282671577
-      objectReference: {fileID: 0}
-    - target: {fileID: 3749597876182463591, guid: 32d8804324786ba4bb1b5c044c3005ee,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32d8804324786ba4bb1b5c044c3005ee, type: 3}
 --- !u!1001 &1789848055
@@ -67956,6 +67931,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 764344d16cd47404db887da11f59f103, type: 3}
+--- !u!1 &2094544283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 294620826927830929, guid: c9649dc802418614fb4acb5b702b774e,
+    type: 3}
+  m_PrefabInstance: {fileID: 749697839}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2094544289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094544283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0405dc36aa923234e81be37b05e73661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitWall: {fileID: 8300000, guid: 15dc5b23c3903a7498777e7ecb7c8925, type: 3}
+  wallHit: {fileID: 4290877654301392896, guid: f1cea9b7f9b9a5244934b68fa17b8885, type: 3}
+  bulletHitWall: 0
 --- !u!1001 &2102193789
 PrefabInstance:
   m_ObjectHideFlags: 0

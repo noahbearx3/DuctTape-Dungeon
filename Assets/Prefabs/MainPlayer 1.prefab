@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3749597875947396565}
   - component: {fileID: 3749597875947396566}
   - component: {fileID: 3749597875947396562}
+  - component: {fileID: 946788826}
   m_Layer: 11
   m_Name: MainPlayer 1
   m_TagString: Player
@@ -182,9 +183,11 @@ MonoBehaviour:
   ak47Picked: 0
   icePicked: 0
   batteryPicked: 0
+  emberPicked: 0
   healthPickup: 25
   healthControl: {fileID: 0}
   h: {fileID: 7218879794533827454}
+  UI: {fileID: 0}
   bullet: {fileID: 0}
   playerHealth: 100
 --- !u!114 &3749597875947396562
@@ -206,6 +209,20 @@ MonoBehaviour:
   HeadLeft: {fileID: 21300000, guid: ca6cb2af108f2854eb48d2fb2b678de3, type: 3}
   HeadBack: {fileID: 21300000, guid: 4a45801f34daf194ab172bbc007e53e6, type: 3}
   spriteRenderer: {fileID: 3749597874940979036}
+--- !u!114 &946788826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456887325290119058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61429416d8300214d9dd2e600dd5ff2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: {fileID: 3749597875947396566}
+  UI: {fileID: 0}
 --- !u!1 &3749597874940979025
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +293,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 7ce2a38a44c59f140aca41e9c56c4e4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -354,7 +371,7 @@ MonoBehaviour:
   myPlayer: {fileID: 456887325290119058}
   pistol: {fileID: 0}
   handsSprite: {fileID: 3749597876182463591}
-  sizeNormalized: -1
+  moveLeft: -1
 --- !u!1 &3749597876182463609
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,7 +443,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 282671577
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d2d073a6b4169c44396b3d71b032237d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

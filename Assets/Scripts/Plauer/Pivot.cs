@@ -8,7 +8,7 @@ public class Pivot : MonoBehaviour
     public GameObject myPlayer;
     public GameObject pistol;
     [SerializeField] private SpriteRenderer handsSprite;
-    public float sizeNormalized = -1f;
+    public float moveLeft = -1f;
 
     private void Start()
     {
@@ -30,7 +30,8 @@ public class Pivot : MonoBehaviour
 
         if(fAngle <= 360 && fAngle >= 180)
         {
-            FlipHands(-1f);
+            moveLeft = -1f;
+            FlipHands (moveLeft);
 
         }
         else
