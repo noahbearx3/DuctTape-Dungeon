@@ -92,10 +92,24 @@ public class PlayerController : MonoBehaviour
             h.SetSize(playerHealth / 100);
         }
 
+        if (col.gameObject.CompareTag("BossEnemy")){
+            //Destroy (col.gameObject);
+            //Destroy (gameObject);
+            playerHealth = playerHealth - 25;
+            h.SetSize(playerHealth / 100);
+        }
+
          if (col.gameObject.CompareTag("Spear")){
             Destroy (col.gameObject);
             //Destroy (gameObject);
             playerHealth = playerHealth - 10;
+            h.SetSize(playerHealth / 100);
+        }
+
+        if (col.gameObject.CompareTag("Kinfe")){
+            Destroy (col.gameObject);
+            //Destroy (gameObject);
+            playerHealth = playerHealth - 15;
             h.SetSize(playerHealth / 100);
         }
 

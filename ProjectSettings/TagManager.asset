@@ -23,6 +23,9 @@ TagManager:
   - Ember
   - FireBullet
   - Computer
+  - BossEnemy
+  - Knife Enemy
+  - Kinfe
   layers:
   - Default
   - TransparentFX
