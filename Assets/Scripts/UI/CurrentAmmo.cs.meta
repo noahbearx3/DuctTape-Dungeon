@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: eab0dedf5ff985a4f822f870974bad11
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - bulletSprite: {fileID: 21300000, guid: 22dcdafd88312a046809468848686a65, type: 3}
+  - iceBulletSprite: {fileID: 21300000, guid: 75f4371fd2a1f8643808bea8d74e5f31, type: 3}
+  - lightningBulletSprite: {fileID: -5468052666668896430, guid: 18852f5a927d29e41b5781f3a1b3391c,
+      type: 3}
+  - fireBulletSprite: {instanceID: 0}
+  - ammoImg: {instanceID: 0}
+  - items: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
