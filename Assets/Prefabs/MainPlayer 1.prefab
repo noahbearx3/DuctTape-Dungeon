@@ -185,12 +185,12 @@ MonoBehaviour:
   batteryPicked: 0
   emberPicked: 0
   healthPickup: 25
-  akPick: {fileID: 0}
-  shotgunPick: {fileID: 0}
-  healthPick: {fileID: 0}
-  iced: {fileID: 0}
-  sparked: {fileID: 0}
-  flamed: {fileID: 0}
+  akPick: {fileID: 8300000, guid: 2e2619110c2866742a0af17fbc9f43c7, type: 3}
+  shotgunPick: {fileID: 8300000, guid: a72cc2df118138148828080f6142b01e, type: 3}
+  healthPick: {fileID: 8300000, guid: 2d44599c0990180478d0f35b8c2d820b, type: 3}
+  iced: {fileID: 8300000, guid: 74ec212b7f073e0458d7e97019f043ed, type: 3}
+  sparked: {fileID: 8300000, guid: 64fdc7db5a92dc64c80a82979e95f7e1, type: 3}
+  flamed: {fileID: 8300000, guid: 2b2002ff995297842a030984a012d100, type: 3}
   healthControl: {fileID: 0}
   h: {fileID: 7218879794533827454}
   UI: {fileID: 0}
@@ -335,11 +335,11 @@ MonoBehaviour:
   HeadLeft: {fileID: 21300000, guid: ca6cb2af108f2854eb48d2fb2b678de3, type: 3}
   HeadBack: {fileID: 21300000, guid: 4a45801f34daf194ab172bbc007e53e6, type: 3}
   spriteRenderer: {fileID: 3749597874940979036}
-  weaponCheck: {fileID: 0}
-  Shotgun: {fileID: 0}
-  AK: {fileID: 0}
-  Pistol: {fileID: 0}
-  weaponRenderer: {fileID: 0}
+  weaponCheck: {fileID: 3749597875947396566}
+  Shotgun: {fileID: 21300000, guid: 0101e565fdd7d0145aa71f960240431c, type: 3}
+  AK: {fileID: 21300000, guid: 5e4bdffb75f67904595bc483f9b99c04, type: 3}
+  Pistol: {fileID: 21300000, guid: d39d6f1ef019ebf49957ef52ba388955, type: 3}
+  weaponRenderer: {fileID: 7694147706653159380}
 --- !u!1 &3749597875445541884
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myPlayer: {fileID: 456887325290119058}
-  pistol: {fileID: 0}
+  pistol: {fileID: 7694147706653159386}
   handsSprite: {fileID: 3749597876182463591}
   moveLeft: -1
 --- !u!1 &3749597876182463609
@@ -854,7 +854,7 @@ GameObject:
   - component: {fileID: 7694147706653159380}
   m_Layer: 0
   m_Name: pistol
-  m_TagString: Untagged
+  m_TagString: Hands
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

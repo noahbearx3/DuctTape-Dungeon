@@ -51,6 +51,8 @@ public class CrosshairAimPlusShoot : MonoBehaviour
     public AudioClip iceShot;
     public AudioClip sparkShot;
     public AudioClip fireShot;
+    public AudioClip akShot;
+    
 
 
 
@@ -297,6 +299,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
                 float distance = difference.magnitude;
                 Vector2 direction = difference / distance;
                 direction.Normalize();
+                AudioSource.PlayClipAtPoint (akShot, transform.position);
                 fireBullet(direction,viewAngle);
             }
         }
@@ -328,6 +331,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
         b.GetComponent<Rigidbody2D>().velocity = direction * bulletPace;
         Destroy(b, 1.0f);
         ammo = ammo + 1;
+        
         
         }
         

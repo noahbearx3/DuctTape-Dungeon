@@ -148,20 +148,20 @@ public class PlayerAnimationTrigger : MonoBehaviour
             pbodyanimator.SetBool("FrontRun", false);
         }
         
-        if (weaponCheck.shotgunPicked == true)
-        {
-            weaponRenderer.sprite = Shotgun;
-        }
-        else
-        {
-            if(weaponCheck.ak47Picked == true)
+            if (weaponCheck.shotgunPicked == true)
             {
-                weaponRenderer.sprite = AK;
+                weaponRenderer.sprite = Shotgun;
             }
             else
             {
-                weaponRenderer.sprite = Pistol;
-            }
+                if(weaponCheck.ak47Picked == true)
+                {
+                    weaponRenderer.sprite = AK;
+                }
+                else
+                {
+                    weaponRenderer.sprite = Pistol;
+                }
         }
 
     }
