@@ -178,7 +178,7 @@ MonoBehaviour:
   bulletHit: {fileID: 1429306884795790670, guid: a354fc9251560ca41ab23c12300fd519,
     type: 3}
   enemySpeed: 2
-  chaseRange: 9
+  chaseRange: 8
   boolean: {fileID: 3749597875947396566, guid: 32d8804324786ba4bb1b5c044c3005ee, type: 3}
   counter: {fileID: 0}
   deathClip: {fileID: 8300000, guid: bc73d97e9a0efb342b33f765526919c4, type: 3}

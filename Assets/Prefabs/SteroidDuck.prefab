@@ -159,18 +159,18 @@ MonoBehaviour:
   knife: {fileID: 1882375479575863709, guid: 04fb5542edd9e554db54ee4bdf0d7c5f, type: 3}
   knifeLaunch: {fileID: 6062138286124118551}
   bossPistolDamage: 55
-  bossIceDamage: 10
-  bossFireDamage: 10
-  bossLightningDamage: 10
-  bossArmor: 10
-  bossIceArmor: 0
-  bossLightningArmor: 0
-  bossFireArmor: 0
+  bossIceDamage: 30
+  bossFireDamage: 30
+  bossLightningDamage: 30
+  bossArmor: 20
+  bossIceArmor: 20
+  bossLightningArmor: 15
+  bossFireArmor: 10
   bossSpeed: 2
   bossAttackRange: 7
   bossMeeleRange: 1
   knifeSpeed: 8
-  bossHealth: 100
+  bossHealth: 500
   chaseRange: 10
   attackDelay: 2
   boolean: {fileID: 0}
