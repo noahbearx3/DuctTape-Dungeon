@@ -51,4 +51,5 @@ public class CameraController : MonoBehaviour
         tempPos = Vector3.SmoothDamp(transform.position, target, ref refVel, smoothTime); //smoothly move towards the target
         transform.position = tempPos; //update the position
     }
+    //reference used: https://www.youtube.com/watch?v=etI-2dHeufc&ab_channel=SixDot
 }

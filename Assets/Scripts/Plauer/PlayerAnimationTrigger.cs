@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerAnimationTrigger : MonoBehaviour
 {
+    //references
     public GameObject myPlayer;
     public Animator pbodyanimator;
     public Sprite HeadFront;
@@ -21,17 +22,17 @@ public class PlayerAnimationTrigger : MonoBehaviour
 
     void Update()
     {
-
+        
         Vector3 v3Pos;
         float fAngle;
 
-
+        //Gets the mouse position depending on the player and turns the value from 0 to 360
         v3Pos = Camera.main.WorldToScreenPoint(myPlayer.transform.position);
         v3Pos = Input.mousePosition - v3Pos;
         fAngle = Mathf.Atan2(v3Pos.y, v3Pos.x) * Mathf.Rad2Deg;
         if (fAngle < 0.0f) fAngle += 360.0f;
 
-
+        //idle rotation when not moving and calling the head rotation to mouse function
         if (fAngle >= 45 && fAngle <= 135)
         {
             pbodyanimator.SetBool("Front", false);
@@ -41,7 +42,7 @@ public class PlayerAnimationTrigger : MonoBehaviour
             LookBack();
         }
 
-
+        
         else
         { 
             if (fAngle >= 135 && fAngle <= 225 )
@@ -80,7 +81,7 @@ public class PlayerAnimationTrigger : MonoBehaviour
 
             }
 
-
+            //playing and stopping running animations
 
         }
         if (Input.GetKey(KeyCode.D))
@@ -148,6 +149,7 @@ public class PlayerAnimationTrigger : MonoBehaviour
             pbodyanimator.SetBool("FrontRun", false);
         }
         
+        //change weapon sprites when weapons are picked up
             if (weaponCheck.shotgunPicked == true)
             {
                 weaponRenderer.sprite = Shotgun;
@@ -166,7 +168,7 @@ public class PlayerAnimationTrigger : MonoBehaviour
 
     }
 
-
+    // head rotation function
     void LookFront()
     {
         spriteRenderer.sprite = HeadFront;
