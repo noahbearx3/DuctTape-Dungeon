@@ -105,7 +105,7 @@ MonoBehaviour:
     type: 3}
   lightningBullet: {fileID: 3109958087545938006, guid: c912b799357149d4e9ed1102f804959b,
     type: 3}
-  shake: {fileID: 5478158005558970441, guid: b39134933ea72ea46865dced20fbaedd, type: 3}
+  shake: {fileID: 0}
   feather: {fileID: 4624075061970007673, guid: 3077d6c861a20be41810f2f51bf51ef3, type: 3}
   pistolDamage: 20
   iceDamage: 7.5

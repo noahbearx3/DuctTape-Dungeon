@@ -171,7 +171,7 @@ public class LightningEnemyController : MonoBehaviour
             enemyHealth = enemyHealth - (lightningDamage - duckLightningArmor);
             
             hitDuck = true; 
-            shake.ShakeCamera(); 
+   //         shake.ShakeCamera(); 
             }
 
         if (col.gameObject.CompareTag("IceBullet")){
@@ -180,7 +180,7 @@ public class LightningEnemyController : MonoBehaviour
                 enemyHealth = enemyHealth - (iceDamage - duckIceArmor);
                 enemySpeed = enemySpeed - 0.1f;
                 hitDuck = true; 
-                shake.ShakeCamera(); 
+    //            shake.ShakeCamera(); 
             
             }
 
@@ -189,7 +189,7 @@ public class LightningEnemyController : MonoBehaviour
             //Destroy (gameObject);
             enemyHealth = enemyHealth - (pistolDamage - duckArmor);
             hitDuck = true; 
-            shake.ShakeCamera(); 
+   //         shake.ShakeCamera(); 
         }
 
         if (col.gameObject.CompareTag("FireBullet")){
@@ -197,7 +197,7 @@ public class LightningEnemyController : MonoBehaviour
             //Destroy (gameObject);
             enemyHealth = enemyHealth - (fireDamage - duckFireArmor);
             hitDuck = true; 
-            shake.ShakeCamera(); 
+    //        shake.ShakeCamera(); 
         }
 
        

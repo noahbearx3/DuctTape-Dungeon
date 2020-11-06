@@ -191,7 +191,7 @@ public class RangeDuckController : MonoBehaviour
             mallardHealth = mallardHealth - 10;
             
             hitMallard = true; 
-            shake.ShakeCamera(); 
+     //       shake.ShakeCamera(); 
             }
 
         if (col.gameObject.CompareTag("IceBullet")){
@@ -200,7 +200,7 @@ public class RangeDuckController : MonoBehaviour
             mallardHealth = mallardHealth - mallardIceDamage;
             mallardSpeed = mallardSpeed - 0.1f;
             hitMallard = true; 
-            shake.ShakeCamera(); 
+    //        shake.ShakeCamera(); 
             }
 
         if (col.gameObject.CompareTag("Bullet")){
@@ -208,7 +208,7 @@ public class RangeDuckController : MonoBehaviour
             //Destroy (gameObject);
             mallardHealth = mallardHealth - 25;
             hitMallard = true; 
-            shake.ShakeCamera(); 
+    //        shake.ShakeCamera(); 
             }
 
         if (col.gameObject.CompareTag("FireBullet")){
@@ -216,7 +216,7 @@ public class RangeDuckController : MonoBehaviour
         //Destroy (gameObject);
         mallardHealth = mallardHealth - 15;
         hitMallard = true; 
-        shake.ShakeCamera(); 
+    //    shake.ShakeCamera(); 
         }
         }
     void Death(){
