@@ -28,7 +28,7 @@ public class SteroidDuck : MonoBehaviour
     private bool icePick = false;
      private bool battPick = false;
      private bool firePick = false;
-     private bool hitBoss = false;
+    // private bool hitBoss = false;
 
     // Variables to control damage dealt and defences
     public float bossPistolDamage = 15;
@@ -165,7 +165,7 @@ public class SteroidDuck : MonoBehaviour
             //Destroy (gameObject);
              AudioSource.PlayClipAtPoint (sparksHit, transform.position);
             bossHealth = bossHealth - (bossLightningDamage - bossLightningArmor);
-            hitBoss = true; 
+            //hitBoss = true; 
             }
 
         if (col.gameObject.CompareTag("IceBullet")){
@@ -173,21 +173,21 @@ public class SteroidDuck : MonoBehaviour
                 //Destroy (gameObject);
                 bossHealth = bossHealth - (bossIceDamage - bossIceArmor);
                 bossSpeed = bossSpeed - 0.1f;
-                hitBoss = true; 
+                //hitBoss = true; 
             }
 
         if (col.gameObject.CompareTag("Bullet")){
             Destroy (col.gameObject);
             //Destroy (gameObject);
             bossHealth = bossHealth - (bossPistolDamage - bossArmor);
-            hitBoss = true;
+            //hitBoss = true;
         }
 
         if (col.gameObject.CompareTag("FireBullet")){
             Destroy (col.gameObject);
             //Destroy (gameObject);
             bossHealth = bossHealth - (bossFireDamage - bossFireArmor);
-            hitBoss = true; 
+            //hitBoss = true; 
         }
 
        

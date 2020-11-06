@@ -6,14 +6,11 @@ public class SwitchAmmo: MonoBehaviour
 {
 
     //Booleans to check current ammo
-    private bool bulletPistol = true; 
+   // private bool bulletPistol = true; 
     private bool pis = true;
-
     private bool fir = false;   
-
     private bool ice = false;   
     private bool batt = false;   
-
     private bool bulletIce;
     private bool bulletFire;
     private bool bulletLightning;
@@ -55,7 +52,7 @@ public class SwitchAmmo: MonoBehaviour
      void SortAmmo(){
         //If Bullet is fire OR ice Or lightning set bullet to false
         if(bulletFire == true || bulletIce == true ||bulletLightning == true){
-            bulletPistol = false;
+            //bulletPistol = false;
         }
     }
 

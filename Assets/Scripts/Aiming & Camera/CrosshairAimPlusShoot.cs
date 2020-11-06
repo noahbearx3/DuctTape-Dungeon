@@ -56,7 +56,7 @@ public class CrosshairAimPlusShoot : MonoBehaviour
 
 
 
-     public ParticleSystem particleEmitter;
+    // public ParticleSystem particleEmitter;
      //private ParticleAnimator particleAnimator;
      
 
@@ -305,12 +305,12 @@ public class CrosshairAimPlusShoot : MonoBehaviour
         }
     }
 
-     if (Input.GetButton("Fire1")){
-         particleEmitter.Play();
-     }
-     else if (Input.GetButtonUp("Fire1")){
-         particleEmitter.Stop();
- }
+    // if (Input.GetButton("Fire1")){
+    //     particleEmitter.Play();
+   //  }
+   //  else if (Input.GetButtonUp("Fire1")){
+     //    particleEmitter.Stop();
+ // }
 
         
     }
